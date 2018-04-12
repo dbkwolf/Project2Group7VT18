@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62bb74ed-e45f-497d-926d-7ba48bbe2176" name="Default" comment="" />
+    <list default="true" id="62bb74ed-e45f-497d-926d-7ba48bbe2176" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Project2Group7VT18.iml" afterPath="$PROJECT_DIR$/.idea/Project2Group7VT18.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +17,13 @@
       <file leaf-file-name="Project2Group7VT18.iml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/Project2Group7VT18.iml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="170">
               <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+=======
+            <state relative-caret-position="136">
+              <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+>>>>>>> 2ffa580880ce24af69f7fdee06ee72f33e5855b6
               <folding />
             </state>
           </provider>
@@ -38,9 +46,19 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds">
+=======
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+>>>>>>> 2ffa580880ce24af69f7fdee06ee72f33e5855b6
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="y" value="-2" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -75,6 +93,7 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
@@ -84,6 +103,18 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+>>>>>>> 2ffa580880ce24af69f7fdee06ee72f33e5855b6
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -190,11 +221,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523539337718</updated>
+      <workItem from="1523541026163" duration="202000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="202000" />
+  </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
+=======
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+>>>>>>> 2ffa580880ce24af69f7fdee06ee72f33e5855b6
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -209,7 +248,12 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17910448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+>>>>>>> 2ffa580880ce24af69f7fdee06ee72f33e5855b6
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -223,6 +267,9 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -257,8 +304,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/Project2Group7VT18.iml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="170">
           <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+=======
+        <state relative-caret-position="136">
+          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+>>>>>>> 2ffa580880ce24af69f7fdee06ee72f33e5855b6
           <folding />
         </state>
       </provider>

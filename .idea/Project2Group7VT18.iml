@@ -4,8 +4,14 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
+<<<<<<< HEAD
     <orderEntry type="sourceFolder" forTests="false" /
     >//jsajhjnbjN
 
+=======
+    <orderEntry type="sourceFolder" forTests="false" />
+
+    //Delay just made a comment
+>>>>>>> 2ffa580880ce24af69f7fdee06ee72f33e5855b6
   </component>
 </module>
