@@ -44,6 +44,19 @@ public class Main extends Application {
         hbBtnSignIn.getChildren().add(btnSignIn);
         grid.add(hbBtnSignIn, 1, 4);
 
+        Button btnforgtpassword = new Button("Forgot Password");
+        HBox hbBtnforgotpassword = new HBox(10);
+        hbBtnforgotpassword.setAlignment(Pos.BOTTOM_RIGHT);
+        hbBtnforgotpassword.getChildren().add(btnforgtpassword);
+        grid.add(hbBtnforgotpassword, 1, 5);
+
+        Button btnHelp = new Button("Help");
+        HBox hbBtnHelp = new HBox(10);
+        hbBtnHelp.setAlignment(Pos.BOTTOM_RIGHT);
+        hbBtnHelp.getChildren().add(btnHelp);
+        grid.add(hbBtnHelp, 1, 6);
+
+
 
         /*-------------SCENE-----------------*/
         Text scenetitle = new Text("Welcome");
