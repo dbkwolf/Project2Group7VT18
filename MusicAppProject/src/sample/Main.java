@@ -23,6 +23,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Music App");
+        primaryStage.setMinWidth(400);
 
         /*------------- GRID PANE-----------------*/
         GridPane grid = new GridPane();

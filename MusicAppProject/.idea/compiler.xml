@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-    <component name="CompilerConfiguration">
-        <option name="DEFAULT_COMPILER" value="Javac" />
-        <resourceExtensions />
-        <wildcardResourcePatterns>
-            <entry name="!?*.java" />
-    <entry name="!?*.form" />
-=======
-      <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" /><entry name="!?*.form" />
->>>>>>> 307c1e4d7d652ac3184252a3b20c41ced53f68a3
       <entry name="!?*.class" />
       <entry name="!?*.groovy" />
       <entry name="!?*.scala" />
