@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<GridPane alignment="center" hgap="10" maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #272f3d;" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogInController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <JFXTextField fx:id="txt_username" style="-fx-text-fill: #a4a4a4;" text="username" unFocusColor="#a4a4a4" GridPane.rowIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="20.0" />
+         </GridPane.margin>
+      </JFXTextField>
+      <JFXTextField fx:id="txt_password" style="-fx-text-fill: #a4a4a4;" text="password" unFocusColor="#a4a4a4" GridPane.rowIndex="2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btn_login" prefHeight="39.0" prefWidth="238.0" style="-fx-background-color: #4deaa1;" text="Log In" textFill="#514242" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="20.0" />
+         </GridPane.margin>
+      </JFXButton>
+      <Label fx:id="lbl_title" alignment="CENTER" text="Welcome to MusicApp" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_register" onAction="#press_btn_register" prefHeight="39.0" prefWidth="237.0" style="-fx-background-color: #4d4dea;" text="Register" textFill="#95fc8e" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lbl_or" text="or" textFill="#979797" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+   </children>
+</GridPane>
