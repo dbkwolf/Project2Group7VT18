@@ -1,5 +1,6 @@
 package sample;
 
+import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -7,7 +8,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.sql.Connection;
+
 public class RegistrationController {
+
+    public JFXTextField txt_usernameRegister;
+    public JFXTextField txt_firstName;
+    public JFXTextField txt_lastName;
+    public JFXTextField txt_passwordRegister;
+    public JFXTextField txt_repeatPasswordRegister;
+    public JFXTextField txt_email;
+    public JFXTextField txt_repeatEmail;
 
     public void press_btn_back(ActionEvent event) throws Exception {
 
@@ -22,6 +33,7 @@ public class RegistrationController {
     }
 
     public void press_btn_registerNew(ActionEvent event) throws Exception{
+
 
 
 
