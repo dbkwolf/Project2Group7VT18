@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="testdb@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.8">
     <root id="1"/>
     <schema id="2" parent="1" name="booklibrarydb">
       <Current>1</Current>
@@ -18,32 +18,32 @@
     <table id="11" parent="10" name="user"/>
     <column id="12" parent="11" name="iduser">
       <Position>1</Position>
-      <DataType>smallint(6)|0</DataType>
+      <DataType>smallint(6)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="13" parent="11" name="username">
       <Position>2</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="14" parent="11" name="password">
       <Position>3</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="15" parent="11" name="email">
       <Position>4</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="16" parent="11" name="first_name">
       <Position>5</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="17" parent="11" name="last_name">
       <Position>6</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="18" parent="11" name="iduser_UNIQUE">
