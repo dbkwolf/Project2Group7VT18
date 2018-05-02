@@ -1,5 +1,6 @@
 package sample;
 
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 
@@ -10,19 +11,20 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.sql.SQLException;
 
-public class RegistrationController {
+public class SignUpController {
 
-    public JFXTextField txt_usernameRegister;
+    public JFXTextField txt_usernameSignUp;
     public JFXTextField txt_firstName;
     public JFXTextField txt_lastName;
-    public JFXTextField txt_passwordRegister;
+    
     public JFXTextField txt_repeatPasswordRegister;
     public JFXTextField txt_email;
     public JFXTextField txt_repeatEmail;
+    public JFXPasswordField txt_passwordSignUp;
 
     public void press_btn_back(ActionEvent event) throws Exception {
 
-        Parent loginParent = FXMLLoader.load(getClass().getResource("Scene_Login.fxml"));
+        Parent loginParent = FXMLLoader.load(getClass().getResource("login.fxml"));
         Scene loginScene = new Scene(loginParent);
 
         //this line gets the stage info
@@ -35,10 +37,10 @@ public class RegistrationController {
     public void press_btn_registerNew(ActionEvent event) throws Exception{
 
 
-        String username = txt_usernameRegister.getText();
+        String username = txt_usernameSignUp.getText();
         String firstName= txt_firstName.getText();
         String lastName = txt_lastName.getText();
-        String password = txt_passwordRegister.getText();
+        String password = txt_passwordSignUp.getText();
         String email = txt_email.getText();
 
 

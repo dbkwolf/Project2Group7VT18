@@ -85,6 +85,7 @@ public class DatabaseUtility {
         PreparedStatement st = con.prepareStatement(query);
 
         st.executeUpdate();
+        disconnectDB();
 
     }
 
