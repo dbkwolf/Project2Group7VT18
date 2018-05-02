@@ -1,7 +1,8 @@
-package sample;
+package controllers;
 
 
 public class User {
+    private int userId;
     private String username;
     private String firstName;
     private String lastName;
@@ -61,5 +62,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 }

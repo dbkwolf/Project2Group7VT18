@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="700.0" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="700.0" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignUpController">
    <children>
       <ImageView fitHeight="633.0" fitWidth="935.0" layoutX="-122.0" layoutY="-158.0" opacity="0.96" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="37.7833251953125" AnchorPane.leftAnchor="-122.0" AnchorPane.rightAnchor="-113.0" AnchorPane.topAnchor="-100.0">
          <image>

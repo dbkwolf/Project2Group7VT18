@@ -1,7 +1,8 @@
-package sample;
+package controllers;
 
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import database_utilities.UserDAO;
 import javafx.event.ActionEvent;
 
 import javafx.fxml.FXMLLoader;
@@ -24,7 +25,7 @@ public class SignUpController {
 
     public void press_btn_back(ActionEvent event) throws Exception {
 
-        Parent loginParent = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Parent loginParent = FXMLLoader.load(getClass().getResource("../scenes/login.fxml"));
         Scene loginScene = new Scene(loginParent);
 
         //this line gets the stage info
