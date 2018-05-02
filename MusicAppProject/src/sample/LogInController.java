@@ -13,7 +13,7 @@ public class LogInController {
 
     public void press_btn_register(ActionEvent event) throws Exception {
 
-        Parent registerParent = FXMLLoader.load(getClass().getResource("registerScene.fxml"));
+        Parent registerParent = FXMLLoader.load(getClass().getResource("Scene_Registration.fxml"));
         Scene registerScene = new Scene(registerParent);
 
         //this line gets the stage info

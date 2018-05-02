@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="5.1">
+    <CLASSES>
+      <root url="file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.46" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/MySQL Connector/J/5.1.46" recursive="false" />
+  </library>
+</component>
