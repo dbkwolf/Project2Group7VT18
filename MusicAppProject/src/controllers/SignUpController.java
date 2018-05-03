@@ -9,8 +9,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 import java.sql.SQLException;
+import java.util.Optional;
 
 public class SignUpController {
 
@@ -32,6 +35,7 @@ public class SignUpController {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(loginScene);
         window.show();
+
 
     }
 
@@ -55,6 +59,23 @@ public class SignUpController {
 
 
         System.out.print("new user registered");
+
+
+        Parent loginParent = FXMLLoader.load(getClass().getResource("../scenes/login.fxml"));
+        Scene loginScene = new Scene(loginParent);
+
+        //this line gets the stage info
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(loginScene);
+        window.show();
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("New user registered! Please, log in.");
+
+        alert.showAndWait();
+
     }
 
     private boolean isNotEmpty(JFXTextField field, String input){
