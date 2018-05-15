@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="402.0" fitWidth="600.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imageresources/adminpageImageView.jpg" />
+            <Image url="@../imageresources/adminpageImageView.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccce5" height="393.0" layoutX="328.0" layoutY="1.0" opacity="0.77" stroke="BLACK" strokeType="INSIDE" width="267.0" />
@@ -21,7 +21,7 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btn_Addsongs" layoutX="388.0" layoutY="76.0"  prefHeight="25.0" prefWidth="169.0" text="ADD SONGS">
+      <JFXButton fx:id="btn_Addsongs" layoutX="388.0" layoutY="76.0" prefHeight="25.0" prefWidth="169.0" text="ADD SONGS">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
