@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HelpController">
+   <children>
+      <ImageView disable="true" fitHeight="455.0" fitWidth="849.0" layoutX="-70.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imageresources/HelpImage.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="54.0" layoutY="14.0" prefHeight="25.0" prefWidth="57.0" text="Help?">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#f2ecec" />
+                  <Stop color="#f4f4f5" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="Centaur" size="20.0" />
+         </font>
+      </Label>
+      <TextArea disable="true" layoutX="127.0" layoutY="1.0" prefHeight="419.0" prefWidth="450.0" promptText="Help" text="There will be a registarion form with fields where a new user can enter their details, such as registration details (login and password) and personal details. After registering the new user will be able to log in.&#10;&#10;After logging in, the new user will be redirected to the Music app home page. The home screen will contain most of the functionalities. When moving to the home page successfully user has ability to create his/her own playlist and share to others with list owners name to listen song and there is a option to rate the song list.&#10;When creating a own playlist, user will be able to add songs to his own list and in the meantime user will have an option to see information of the song and remove the selected song. As well as when a song is being playing user can see the song information as a quick view.&#10;After creating user own playlist he can view in a separate page as a informative view. &#10;" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextArea>
+      <JFXButton fx:id="btn_HelpBack" layoutX="646.0" layoutY="350.0" onAction="#press_btn_HelpBack" text="Back" textFill="#f5f2f2">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
