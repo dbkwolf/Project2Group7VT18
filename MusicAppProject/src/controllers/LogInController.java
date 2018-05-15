@@ -1,5 +1,6 @@
 package controllers;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.animation.PauseTransition;
@@ -29,6 +30,7 @@ public class LogInController {
     private User activeUser;
     public JFXTextField txt_usernameLogIn;
     public Label lbl_error;
+    public JFXButton btn_help;
 
     public void press_btn_register(ActionEvent event) throws Exception {
 
@@ -40,6 +42,17 @@ public class LogInController {
         window.setScene(registerScene);
         window.show();
     }
+    public void press_btn_help(ActionEvent event) throws Exception {
+
+        Parent registerParent = FXMLLoader.load(getClass().getResource("../scenes/Help.fxml"));
+        Scene registerScene = new Scene(registerParent);
+
+        //this line gets the stage info
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(registerScene);
+        window.show();
+    }
+
 
 
 
