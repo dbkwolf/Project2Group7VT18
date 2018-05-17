@@ -17,50 +17,33 @@ import database_utilities.UserDAO;
 import javafx.concurrent.Service;
 import javafx.util.Duration;
 
-import javax.swing.*;
+
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Objects;
 
-public class LogInController {
+public class LogInController extends MainController {
 
 
     public JFXPasswordField txt_passwordLogIn;
-    private User activeUser;
+    public static User activeUser;
     public JFXTextField txt_usernameLogIn;
     public Label lbl_error;
     public JFXButton btn_help;
 
     public void press_btn_register(ActionEvent event) throws Exception {
 
-        Parent registerParent = FXMLLoader.load(getClass().getResource("../scenes/signup.fxml"));
-        Scene registerScene = new Scene(registerParent);
-
-        //this line gets the stage info
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(registerScene);
-        window.show();
+        change_Scene_to(event,"../scenes/signup.fxml");
     }
+
     public void press_btn_help(ActionEvent event) throws Exception {
-
-        Parent registerParent = FXMLLoader.load(getClass().getResource("../scenes/Help.fxml"));
-        Scene registerScene = new Scene(registerParent);
-
-        //this line gets the stage info
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(registerScene);
-        window.show();
+        change_Scene_to(event,"../scenes/Help.fxml");
     }
-
-
 
 
     public void press_btn_login (ActionEvent event) throws Exception {
         System.out.print("trying to log in");
-
-
-
 
         try {
             activeUser = UserDAO.findUser(txt_usernameLogIn.getText());
@@ -75,13 +58,7 @@ public class LogInController {
              if(Objects.equals(activeUser.getPassword(), txt_passwordLogIn.getText())){
                  System.out.print("login successful");
                  lbl_error.setVisible(false);
-                 Parent registerParent = FXMLLoader.load(getClass().getResource("../scenes/home.fxml"));
-                 Scene registerScene = new Scene(registerParent);
-
-                 //this line gets the stage info
-                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                 window.setScene(registerScene);
-                 window.show();
+                 change_Scene_to(event,"../scenes/home.fxml");
              }else{
                  lbl_error.setVisible(true);
              }
@@ -90,12 +67,10 @@ public class LogInController {
 
     }
 
-
     public void closedPressedButton(){
         System.exit(1);
 
     }
-
 
 
     @FXML

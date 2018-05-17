@@ -8,6 +8,7 @@ public class User {
     private String lastName;
     private String password;
     private String email;
+    private boolean adminLevel;
 
 
 
@@ -70,5 +71,13 @@ public class User {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public boolean isAdminLevel() {
+        return adminLevel;
+    }
+
+    public void setAdminLevel(boolean adminLevel) {
+        this.adminLevel = adminLevel;
     }
 }

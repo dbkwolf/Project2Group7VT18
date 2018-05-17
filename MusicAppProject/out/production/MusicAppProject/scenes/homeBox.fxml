@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="350.0" style="-fx-background-color: #06111e;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+   <children>
+      <TableView fx:id="tbl_searchResults" layoutY="74.0" prefHeight="669.0" prefWidth="350.0" style="-fx-background-color: #06111e;" stylesheets="@tables_stylesheet.css">
+         <columns>
+            <TableColumn fx:id="col_searchTitle" prefWidth="139.0" text="Title" />
+            <TableColumn fx:id="col_searchArtist" prefWidth="91.0" text="Artist" />
+            <TableColumn fx:id="col_searchAlbum" prefWidth="83.0" text="Album" />
+         </columns>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </TableView>
+      <JFXTextField fx:id="txt_search" layoutX="29.0" layoutY="28.0" maxWidth="293.0" minWidth="217.0" prefHeight="37.0" prefWidth="217.0" promptText="Search" />
+      <JFXButton fx:id="btn_search" layoutX="246.0" layoutY="31.0" onAction="#press_btn_search" style="-fx-background-color: f0f0f0;" text="test search" textFill="#862828" />
+      <JFXButton fx:id="btn_addSong" layoutX="222.0" layoutY="755.0" style="-fx-background-color: #00060c;" text="add to Playlist" textFill="#c3c0c0" />
+   </children>
+</AnchorPane>

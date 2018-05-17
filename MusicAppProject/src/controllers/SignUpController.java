@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.sql.SQLException;
 
-public class SignUpController {
+public class SignUpController extends MainController{
 
     public JFXTextField txt_usernameSignUp;
     public JFXTextField txt_firstName;
@@ -22,39 +22,37 @@ public class SignUpController {
     public JFXTextField txt_email;
     public JFXTextField txt_repeatEmail;
     public JFXPasswordField txt_passwordSignUp;
+    public JFXTextField txt_authorizationCode;
+
 
     public void press_btn_back(ActionEvent event) throws Exception {
 
-        Parent loginParent = FXMLLoader.load(getClass().getResource("../scenes/login.fxml"));
-        Scene loginScene = new Scene(loginParent);
-
-        //this line gets the stage info
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(loginScene);
-        window.show();
+        change_Scene_to(event, "../scenes/login.fxml");
 
     }
 
-    public void press_btn_registerNew(ActionEvent event) throws Exception{
-
-
+    public void register()throws Exception{
         String username = txt_usernameSignUp.getText();
         String firstName= txt_firstName.getText();
         String lastName = txt_lastName.getText();
         String password = txt_passwordSignUp.getText();
         String email = txt_email.getText();
 
+        UserDAO.insertUser(username, firstName, lastName, password, email);
+
+    }
+    public void press_btn_registerNew(ActionEvent event) throws Exception{
 
         try {
-            UserDAO.insertUser(username, firstName, lastName, password, email);
-            System.out.print("Employee inserted!");
+            register();
         } catch (SQLException e) {
-            System.out.print("Problem occurred while inserting employee " + e);
+            System.out.print("Problem occurred while inserting user " + e);
             throw e;
         }
 
 
         System.out.print("new user registered");
+        change_Scene_to(event, "../scenes/login.fxml");
     }
 
     private boolean isNotEmpty(JFXTextField field, String input){
@@ -63,4 +61,9 @@ public class SignUpController {
     }
 
 
+    public void press_btn_registerNewAdmin(ActionEvent event) throws Exception{
+
+        String code = txt_authorizationCode.getText();
+
+    }
 }
