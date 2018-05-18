@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="added: searchSong(), addSong(), new playlist bug fixes">
-      <change afterPath="$PROJECT_DIR$/src/images/tbl-stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/util/HttpGet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/util/HttpGet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PlaylistDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/SongDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SongDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/home.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,8 +105,8 @@
       <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+            <state relative-caret-position="356">
+              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6020#6021#0" expanded="true" />
@@ -553,7 +542,7 @@
       <workItem from="1526616197567" duration="451000" />
       <workItem from="1526617645125" duration="444000" />
       <workItem from="1526645514549" duration="236000" />
-      <workItem from="1526646082886" duration="12734000" />
+      <workItem from="1526646082886" duration="12967000" />
     </task>
     <task id="LOCAL-00001" summary=" JFoenix added">
       <created>1525085802096</created>
@@ -639,11 +628,25 @@
       <option name="project" value="LOCAL" />
       <updated>1526424654792</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added: searchSong(), addSong(), new playlist bug fixes">
+      <created>1526659754135</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1526659754135</updated>
+    </task>
+    <task id="LOCAL-00014" summary="playlist methods">
+      <created>1526659856232</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1526659856232</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133410000" />
+    <option name="totallyTimeSpent" value="133643000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -656,17 +659,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="845" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32968128" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32867134" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32867134" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" weight="0.55944055" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32868525" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32867134" />
       <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4978678" weight="0.9132867" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.32868525" />
       <window_info id="Capture Tool" order="2" />
@@ -745,7 +749,8 @@
     <MESSAGE value="created addsong fxml" />
     <MESSAGE value="created" />
     <MESSAGE value="added: searchSong(), addSong(), new playlist bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added: searchSong(), addSong(), new playlist bug fixes" />
+    <MESSAGE value="playlist methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="playlist methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1044,8 +1049,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+        <state relative-caret-position="356">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6020#6021#0" expanded="true" />
