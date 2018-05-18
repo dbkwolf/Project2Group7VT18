@@ -3,23 +3,16 @@ package controllers;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import database_utilities.UserDAO;
-import javafx.concurrent.Service;
-import javafx.util.Duration;
+import model.User;
+import model.UserDAO;
 
 
-
-import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Objects;
 

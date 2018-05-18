@@ -14,7 +14,7 @@
    <children>
       <ImageView disable="true" fitHeight="455.0" fitWidth="849.0" layoutX="-70.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imageresources/HelpImage.jpg" />
+            <Image url="@../images/HelpImage.jpg" />
          </image>
       </ImageView>
       <Label layoutX="54.0" layoutY="14.0" prefHeight="25.0" prefWidth="57.0" text="Help?">

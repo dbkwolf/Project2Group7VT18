@@ -14,23 +14,23 @@
    <children>
       <ImageView fitHeight="633.0" fitWidth="935.0" layoutX="-122.0" layoutY="-158.0" opacity="0.96" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="37.7833251953125" AnchorPane.leftAnchor="-122.0" AnchorPane.rightAnchor="-113.0" AnchorPane.topAnchor="-100.0">
          <image>
-            <Image url="@../imageresources/register.jpg" />
+            <Image url="@../images/register.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="288.0" fitWidth="394.0" layoutX="-29.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-20.2166748046875" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-113.0" AnchorPane.topAnchor="100.0">
          <image>
-            <Image url="@../imageresources/register.jpg" />
+            <Image url="@../images/register.jpg" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccce5" height="432.0" layoutX="394.0" layoutY="50.0" opacity="0.77" stroke="BLACK" strokeType="INSIDE" width="271.0" />
       <ImageView fitHeight="59.0" fitWidth="62.0" layoutX="500.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imageresources/NewUserImageView.png" />
+            <Image url="@../images/NewUserImageView.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="547.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imageresources/newUserImageView2.png" />
+            <Image url="@../images/newUserImageView2.png" />
          </image>
       </ImageView>
       <Label layoutX="164.0" layoutY="221.0" text="E G I S T E R" textFill="WHITE">

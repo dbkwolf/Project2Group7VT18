@@ -2,23 +2,18 @@ package controllers;
 
 
 import com.jfoenix.controls.JFXButton;
-import database_utilities.DatabaseUtility;
-import database_utilities.PlaylistDAO;
-import database_utilities.SongDAO;
-import javafx.collections.FXCollections;
+import model.Playlist;
+import model.PlaylistDAO;
+import model.Song;
+import model.SongDAO;
 import javafx.collections.ObservableList;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 
-import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.Optional;
 
 import static controllers.LogInController.activeUser;
@@ -148,7 +143,8 @@ public class HomeController extends MainController{
 
     public void update_tbl_userPlaylists() throws SQLException, ClassNotFoundException{
 
-        ObservableList<Playlist> userPlaylists = PlaylistDAO.buildPlaylistData();
+        String strActiveUserId = Integer.toString(activeUser.getUserId());
+        ObservableList<Playlist> userPlaylists = PlaylistDAO.buildPlaylistData(strActiveUserId);
         col_userPlaylistTitle.setCellValueFactory(cellData -> cellData.getValue().plTitleProperty());
         tbl_userPlaylists.setItems(userPlaylists);
 
