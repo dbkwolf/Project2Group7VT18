@@ -2,6 +2,7 @@ package controllers;
 
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import model.Playlist;
 import model.PlaylistDAO;
 import model.Song;
@@ -21,8 +22,10 @@ import static controllers.LogInController.activeUser;
 
 public class HomeController extends MainController{
 
+    public  Label lbl_user;
     public Song selectedSong;
-    public Playlist selectedPlaylist;
+    public static Playlist selectedPlaylist;
+
     public Media track;
     public MediaPlayer player;
 
@@ -35,12 +38,13 @@ public class HomeController extends MainController{
     public TableColumn<Song,String> col_title;
     public TableColumn<Song,String> col_artist;
     public TableColumn<Song,String> col_album;
+    public JFXTextField txt_search;
 
 
     private  ObservableList<Song> data;
 
     public  TableView<Song> tbl_searchResults;
-    public  Label lbl_user;
+
     public TableColumn<Song,String> col_searchTitle= new TableColumn<>("First Name");
     public TableColumn<Song,String> col_searchArtist;
     public TableColumn<Song,String> col_searchAlbum;
@@ -62,15 +66,10 @@ public class HomeController extends MainController{
 
     }
 
-    public void click_checkid(javafx.event.ActionEvent event)throws Exception{
-        Song selectedSong = tbl_searchResults.getSelectionModel().getSelectedItem();
-        System.out.println(selectedSong.getSongLocation());
-       //playTrack(selectedSong);
-    }
 
     public void press_btn_search(javafx.event.ActionEvent event)throws SQLException, ClassNotFoundException{
 
-        ObservableList<Song> songsAvailable = SongDAO.buildSongData();
+        ObservableList<Song> songsAvailable = SongDAO.searchSong(txt_search.getText());
         col_searchTitle.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
         col_searchArtist.setCellValueFactory(cellData -> cellData.getValue().artistProperty());
         col_searchAlbum.setCellValueFactory(cellData -> cellData.getValue().albumProperty());
@@ -112,20 +111,29 @@ public class HomeController extends MainController{
         }
     }
 
-    public void press_btn_newPlaylist (javafx.event.ActionEvent event)throws Exception{
+    public void press_btn_newPlaylist (javafx.event.ActionEvent event)throws Exception {
+
 
         String plTitle = namePlaylistPrompt();
 
-        String strActiveUserId = Integer.toString(activeUser.getUserId());
-        System.out.println(plTitle);
-        PlaylistDAO.insertPlaylist(plTitle, strActiveUserId);
+        if (plTitle.equals("empty")) {
 
-        update_tbl_userPlaylists();
+
+                System.out.println("no playlist created");
+
+        }else{
+
+            String strActiveUserId = Integer.toString(activeUser.getUserId());
+            System.out.println(plTitle);
+            PlaylistDAO.insertPlaylist(plTitle, strActiveUserId);
+
+            update_tbl_userPlaylists();
+         }
 
     }
 
     public String namePlaylistPrompt(){
-        String playlistName = "nothing to see";
+        String playlistName = "empty";
 
         TextInputDialog dialog = new TextInputDialog(activeUser.getFirstName()+"Playlist1"); // no apostrophes since it fs up SQL
         dialog.setTitle("Create Playlist");
@@ -162,10 +170,25 @@ public class HomeController extends MainController{
         tbl_playlistTracks.setItems(playlistSongs);
 
 
+
     }
+
 
     public void press_btn_addSong() throws Exception{
 
+        selectedPlaylist = tbl_userPlaylists.getSelectionModel().getSelectedItem();
+        selectedSong = tbl_searchResults.getSelectionModel().getSelectedItem();
+
+
+        PlaylistDAO.insertSonginPlaylist(Integer.toString(selectedSong.getSongId()),Integer.toString(selectedPlaylist.getPlaylistId()));
+
+        update_tbl_playlistTracks();
+
+
+    }
+
+    public void test_delete(){
+        System.out.println("this gets deleted");
     }
 
 

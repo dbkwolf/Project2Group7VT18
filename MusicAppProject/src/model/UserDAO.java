@@ -11,7 +11,7 @@ public class UserDAO {
     //INSERT a user
     //*************************************
     public static void insertUser (String username, String firstName, String lastName,String password,String email) throws SQLException, ClassNotFoundException {
-        //Declare a DELETE statement
+        //Declare a INSERT statement
 
 
         String insertQuery ="INSERT INTO g7musicappdb.users (user_id, username, first_name, last_name, password, email) VALUES ('0','" + username+ "', '"+firstName+"', '"+lastName+"', '"+password+"','"+email+"'); ";
@@ -20,7 +20,7 @@ public class UserDAO {
         try {
             DatabaseUtility.runQuery(insertQuery);
         } catch (SQLException e) {
-            System.out.print("Error occurred while DELETE Operation: " + e);
+            System.out.print("Error occurred while INSERT Operation: " + e);
             throw e;
         }
     }
@@ -35,7 +35,7 @@ public class UserDAO {
             User user = getUserFromResultSet(rsUser);
             return user;
         } catch (SQLException e) {
-            System.out.println("error while seraching user");
+            System.out.println("error while searching user");
             throw e;
         }
     }

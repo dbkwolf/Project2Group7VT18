@@ -3,6 +3,8 @@ package controllers;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import com.sun.tools.javac.Main;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -28,6 +30,8 @@ public class LogInController extends MainController {
     public void press_btn_register(ActionEvent event) throws Exception {
 
         change_Scene_to(event,"../scenes/signup.fxml");
+
+
     }
 
     public void press_btn_help(ActionEvent event) throws Exception {
