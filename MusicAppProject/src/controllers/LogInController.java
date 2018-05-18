@@ -24,6 +24,7 @@ public class LogInController extends MainController {
     public JFXTextField txt_usernameLogIn;
     public Label lbl_error;
     public JFXButton btn_help;
+    public JFXButton btn_forgotPswd;
 
     public void press_btn_register(ActionEvent event) throws Exception {
 
@@ -34,6 +35,9 @@ public class LogInController extends MainController {
         change_Scene_to(event,"../scenes/Help.fxml");
     }
 
+    public void press_btn_forgotpswd(ActionEvent event) throws Exception {
+        change_Scene_to(event, "../scenes/Forgotpassword.fxml");
+    }
 
     public void press_btn_login (ActionEvent event) throws Exception {
         System.out.print("trying to log in");

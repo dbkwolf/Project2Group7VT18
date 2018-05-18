@@ -34,7 +34,7 @@
                </image>
             </ImageView>
             <JFXButton fx:id="btn_login" buttonType="RAISED" layoutX="65.0" layoutY="217.0" onAction="#press_btn_login" prefHeight="25.0" prefWidth="159.0" style="-fx-background-radius: 100; -fx-background-color: #000080; -fx-opacity: 1;" text="Login" textFill="#fffafa" />
-            <JFXButton fx:id="btn_forgotPswd" buttonType="RAISED" layoutX="91.0" layoutY="252.0" prefHeight="25.0" prefWidth="107.0" style="-fx-background-radius: 100;" text="Forgot password?">
+            <JFXButton fx:id="btn_forgotPswd" buttonType="RAISED" layoutX="91.0" layoutY="252.0" onAction="#press_btn_forgotpswd" prefHeight="25.0" prefWidth="107.0" style="-fx-background-radius: 100;" text="Forgot password?">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font>
