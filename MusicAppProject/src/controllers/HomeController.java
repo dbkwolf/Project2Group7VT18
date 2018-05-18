@@ -2,7 +2,7 @@ package controllers;
 
 
 import com.jfoenix.controls.JFXButton;
-import javafx.application.Platform;
+import com.jfoenix.controls.JFXTextField;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
@@ -24,35 +24,37 @@ import java.util.Optional;
 import static controllers.LogInController.activeUser;
 
 
-public class HomeController extends MainController {
+public class HomeController extends MainController{
 
+    public  Label lbl_user;
     public Song selectedSong;
-    public Playlist selectedPlaylist;
+    public static Playlist selectedPlaylist;
+
     public Media track;
     public MediaPlayer player;
 
-    public JFXButton btn_profile_settings;
     public JFXButton btn_play;
     public JFXButton btn_pause;
     public Label lbl_currentTrack;
     public TableView<Playlist> tbl_userPlaylists;
     public TableColumn<Playlist, String> col_userPlaylistTitle;
     public TableView<Song> tbl_playlistTracks;
-    public TableColumn<Song, String> col_title;
-    public TableColumn<Song, String> col_artist;
-    public TableColumn<Song, String> col_album;
+    public TableColumn<Song,String> col_title;
+    public TableColumn<Song,String> col_artist;
+    public TableColumn<Song,String> col_album;
+    public JFXTextField txt_search;
 
 
-    private ObservableList<Song> data;
+    private  ObservableList<Song> data;
 
-    public TableView<Song> tbl_searchResults;
-    public Label lbl_user;
-    public TableColumn<Song, String> col_searchTitle = new TableColumn<>("First Name");
-    public TableColumn<Song, String> col_searchArtist;
-    public TableColumn<Song, String> col_searchAlbum;
+    public  TableView<Song> tbl_searchResults;
+
+    public TableColumn<Song,String> col_searchTitle= new TableColumn<>("First Name");
+    public TableColumn<Song,String> col_searchArtist;
+    public TableColumn<Song,String> col_searchAlbum;
 
     @FXML
-    void initialize() throws SQLException, ClassNotFoundException {
+    void initialize() throws SQLException, ClassNotFoundException{
 
         String fullName = activeUser.getFirstName() + " " + activeUser.getLastName();
 
@@ -68,28 +70,24 @@ public class HomeController extends MainController {
 
     }
 
-    public void click_checkid(javafx.event.ActionEvent event) throws Exception {
-        Song selectedSong = tbl_searchResults.getSelectionModel().getSelectedItem();
-        System.out.println(selectedSong.getSongLocation());
-        //playTrack(selectedSong);
-    }
 
-    public void press_btn_search(javafx.event.ActionEvent event) throws SQLException, ClassNotFoundException {
+    public void press_btn_search(javafx.event.ActionEvent event)throws SQLException, ClassNotFoundException{
 
-        ObservableList<Song> songsAvailable = SongDAO.buildSongData();
+        ObservableList<Song> songsAvailable = SongDAO.searchSong(txt_search.getText());
         col_searchTitle.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
         col_searchArtist.setCellValueFactory(cellData -> cellData.getValue().artistProperty());
         col_searchAlbum.setCellValueFactory(cellData -> cellData.getValue().albumProperty());
         tbl_searchResults.setItems(songsAvailable);
 
 
+
     }
 
 
-    public void press_btn_play(javafx.event.ActionEvent event) throws Exception {
+    public void press_btn_play(javafx.event.ActionEvent event)throws Exception{
         btn_play.setVisible(false);
         btn_pause.setVisible(true);
-        try {
+        try{
             selectedSong = tbl_searchResults.getSelectionModel().getSelectedItem();
             String selectedSongInfo = selectedSong.getSongTitle() + " - " + selectedSong.getSongArtist() + " - " + selectedSong.getAlbum();
             lbl_currentTrack.setText(selectedSongInfo);
@@ -97,40 +95,50 @@ public class HomeController extends MainController {
             track = new Media(selectedSong.getSongLocation());
             player = new MediaPlayer(track);
             player.play();
-        } catch (Exception e) {
+        }
+        catch (Exception e){
             System.out.println("no media found");
         }
 
     }
 
-    public void press_btn_pause(javafx.event.ActionEvent event) throws Exception {
+    public void press_btn_pause(javafx.event.ActionEvent event)throws Exception{
 
         btn_pause.setVisible(false);
         btn_play.setVisible(true);
-        try {
+        try{
             player.pause();
-        } catch (Exception e) {
+        }
+        catch(Exception e){
             e.printStackTrace();
             System.out.println("no media was playing");
         }
     }
 
-    public void press_btn_newPlaylist(javafx.event.ActionEvent event) throws Exception {
+    public void press_btn_newPlaylist (javafx.event.ActionEvent event)throws Exception {
+
 
         String plTitle = namePlaylistPrompt();
 
-        String strActiveUserId = Integer.toString(activeUser.getUserId());
-        System.out.println(plTitle);
-        PlaylistDAO.insertPlaylist(plTitle, strActiveUserId);
+        if (plTitle.equals("empty")) {
 
-        update_tbl_userPlaylists();
+
+
+        }else{
+
+            String strActiveUserId = Integer.toString(activeUser.getUserId());
+            System.out.println(plTitle);
+            PlaylistDAO.insertPlaylist(plTitle, strActiveUserId);
+
+            update_tbl_userPlaylists();
+         }
 
     }
 
-    public String namePlaylistPrompt() {
-        String playlistName = "nothing to see";
+    public String namePlaylistPrompt(){
+        String playlistName = "empty";
 
-        TextInputDialog dialog = new TextInputDialog(activeUser.getFirstName() + "Playlist1"); // no apostrophes since it fs up SQL
+        TextInputDialog dialog = new TextInputDialog(activeUser.getFirstName()+"Playlist1"); // no apostrophes since it fs up SQL
         dialog.setTitle("Create Playlist");
         dialog.setHeaderText("");
         dialog.setContentText("Name:");
@@ -144,8 +152,7 @@ public class HomeController extends MainController {
         return playlistName;
     }
 
-
-    public void update_tbl_userPlaylists() throws SQLException, ClassNotFoundException {
+    public void update_tbl_userPlaylists() throws SQLException, ClassNotFoundException{
 
         String strActiveUserId = Integer.toString(activeUser.getUserId());
         ObservableList<Playlist> userPlaylists = PlaylistDAO.buildPlaylistData(strActiveUserId);
@@ -154,7 +161,7 @@ public class HomeController extends MainController {
 
     }
 
-    public void update_tbl_playlistTracks() throws SQLException, ClassNotFoundException {
+    public void update_tbl_playlistTracks() throws SQLException, ClassNotFoundException{
 
         selectedPlaylist = tbl_userPlaylists.getSelectionModel().getSelectedItem();
 
@@ -166,10 +173,25 @@ public class HomeController extends MainController {
         tbl_playlistTracks.setItems(playlistSongs);
 
 
+
     }
 
-    public void press_btn_addSong() throws Exception {
 
+    public void press_btn_addSong() throws Exception{
+
+        selectedPlaylist = tbl_userPlaylists.getSelectionModel().getSelectedItem();
+        selectedSong = tbl_searchResults.getSelectionModel().getSelectedItem();
+
+
+        PlaylistDAO.insertSonginPlaylist(Integer.toString(selectedSong.getSongId()),Integer.toString(selectedPlaylist.getPlaylistId()));
+
+        update_tbl_playlistTracks();
+
+
+    }
+
+    public void test_delete(){
+        System.out.println("this gets deleted");
     }
 
     public void press_btn_profile_settings(javafx.event.ActionEvent event) throws Exception {
@@ -225,4 +247,5 @@ public class HomeController extends MainController {
 
 
     }
+
 }

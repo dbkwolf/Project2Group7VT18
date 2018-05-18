@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXSlider?>
 <?import com.jfoenix.controls.JFXTextField?>
@@ -13,7 +20,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane style="-fx-background-color: #1f2835;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+<BorderPane fx:id="bpn_root" style="-fx-background-color: #1f2835;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
    <top>
       <AnchorPane prefHeight="186.0" prefWidth="1200.0" style="-fx-background-color: #00060c;" BorderPane.alignment="CENTER">
          <children>
@@ -31,7 +38,6 @@
             <JFXButton fx:id="btn_shuffle" layoutX="561.0" layoutY="135.0" text="SHUFFLE" textFill="WHITE" />
             <Label fx:id="lbl_currentTrack" layoutX="436.0" layoutY="36.0" prefHeight="21.0" prefWidth="330.0" text="current title - current songArtist - current album" />
             <JFXButton fx:id="btn_search" layoutX="1026.0" layoutY="50.0" onAction="#press_btn_search" style="-fx-background-color: f0f0f0;" text="test search" textFill="#862828" />
-            <JFXButton fx:id="btn_checkId" layoutX="834.0" layoutY="76.0" onAction="#click_checkid" text="CheckId" />
             <JFXButton fx:id="btn_pause" layoutX="574.0" layoutY="65.0" onAction="#press_btn_pause" text="PAUSE" textFill="WHITE" visible="false" />
             <Label layoutX="1016.0" layoutY="140.0" text="no results found " textFill="#8a8888" />
             <JFXButton fx:id="btn_profile_settings" layoutX="67.0" layoutY="38.0" onAction="#press_btn_profile_settings" text="Settings" textFill="#f8f6f6">
@@ -43,7 +49,7 @@
       </AnchorPane>
    </top>
    <right>
-      <TableView fx:id="tbl_searchResults" prefHeight="614.0" prefWidth="325.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER">
+      <TableView fx:id="tbl_searchResults" prefHeight="614.0" prefWidth="325.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="col_searchTitle" prefWidth="139.0" text="Title" />
           <TableColumn fx:id="col_searchArtist" prefWidth="91.0" text="Artist" />
@@ -55,7 +61,7 @@
       </TableView>
    </right>
    <center>
-      <TableView fx:id="tbl_playlistTracks" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #091626;" BorderPane.alignment="CENTER">
+      <TableView fx:id="tbl_playlistTracks" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #091626;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn minWidth="0.0" prefWidth="36.0" />
           <TableColumn fx:id="col_title" prefWidth="245.0" text="Title" />
@@ -68,7 +74,7 @@
       </TableView>
    </center>
    <left>
-      <TableView fx:id="tbl_userPlaylists" onMouseClicked="#update_tbl_playlistTracks" prefHeight="614.0" prefWidth="220.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER">
+      <TableView fx:id="tbl_userPlaylists" onMouseClicked="#update_tbl_playlistTracks" prefHeight="614.0" prefWidth="220.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="col_userPlaylistTitle" prefWidth="210.0" text="Playlists" />
         </columns>
@@ -83,7 +89,7 @@
    <bottom>
       <AnchorPane prefHeight="75.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton fx:id="btn_addSong" layoutX="1072.0" layoutY="22.0" style="-fx-background-color: #06111e;" text="add to Playlist" textFill="#c3c0c0" />
+            <JFXButton fx:id="btn_addSong" layoutX="1072.0" layoutY="22.0" onAction="#press_btn_addSong" style="-fx-background-color: #06111e;" text="add to Playlist" textFill="#c3c0c0" />
             <JFXButton fx:id="btn_newPlaylist" layoutX="104.0" layoutY="22.0" onAction="#press_btn_newPlaylist" style="-fx-background-color: #06111e;" text="New Playlist+" textFill="#a19e9e" />
          </children>
       </AnchorPane>
