@@ -11,6 +11,7 @@ import com.google.api.services.youtube.model.Thumbnail;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import model.SongLink;
@@ -23,7 +24,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 
-public class YouTubeSearchController {
+public class YouTubeSearchController extends MainController{
 
 
     public JFXTextField txt_search;
@@ -39,7 +40,7 @@ public class YouTubeSearchController {
 
         Properties properties = new Properties();
         try {
-            InputStream in = Search.class.getResourceAsStream("/main/resources/" + PROPERTIES_FILENAME);
+            InputStream in = Search.class.getResourceAsStream("/util/" + PROPERTIES_FILENAME);
             properties.load(in);
 
         } catch (IOException e) {
@@ -153,6 +154,10 @@ public class YouTubeSearchController {
         selectedSongLink = tbl_results.getSelectionModel().getSelectedItem();
         System.out.println(selectedSongLink.getUrl());
 
+    }
+
+    public void press_btn_back(ActionEvent event) throws Exception{
+        change_Scene_to(event, "../scenes/home.fxml");
     }
 
 

@@ -3,6 +3,7 @@ package controllers;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
@@ -254,6 +255,10 @@ public class HomeController extends MainController{
 
         System.out.println(HttpGet.getDownload(txt_test.getText()));
 
+    }
+
+    public void press_btn_ytSearch(ActionEvent event) throws Exception {
+        change_Scene_to(event,"../scenes/youtube-search.fxml");
     }
 
 }

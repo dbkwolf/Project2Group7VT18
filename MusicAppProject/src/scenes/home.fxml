@@ -40,7 +40,7 @@
             <JFXButton fx:id="btn_search" layoutX="1026.0" layoutY="50.0" onAction="#press_btn_search" style="-fx-background-color: f0f0f0;" text="test search" textFill="#862828" />
             <JFXButton fx:id="btn_pause" layoutX="575.0" layoutY="93.0" onAction="#press_btn_pause" text="PAUSE" textFill="WHITE" visible="false" />
             <Label layoutX="1016.0" layoutY="140.0" text="no results found " textFill="#8a8888" />
-            <JFXButton fx:id="btn_profile_settings" layoutX="67.0" layoutY="38.0" onAction="#press_btn_profile_settings" text="Settings" textFill="#f8f6f6">
+            <JFXButton fx:id="btn_profile_settings" layoutX="102.0" layoutY="38.0" onAction="#press_btn_profile_settings" text="Settings" textFill="#f8f6f6">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -91,8 +91,13 @@
          <children>
             <JFXButton fx:id="btn_addSong" layoutX="1072.0" layoutY="22.0" onAction="#press_btn_addSong" style="-fx-background-color: #06111e;" text="add to Playlist" textFill="#c3c0c0" />
             <JFXButton fx:id="btn_newPlaylist" layoutX="104.0" layoutY="22.0" onAction="#press_btn_newPlaylist" style="-fx-background-color: #06111e;" text="New Playlist+" textFill="#a19e9e" />
-            <JFXButton fx:id="btn_testHttpGet" layoutX="433.0" layoutY="25.0" style="-fx-background-color: #000000;"  onAction="#testHttpGet" text="Test HttpGet" textFill="#a40b0b" />
+            <JFXButton fx:id="btn_testHttpGet" layoutX="433.0" layoutY="25.0" onAction="#testHttpGet" style="-fx-background-color: #000000;" text="Test HttpGet" textFill="#a40b0b" />
             <JFXTextField fx:id="txt_test" layoutX="549.0" layoutY="22.0" promptText="URL here" />
+            <JFXButton fx:id="btn_ytSearch" layoutX="791.0" layoutY="22.0" style="-fx-background-color: #a11111;" onAction="#press_btn_ytSearch" text="Go to YT Search" textFill="#dadada">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
          </children>
       </AnchorPane>
    </bottom>
