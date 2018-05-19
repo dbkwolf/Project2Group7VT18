@@ -24,7 +24,7 @@
    <top>
       <AnchorPane prefHeight="186.0" prefWidth="1200.0" style="-fx-background-color: #00060c;" BorderPane.alignment="CENTER">
          <children>
-            <JFXSlider layoutX="433.0" layoutY="108.0" prefHeight="18.0" prefWidth="334.0" />
+            <JFXSlider layoutX="433.0" layoutY="66.0" prefHeight="18.0" prefWidth="334.0" />
             <JFXTextField fx:id="txt_search" layoutX="980.0" layoutY="99.0" promptText="Search" />
             <ImageView fx:id="img_user" fitHeight="81.0" fitWidth="79.0" layoutX="27.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -32,13 +32,13 @@
                </image>
             </ImageView>
             <Label fx:id="lbl_user" layoutX="133.0" layoutY="70.0" text="" textFill="#dadada" />
-            <JFXButton fx:id="btn_play" layoutX="573.0" layoutY="65.0" onAction="#press_btn_play" text="PLAY" textFill="WHITE" />
-            <JFXButton fx:id="btn_previous" layoutX="464.0" layoutY="65.0" text="PREVIOUS" textFill="WHITE" />
-            <JFXButton fx:id="btn_next" layoutX="663.0" layoutY="65.0" text="NEXT" textFill="WHITE" />
-            <JFXButton fx:id="btn_shuffle" layoutX="561.0" layoutY="135.0" text="SHUFFLE" textFill="WHITE" />
-            <Label fx:id="lbl_currentTrack" layoutX="436.0" layoutY="36.0" prefHeight="21.0" prefWidth="330.0" text="current title - current songArtist - current album" />
+            <JFXButton fx:id="btn_play" layoutX="579.0" layoutY="93.0" onAction="#press_btn_play" text="PLAY" textFill="WHITE" />
+            <JFXButton fx:id="btn_previous" layoutX="464.0" layoutY="93.0" text="PREVIOUS" textFill="WHITE" />
+            <JFXButton fx:id="btn_next" layoutX="677.0" layoutY="93.0" text="NEXT" textFill="WHITE" />
+            <JFXButton fx:id="btn_shuffle" layoutX="791.0" layoutY="63.0" text="SHUFFLE" textFill="WHITE" />
+            <Label fx:id="lbl_currentTrack" alignment="CENTER" contentDisplay="CENTER" layoutX="430.0" layoutY="40.0" prefHeight="21.0" prefWidth="322.0" text="current title - current songArtist - current album" textAlignment="CENTER" textFill="#b1aecf" />
             <JFXButton fx:id="btn_search" layoutX="1026.0" layoutY="50.0" onAction="#press_btn_search" style="-fx-background-color: f0f0f0;" text="test search" textFill="#862828" />
-            <JFXButton fx:id="btn_pause" layoutX="574.0" layoutY="65.0" onAction="#press_btn_pause" text="PAUSE" textFill="WHITE" visible="false" />
+            <JFXButton fx:id="btn_pause" layoutX="575.0" layoutY="93.0" onAction="#press_btn_pause" text="PAUSE" textFill="WHITE" visible="false" />
             <Label layoutX="1016.0" layoutY="140.0" text="no results found " textFill="#8a8888" />
             <JFXButton fx:id="btn_profile_settings" layoutX="67.0" layoutY="38.0" onAction="#press_btn_profile_settings" text="Settings" textFill="#f8f6f6">
                <font>
@@ -91,6 +91,8 @@
          <children>
             <JFXButton fx:id="btn_addSong" layoutX="1072.0" layoutY="22.0" onAction="#press_btn_addSong" style="-fx-background-color: #06111e;" text="add to Playlist" textFill="#c3c0c0" />
             <JFXButton fx:id="btn_newPlaylist" layoutX="104.0" layoutY="22.0" onAction="#press_btn_newPlaylist" style="-fx-background-color: #06111e;" text="New Playlist+" textFill="#a19e9e" />
+            <JFXButton fx:id="btn_testHttpGet" layoutX="433.0" layoutY="25.0" style="-fx-background-color: #000000;"  onAction="#testHttpGet" text="Test HttpGet" textFill="#a40b0b" />
+            <JFXTextField fx:id="txt_test" layoutX="549.0" layoutY="22.0" promptText="URL here" />
          </children>
       </AnchorPane>
    </bottom>
