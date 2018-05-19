@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/YouTubeSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/YouTubeSearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/youtube-search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/youtube-search.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +33,6 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="MusicAppDB@Gearhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MusicAppDB@Gearhost" type="feb32156:DbDataSourceImpl" />
-        <item name="g7musicappdb: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -93,20 +83,20 @@
       <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="263" column="1" lean-forward="true" selection-start-line="263" selection-start-column="1" selection-end-line="263" selection-end-column="1" />
+            <state relative-caret-position="4063">
+              <caret line="263" column="1" selection-start-line="263" selection-start-column="1" selection-end-line="263" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="youtube-search.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/youtube-search.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="561">
+              <caret line="33" column="130" selection-start-line="33" selection-start-column="130" selection-end-line="33" selection-end-column="130" />
             </state>
           </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file leaf-file-name="Song.java" pinned="false" current-in-tab="false">
@@ -120,27 +110,27 @@
       </file>
       <file leaf-file-name="home.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/home.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="100" column="20" lean-forward="true" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+            <state relative-caret-position="1700">
+              <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
             </state>
           </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file leaf-file-name="YouTubeSearchController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/YouTubeSearchController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
+            <state relative-caret-position="799">
+              <caret line="69" column="47" lean-forward="true" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="signup.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/signup.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor" />
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file leaf-file-name="SignUpController.java" pinned="false" current-in-tab="false">
@@ -164,8 +154,8 @@
       <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/LogInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="340">
+              <caret line="34" column="5" selection-start-line="32" selection-start-column="3" selection-end-line="34" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,7 +166,7 @@
       <file leaf-file-name="SongDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/SongDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
+            <state relative-caret-position="748">
               <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="58" />
             </state>
           </provider>
@@ -216,7 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/signup.fxml" />
         <option value="$PROJECT_DIR$/src/sample/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/sample/login.fxml" />
         <option value="$PROJECT_DIR$/src/sample/SignUpController.java" />
@@ -266,6 +255,7 @@
         <option value="$PROJECT_DIR$/src/images/tbl-stylesheet.css" />
         <option value="$PROJECT_DIR$/src/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/scenes/home.fxml" />
+        <option value="$PROJECT_DIR$/src/scenes/youtube-search.fxml" />
         <option value="$PROJECT_DIR$/src/controllers/YouTubeSearchController.java" />
       </list>
     </option>
@@ -281,8 +271,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1101" />
-    <option name="width" value="819" />
+    <option name="x" value="1310" />
+    <option name="width" value="610" />
     <option name="height" value="1160" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -308,7 +298,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -364,6 +353,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,7 +374,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -532,6 +522,7 @@
       <workItem from="1526616197567" duration="451000" />
       <workItem from="1526617645125" duration="444000" />
       <workItem from="1526677231058" duration="1443000" />
+      <workItem from="1526763837963" duration="216000" />
     </task>
     <task id="LOCAL-00001" summary=" JFoenix added">
       <created>1525085802096</created>
@@ -621,7 +612,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123110000" />
+    <option name="totallyTimeSpent" value="123740000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -634,11 +625,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32968128" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286638" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
@@ -646,48 +635,27 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32868525" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4978678" visible="true" weight="0.21483622" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4978678" weight="0.21538462" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4978678" weight="0.32868525" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49902153" visible="true" weight="0.15458423" />
-      <window_info anchor="right" id="Database" order="5" weight="0.253116" />
-      <window_info id="Structure" order="1" sideWeight="0.50097847" side_tool="true" weight="0.2780441" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16791044" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.15245202" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32947975" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021322" side_tool="true" weight="0.5597609" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16633132" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4978678" weight="0.32868525" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="right" x="91" y="91" width="1738" height="850" id="Documentation" order="9" type="FLOATING" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.1529175" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32868525" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32968128" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286638" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3280543" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32968128" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4978678" visible="true" weight="0.21538462" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286638" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info id="Designer" order="3" />
+      <window_info anchor="right" x="91" y="91" width="1738" height="850" id="Documentation" order="9" type="FLOATING" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
@@ -696,12 +664,12 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4978678" visible="true" weight="0.9153499" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24758324" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32968128" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32868525" />
       <window_info id="Image Layers" order="6" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="4" />
@@ -712,7 +680,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4978678" weight="0.32868525" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32868525" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021322" side_tool="true" weight="0.5597609" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3280543" />
       <window_info anchor="bottom" id="Message" order="1" />
@@ -864,9 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -888,9 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -940,7 +902,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/SongDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
+        <state relative-caret-position="748">
           <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="58" />
         </state>
       </provider>
@@ -961,34 +923,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/LogInController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="34" column="5" selection-start-line="32" selection-start-column="3" selection-end-line="34" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="263" column="1" lean-forward="true" selection-start-line="263" selection-start-column="1" selection-end-line="263" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/youtube-search.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/home.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="100" column="20" lean-forward="true" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+        <state relative-caret-position="1700">
+          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1010,10 +957,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4063">
+          <caret line="263" column="1" selection-start-line="263" selection-start-column="1" selection-end-line="263" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/youtube-search.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="130" selection-start-line="33" selection-start-column="130" selection-end-line="33" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/YouTubeSearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
+        <state relative-caret-position="799">
+          <caret line="69" column="47" lean-forward="true" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1034,7 +996,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
