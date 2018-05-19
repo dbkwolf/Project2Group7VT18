@@ -17,6 +17,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import util.HttpGet;
 
 import java.sql.SQLException;
 import java.util.Optional;
@@ -43,6 +44,7 @@ public class HomeController extends MainController{
     public TableColumn<Song,String> col_artist;
     public TableColumn<Song,String> col_album;
     public JFXTextField txt_search;
+    public JFXTextField txt_test;
 
 
     private  ObservableList<Song> data;
@@ -245,6 +247,12 @@ public class HomeController extends MainController{
         dialog.showAndWait();
 
 
+
+    }
+
+    public void testHttpGet() throws Exception{
+
+        System.out.println(HttpGet.getDownload(txt_test.getText()));
 
     }
 

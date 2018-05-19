@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="MusicAppDB@Gearhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.8">
     <root id="1"/>
     <schema id="2" parent="1" name="g7musicappdb">
       <Current>1</Current>
@@ -17,18 +17,18 @@
     <table id="11" parent="2" name="users"/>
     <column id="12" parent="4" name="album_id">
       <Position>1</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="13" parent="4" name="album_title">
       <Position>2</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="14" parent="4" name="artist_id">
       <Position>3</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
     </column>
     <index id="15" parent="4" name="albums_album_id_uindex">
       <ColNames>album_id</ColNames>
@@ -54,13 +54,13 @@
     </foreign-key>
     <column id="20" parent="5" name="artist_id">
       <Position>1</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="21" parent="5" name="artist_name">
       <Position>2</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
     </column>
     <index id="22" parent="5" name="artists_artist_id_uindex">
       <ColNames>artist_id</ColNames>
@@ -77,13 +77,13 @@
     </key>
     <column id="25" parent="6" name="authorization_code_id">
       <Position>1</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="26" parent="6" name="code_sequence">
       <Position>2</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="27" parent="6" name="authorization_codes_authorization_code_id_uindex">
@@ -109,13 +109,13 @@
     </key>
     <column id="32" parent="7" name="genre_id">
       <Position>1</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="33" parent="7" name="gnr_name">
       <Position>2</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="34" parent="7" name="genres_genre_id_uindex">
@@ -133,18 +133,18 @@
     </key>
     <column id="37" parent="8" name="playlist_id">
       <Position>1</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="38" parent="8" name="pl_title">
       <Position>2</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="39" parent="8" name="owner_id">
       <Position>3</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="40" parent="8" name="playlists_playlist_id_uindex">
@@ -173,17 +173,17 @@
     </foreign-key>
     <column id="45" parent="9" name="ref_id">
       <Position>1</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="46" parent="9" name="song_id">
       <Position>2</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
     </column>
     <column id="47" parent="9" name="playlist_id">
       <Position>3</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
     </column>
     <index id="48" parent="9" name="song_playlist_ref_playlists_playlist_id_fk">
       <ColNames>playlist_id</ColNames>
@@ -218,28 +218,28 @@
     </foreign-key>
     <column id="55" parent="10" name="song_id">
       <Position>1</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="56" parent="10" name="song_title">
       <Position>2</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="57" parent="10" name="artist_id">
       <Position>3</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="58" parent="10" name="album_id">
       <Position>4</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="59" parent="10" name="file_location">
       <Position>5</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
     </column>
     <index id="60" parent="10" name="songs_song_id_uindex">
       <ColNames>song_id</ColNames>
@@ -274,38 +274,38 @@
     </foreign-key>
     <column id="67" parent="11" name="user_id">
       <Position>1</Position>
-      <DataType>int(10)|0</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="68" parent="11" name="username">
       <Position>2</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="69" parent="11" name="first_name">
       <Position>3</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="70" parent="11" name="last_name">
       <Position>4</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="71" parent="11" name="password">
       <Position>5</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="72" parent="11" name="email">
       <Position>6</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="73" parent="11" name="admin_level">
       <Position>7</Position>
-      <DataType>tinyint(1)|0</DataType>
+      <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
     <index id="74" parent="11" name="User_email_uindex">

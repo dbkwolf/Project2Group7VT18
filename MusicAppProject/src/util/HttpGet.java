@@ -17,7 +17,7 @@ public class HttpGet {
      * @return url location from server (this is the link to be stored in the database)
      * @throws Exception throws an exception if an error occurs
      */
-    public String getDownload(String URL) throws Exception {
+    public static String getDownload(String URL) throws Exception {
 
         String url = "http://project2.duckdns.org:1234/index.php?link=" + URL;
 
@@ -44,7 +44,7 @@ public class HttpGet {
         return parseJSON(response.toString());
     }
 
-    private String parseJSON(String jsonString){
+    private  static String parseJSON(String jsonString){
 
         JSONObject obj = new JSONObject(jsonString);
         String url = obj.getString("file");

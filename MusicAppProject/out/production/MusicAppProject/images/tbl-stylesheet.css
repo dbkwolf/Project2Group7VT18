@@ -24,7 +24,7 @@
 }
 
 .table-view .column-header .label {
-    -fx-font-size: 13pt;
+    -fx-font-size: 10pt;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
     -fx-alignment: center-left;
@@ -34,3 +34,4 @@
 .table-view:focused .table-row-cell:filled:focused:selected {
     -fx-background-color: -fx-focus-color;
 }
+
