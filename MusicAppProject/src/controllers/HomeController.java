@@ -53,12 +53,10 @@ public class HomeController extends MainController{
     public TableColumn<Song,String> col_searchTitle= new TableColumn<>("First Name");
     public TableColumn<Song,String> col_searchArtist;
     public TableColumn<Song,String> col_searchAlbum;
+    public Label lbl_playlistName;
 
     ContextMenu cm = new ContextMenu();
     MenuItem mi_delete = new MenuItem("Delete");
-    MenuItem mi2 = new MenuItem("Menu 2");
-
-    String test = "not changed";
 
     @FXML
     void initialize() throws SQLException, ClassNotFoundException{
@@ -68,12 +66,6 @@ public class HomeController extends MainController{
         lbl_user.setText(fullName);
         lbl_currentTrack.setText("");
         update_tbl_userPlaylists();
-
-       /* tbl_searchResults.setOnMouseClicked((MouseEvent event) -> {
-            if(event.getButton().equals(MouseButton.PRIMARY)){
-                System.out.println(tbl_searchResults.getSelectionModel().getSelectedItem().getSongId());
-            }
-        });*/
 
 
 
@@ -224,6 +216,7 @@ public class HomeController extends MainController{
 
 
         selectedPlaylist = tbl_userPlaylists.getSelectionModel().getSelectedItem();
+        lbl_playlistName.setText(selectedPlaylist.getPlTitle());
 
         ObservableList<Song> playlistSongs = SongDAO.buildSongDataFromPlaylist(selectedPlaylist.getPlaylistId());
 

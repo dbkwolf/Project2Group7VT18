@@ -9,15 +9,16 @@ import java.sql.SQLException;
 
 public class PlaylistDAO {
 
-    public static void insertPlaylist (String plTitle, String owner) throws SQLException, ClassNotFoundException {
+    public static void insertPlaylist(String plTitle, String owner) throws SQLException, ClassNotFoundException {
 
-    //declare insert op
-        String insertQuery ="INSERT INTO g7musicappdb.playlists (playlist_id, pl_title, owner_id) VALUES ('0','" + plTitle+ "', '"+owner+"'); ";
+        //declare insert op
+        String insertQuery = "INSERT INTO g7musicappdb.playlists (playlist_id, pl_title, owner_id) VALUES ('0','" + plTitle + "', '" + owner + "'); ";
 
         //Execute INSERT operation
         try {
             DatabaseUtility.runQuery(insertQuery);
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.print("Error occurred while DELETE Operation: " + e);
             throw e;
         }
@@ -30,8 +31,8 @@ public class PlaylistDAO {
         try {
             plData = FXCollections.observableArrayList();
 
-            String query = "SELECT g7musicappdb.playlists.playlist_id, g7musicappdb.playlists.pl_title, g7musicappdb.playlists.owner_id"+
-            " FROM (g7musicappdb.playlists INNER JOIN g7musicappdb.users ON g7musicappdb.playlists.owner_id = g7musicappdb.users.user_id)" +
+            String query = "SELECT g7musicappdb.playlists.playlist_id, g7musicappdb.playlists.pl_title, g7musicappdb.playlists.owner_id" +
+                    " FROM (g7musicappdb.playlists INNER JOIN g7musicappdb.users ON g7musicappdb.playlists.owner_id = g7musicappdb.users.user_id)" +
                     " WHERE g7musicappdb.playlists.owner_id like '" + owner + "';";
             ResultSet rs = DatabaseUtility.dbExecuteQuery(query);
 
@@ -51,34 +52,35 @@ public class PlaylistDAO {
         return plData;
     }
 
-    public static void insertSonginPlaylist (String songId, String playlistId) throws SQLException, ClassNotFoundException {
+    public static void insertSonginPlaylist(String songId, String playlistId) throws SQLException, ClassNotFoundException {
         //Declare a INSERT statement
 
 
-        String insertQuery ="INSERT INTO g7musicappdb.song_playlist_references (ref_id, song_id, playlist_id) VALUES ('0','" + songId + "', '"+playlistId+"'); ";
+        String insertQuery = "INSERT INTO g7musicappdb.song_playlist_references (ref_id, song_id, playlist_id) VALUES ('0','" + songId + "', '" + playlistId + "'); ";
 
         //Execute INSERT operation
         try {
             DatabaseUtility.runQuery(insertQuery);
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.print("Error occurred while INSERT Operation: " + e);
             throw e;
         }
     }
 
-    public static void deletePlaylist (String playlistId) throws SQLException, ClassNotFoundException {
+    public static void deletePlaylist(String playlistId) throws SQLException, ClassNotFoundException {
         //Declare a DELETE statement
-        String updateStmt = "DELETE FROM g7musicappdb.playlists WHERE playlist_id = "+ playlistId +";";
+        String updateStmt = "DELETE FROM g7musicappdb.playlists WHERE playlist_id = " + playlistId + ";";
 
         //Execute DELETE operation
         try {
             DatabaseUtility.dbExecuteUpdate(updateStmt);
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.print("Error occurred while DELETE Operation: " + e);
             throw e;
         }
     }
-
 
 
 }
