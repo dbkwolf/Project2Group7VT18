@@ -40,6 +40,7 @@ public class PlaylistDAO {
             while (rs.next()) {
 
                 Playlist crntPlaylist = new Playlist(rs.getInt("playlist_id"), rs.getString("pl_title"), rs.getInt("owner_id"));
+
                 plData.add(crntPlaylist);
 
             }

@@ -61,7 +61,9 @@ public class SongDAO {
             while (rs.next()) {
 
                 Song currentSong = new Song(rs.getInt("song_id"), rs.getString("song_title"), rs.getString("artist_name"), rs.getString("album_title"), rs.getString("file_location"));
+
                 songData.add(currentSong);
+
 
             }
 
@@ -73,6 +75,7 @@ public class SongDAO {
         return songData;
 
     }
+
 
 
 }

@@ -155,16 +155,11 @@ public class HomeController extends MainController{
 
     public void update_tbl_userPlaylists() throws SQLException, ClassNotFoundException{
 
-
-
-
-
         String strActiveUserId = Integer.toString(activeUser.getUserId());
         ObservableList<Playlist> userPlaylists = PlaylistDAO.buildPlaylistData(strActiveUserId);
+        addSongsToUserPlaylistsLocal(userPlaylists);
         col_userPlaylistTitle.setCellValueFactory(cellData -> cellData.getValue().plTitleProperty());
         tbl_userPlaylists.setItems(userPlaylists);
-
-
 
     }
 
@@ -189,7 +184,7 @@ public class HomeController extends MainController{
 
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
 
-                        alert.setContentText("Are you ok with this?");
+                        alert.setContentText("Are you sure you want to delete this playlist?");
 
                         Optional<ButtonType> result = alert.showAndWait();
                         if (result.get() == ButtonType.OK) {
@@ -218,12 +213,11 @@ public class HomeController extends MainController{
         selectedPlaylist = tbl_userPlaylists.getSelectionModel().getSelectedItem();
         lbl_playlistName.setText(selectedPlaylist.getPlTitle());
 
-        ObservableList<Song> playlistSongs = SongDAO.buildSongDataFromPlaylist(selectedPlaylist.getPlaylistId());
 
         col_title.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
         col_artist.setCellValueFactory(cellData -> cellData.getValue().artistProperty());
         col_album.setCellValueFactory(cellData -> cellData.getValue().albumProperty());
-        tbl_playlistTracks.setItems(playlistSongs);
+        tbl_playlistTracks.setItems(selectedPlaylist.getSongsInPlaylist());
 
 
     }
@@ -321,5 +315,28 @@ public class HomeController extends MainController{
     }
 
 
+    public void addSongsToUserPlaylistsLocal(ObservableList<Playlist> playlistList){
+
+
+        playlistList.forEach((p) -> {
+            try {
+                if(p!=null){
+                    p.setSongsInPlaylist(SongDAO.buildSongDataFromPlaylist(p.getPlaylistId()));}
+                else{
+                    System.out.println("no songs in " + p.getPlTitle());
+                }
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+            catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        });
+
+
+
+
+    }
 
 }

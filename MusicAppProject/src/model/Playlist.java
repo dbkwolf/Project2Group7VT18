@@ -2,11 +2,15 @@ package model;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.ObservableList;
+
+import java.util.ArrayList;
 
 public class Playlist {
     private SimpleIntegerProperty playlistId;
     private SimpleStringProperty plTitle;
     private SimpleIntegerProperty plOwner;
+    private ObservableList<Song> songsInPlaylist;
 
     public Playlist(int id, String title, int owner) {
         this.playlistId = new SimpleIntegerProperty(id);
@@ -49,5 +53,12 @@ public class Playlist {
     public void setPlOwner(int plOwner) {
         this.plOwner.set(plOwner);
     }
-}
 
+    public ObservableList<Song> getSongsInPlaylist() {
+        return songsInPlaylist;
+    }
+
+    public void setSongsInPlaylist(ObservableList<Song> songsInPlaylist) {
+        this.songsInPlaylist = songsInPlaylist;
+    }
+}
