@@ -7,9 +7,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="5.1" level="project" />
-    <orderEntry type="library" name="mysql:mysql-connector-mxj:5.0.12" level="project" />
-    <orderEntry type="library" name="jfoenix" level="project" />
-    <orderEntry type="library" name="json-20180130" level="project" />
+    <orderEntry type="library" exported="" name="5.1" level="project" />
+    <orderEntry type="library" exported="" name="mysql:mysql-connector-mxj:5.0.12" level="project" />
+    <orderEntry type="library" exported="" name="jfoenix" level="project" />
+    <orderEntry type="library" exported="" name="json-20180130" level="project" />
+    <orderEntry type="library" exported="" name="guava-jdk5-17.0" level="project" />
   </component>
 </module>
