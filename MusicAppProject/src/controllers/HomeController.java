@@ -179,7 +179,7 @@ public class HomeController extends MainController{
 
 
                 cm.getItems().add(mi_delete);
-                cm.getItems().add(mi2);
+
 
                 cm.show(tbl_userPlaylists, event.getScreenX(), event.getScreenY());
 
