@@ -55,13 +55,26 @@ public class PlaylistDAO {
         //Declare a INSERT statement
 
 
-        String insertQuery ="INSERT INTO g7musicappdb.song_playlist_references (ref_id, song_id, playlist_id) VALUES ('0','" + songId + "', '"+playlistId+"); ";
+        String insertQuery ="INSERT INTO g7musicappdb.song_playlist_references (ref_id, song_id, playlist_id) VALUES ('0','" + songId + "', '"+playlistId+"'); ";
 
         //Execute INSERT operation
         try {
             DatabaseUtility.runQuery(insertQuery);
         } catch (SQLException e) {
             System.out.print("Error occurred while INSERT Operation: " + e);
+            throw e;
+        }
+    }
+
+    public static void deletePlaylist (String playlistId) throws SQLException, ClassNotFoundException {
+        //Declare a DELETE statement
+        String updateStmt = "DELETE FROM g7musicappdb.playlists WHERE playlist_id = "+ playlistId +";";
+
+        //Execute DELETE operation
+        try {
+            DatabaseUtility.dbExecuteUpdate(updateStmt);
+        } catch (SQLException e) {
+            System.out.print("Error occurred while DELETE Operation: " + e);
             throw e;
         }
     }
