@@ -54,6 +54,7 @@ public class HomeController extends MainController{
     public TableColumn<Song,String> col_searchArtist;
     public TableColumn<Song,String> col_searchAlbum;
     public Label lbl_playlistName;
+    public JFXButton btn_manageDB;
 
     ContextMenu cm = new ContextMenu();
     MenuItem mi_delete = new MenuItem("Delete");
@@ -66,8 +67,8 @@ public class HomeController extends MainController{
         lbl_user.setText(fullName);
         lbl_currentTrack.setText("");
         update_tbl_userPlaylists();
-
-
+        cm.getItems().add(mi_delete);
+        adminVisibility(activeUser.isAdminLevel());
 
     }
 
@@ -116,6 +117,7 @@ public class HomeController extends MainController{
         }
     }
 
+
     public void press_btn_newPlaylist (javafx.event.ActionEvent event)throws Exception {
 
 
@@ -163,7 +165,7 @@ public class HomeController extends MainController{
 
     }
 
-    public void click_tbl_playlistTracks(MouseEvent event) throws SQLException, ClassNotFoundException{
+    public void click_tbl_userPlaylists(MouseEvent event) throws SQLException, ClassNotFoundException{
 
 
             if (event.getButton() == MouseButton.PRIMARY  && event.getClickCount() == 2) {
@@ -171,9 +173,6 @@ public class HomeController extends MainController{
                 update_tbl_playlistTracks();
 
             }else if(event.getButton() == MouseButton.SECONDARY) {
-
-
-                cm.getItems().add(mi_delete);
 
 
                 cm.show(tbl_userPlaylists, event.getScreenX(), event.getScreenY());
@@ -221,7 +220,6 @@ public class HomeController extends MainController{
 
 
     }
-
 
     public void press_btn_addSong() throws Exception{
 
@@ -314,7 +312,6 @@ public class HomeController extends MainController{
         change_Scene_to(event,"../scenes/youtube-search.fxml");
     }
 
-
     public void addSongsToUserPlaylistsLocal(ObservableList<Playlist> playlistList){
 
 
@@ -339,4 +336,13 @@ public class HomeController extends MainController{
 
     }
 
+    public void adminVisibility(boolean activeUserIsAdmin){
+        if(activeUserIsAdmin){
+            btn_manageDB.setVisible(true);
+        }
+    }
+
+    public void press_btn_manageDB (javafx.event.ActionEvent event)throws Exception{
+        change_Scene_to(event,"../scenes/manageDB.fxml");
+    }
 }

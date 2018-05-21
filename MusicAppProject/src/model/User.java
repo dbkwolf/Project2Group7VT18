@@ -1,14 +1,18 @@
 package model;
 
 
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 public class User {
-    private int userId;
-    private String username;
-    private String firstName;
-    private String lastName;
-    private String password;
-    private String email;
-    private boolean adminLevel;
+    private SimpleIntegerProperty userId;
+    private SimpleStringProperty username;
+    private SimpleStringProperty firstName;
+    private SimpleStringProperty lastName;
+    private SimpleStringProperty password;
+    private SimpleStringProperty email;
+    private SimpleBooleanProperty adminLevel;
 
 
 
@@ -16,15 +20,104 @@ public class User {
 
     }
 
-    public User(String username, String first, String last, String password, String email){
+    public User(int id, String username, String first, String last, String password, String email, boolean isadmin){
         super();
-        this.username = username;
-        this.firstName = first;
-        this.lastName= last;
-        this.password = password;
-        this.email= email;
+
+        this.userId = new SimpleIntegerProperty(id);
+        this.username = new SimpleStringProperty(username);
+        this.firstName = new SimpleStringProperty(first);
+        this.lastName= new SimpleStringProperty(last);
+        this.password = new SimpleStringProperty(password);
+        this.email= new SimpleStringProperty(email);
+        this.adminLevel = new SimpleBooleanProperty(isadmin);
     }
 
+
+
+    public String getUsername() {
+        return username.get();
+    }
+
+    public SimpleStringProperty usernameProperty() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username.set(username);
+    }
+
+    public String getFirstName() {
+        return firstName.get();
+    }
+
+    public SimpleStringProperty firstNameProperty() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName.set(firstName);
+    }
+
+    public String getLastName() {
+        return lastName.get();
+    }
+
+    public SimpleStringProperty lastNameProperty() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName.set(lastName);
+    }
+
+    public String getPassword() {
+        return password.get();
+    }
+
+    public SimpleStringProperty passwordProperty() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password.set(password);
+    }
+
+    public String getEmail() {
+        return email.get();
+    }
+
+    public SimpleStringProperty emailProperty() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email.set(email);
+    }
+
+    public boolean isAdminLevel() {
+        return adminLevel.get();
+    }
+
+    public SimpleBooleanProperty adminLevelProperty() {
+        return adminLevel;
+    }
+
+    public void setAdminLevel(boolean adminLevel) {
+        this.adminLevel.set(adminLevel);
+    }
+
+    public int getUserId() {
+        return userId.get();
+    }
+
+    public SimpleIntegerProperty userIdProperty() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId.set(userId);
+    }
+/*
     public String getFirstName() {
         return firstName;
     }
@@ -79,5 +172,5 @@ public class User {
 
     public void setAdminLevel(boolean adminLevel) {
         this.adminLevel = adminLevel;
-    }
+    }*/
 }

@@ -10,17 +10,17 @@ public class UserDAO {
     //*************************************
     //INSERT a user
     //*************************************
-    public static void insertUser (String username, String firstName, String lastName,String password,String email) throws SQLException, ClassNotFoundException {
-        //Declare a DELETE statement
+    public static void insertUser (String username, String firstName, String lastName,String password,String email, String adminLevel) throws SQLException, ClassNotFoundException {
+        //Declare a INSERT statement
 
 
-        String insertQuery ="INSERT INTO g7musicappdb.users (user_id, username, first_name, last_name, password, email) VALUES ('0','" + username+ "', '"+firstName+"', '"+lastName+"', '"+password+"','"+email+"'); ";
+        String insertQuery ="INSERT INTO g7musicappdb.users (user_id, username, first_name, last_name, password, email, admin_level) VALUES ('0','" + username+ "', '"+firstName+"', '"+lastName+"', '"+password+"','"+email+"','"+adminLevel+"'); ";
 
-        //Execute DELETE operation
+        //Execute INSERT operation
         try {
             DatabaseUtility.runQuery(insertQuery);
         } catch (SQLException e) {
-            System.out.print("Error occurred while DELETE Operation: " + e);
+            System.out.print("Error occurred while INSERT Operation: " + e);
             throw e;
         }
     }
@@ -35,7 +35,7 @@ public class UserDAO {
             User user = getUserFromResultSet(rsUser);
             return user;
         } catch (SQLException e) {
-            System.out.println("error while seraching user");
+            System.out.println("error while searching user");
             throw e;
         }
     }
@@ -43,17 +43,31 @@ public class UserDAO {
         public static User getUserFromResultSet(ResultSet rs) throws  SQLException{
             User user = null;
             if (rs.next()){
-                user = new User();
-                user.setUserId(rs.getInt("user_id"));
-                user.setFirstName(rs.getString("first_name"));
-                user.setLastName(rs.getString("last_name"));
-                user.setUsername(rs.getString("username"));
-                user.setEmail(rs.getString("email"));
-                user.setPassword(rs.getString("password"));
+                user = new User(rs.getInt("user_id"), rs.getString("username"),
+                        rs.getString("first_name"), rs.getString("last_name"),
+                        rs.getString("password"),rs.getString("email"), rs.getBoolean("admin_level"));
+
             }
             return user;
     }
 
+    public static String findAuCode(String input) throws SQLException, ClassNotFoundException {
+
+        String searchQuery = "SELECT * FROM g7musicappdb.authorization_codes WHERE code_sequence like '" + input +"';";
+        String auCode=null;
+        try {
+            ResultSet rsCode = DatabaseUtility.dbExecuteQuery(searchQuery);
+            if (rsCode.next()) {
+
+                auCode = rsCode.getString("code_sequence");
+
+            }
+            return auCode;
+        } catch (SQLException e) {
+            System.out.println("error while searching user");
+            throw e;
+        }
+    }
 
 }
 
