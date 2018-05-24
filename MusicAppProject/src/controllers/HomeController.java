@@ -5,10 +5,12 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.util.Pair;
 import model.Playlist;
@@ -32,7 +34,6 @@ import static controllers.LogInController.activeUser;
 public class HomeController extends MainController{
 
     public static Playlist selectedPlaylist;
-    public static boolean okToDelete;
     public  Label lbl_user;
     public Song selectedSong;
     public Media track;
@@ -50,14 +51,15 @@ public class HomeController extends MainController{
     public JFXTextField txt_test;
     public  TableView<Song> tbl_searchResults;
 
-    public TableColumn<Song,String> col_searchTitle= new TableColumn<>("First Name");
+    public TableColumn<Song,String> col_searchTitle;
     public TableColumn<Song,String> col_searchArtist;
     public TableColumn<Song,String> col_searchAlbum;
     public Label lbl_playlistName;
     public JFXButton btn_manageDB;
+    public AnchorPane apn_middleHomeAnchorpane;
 
-    ContextMenu cm = new ContextMenu();
-    MenuItem mi_delete = new MenuItem("Delete");
+    private ContextMenu cm = new ContextMenu();
+    private MenuItem mi_delete = new MenuItem("Delete");
 
     @FXML
     void initialize() throws SQLException, ClassNotFoundException{
@@ -161,6 +163,7 @@ public class HomeController extends MainController{
         ObservableList<Playlist> userPlaylists = PlaylistDAO.buildPlaylistData(strActiveUserId);
         addSongsToUserPlaylistsLocal(userPlaylists);
         col_userPlaylistTitle.setCellValueFactory(cellData -> cellData.getValue().plTitleProperty());
+
         tbl_userPlaylists.setItems(userPlaylists);
 
     }
@@ -270,6 +273,7 @@ public class HomeController extends MainController{
             grid.setHgap(10);
             grid.setVgap(10);
             grid.setPadding(new Insets(20, 150, 10, 10));
+            grid.setStyle("-fx-background-color: greenyellow;");
 
             TextField username = new TextField();
             username.setPromptText("Username");
@@ -342,7 +346,9 @@ public class HomeController extends MainController{
         }
     }
 
-    public void press_btn_manageDB (javafx.event.ActionEvent event)throws Exception{
-        change_Scene_to(event,"../scenes/manageDB.fxml");
+    public  void press_btn_manageDB (javafx.event.ActionEvent event)throws Exception{
+
+        change_Scene_to(event,"../scenes/admin.fxml");
+
     }
 }

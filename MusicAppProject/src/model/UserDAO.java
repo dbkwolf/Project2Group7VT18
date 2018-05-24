@@ -1,5 +1,7 @@
 package model;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import util.DatabaseUtility;
 
 import java.sql.ResultSet;
@@ -67,6 +69,34 @@ public class UserDAO {
             System.out.println("error while searching user");
             throw e;
         }
+    }
+
+    public static ObservableList<User> buildUserData(String query) throws SQLException {
+
+
+        ObservableList<User> userData;
+
+        try {
+            userData = FXCollections.observableArrayList();
+
+
+            ResultSet rsUser = DatabaseUtility.dbExecuteQuery(query);
+
+            while (rsUser.next()) {
+
+                User currentUser = new User(rsUser.getInt("user_id"), rsUser.getString("username"),
+                                     rsUser.getString("first_name"), rsUser.getString("last_name"),
+                                     rsUser.getString("password"), rsUser.getString("email"), rsUser.getBoolean("admin_level"));
+                System.out.println(currentUser.getUserId() + " " + currentUser.getFirstName());
+
+                userData.add(currentUser);
+            }
+
+        } catch (SQLException e) {
+            System.out.println("error while searching user");
+            throw e;
+        }
+        return userData;
     }
 
 }

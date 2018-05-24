@@ -7,29 +7,35 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class User {
     private SimpleIntegerProperty userId;
+    private SimpleStringProperty strUserId;
     private SimpleStringProperty username;
     private SimpleStringProperty firstName;
     private SimpleStringProperty lastName;
     private SimpleStringProperty password;
     private SimpleStringProperty email;
     private SimpleBooleanProperty adminLevel;
+    private SimpleStringProperty strAdminLevel;
 
 
 
-    public User(){
-
-    }
 
     public User(int id, String username, String first, String last, String password, String email, boolean isadmin){
         super();
 
         this.userId = new SimpleIntegerProperty(id);
+        this.strUserId = new SimpleStringProperty(Integer.toString(id));
         this.username = new SimpleStringProperty(username);
         this.firstName = new SimpleStringProperty(first);
         this.lastName= new SimpleStringProperty(last);
         this.password = new SimpleStringProperty(password);
         this.email= new SimpleStringProperty(email);
         this.adminLevel = new SimpleBooleanProperty(isadmin);
+
+        if (isadmin){
+            this.strAdminLevel = new SimpleStringProperty("admin");
+        }else{
+            this.strAdminLevel = new SimpleStringProperty("standard");
+        }
     }
 
 
@@ -116,6 +122,30 @@ public class User {
 
     public void setUserId(int userId) {
         this.userId.set(userId);
+    }
+
+    public String getStrAdminLevel() {
+        return strAdminLevel.get();
+    }
+
+    public SimpleStringProperty strAdminLevelProperty() {
+        return strAdminLevel;
+    }
+
+    public void setStrAdminLevel(String strAdminLevel) {
+        this.strAdminLevel.set(strAdminLevel);
+    }
+
+    public String getStrUserId() {
+        return strUserId.get();
+    }
+
+    public SimpleStringProperty strUserIdProperty() {
+        return strUserId;
+    }
+
+    public void setStrUserId(String strUserId) {
+        this.strUserId.set(strUserId);
     }
 /*
     public String getFirstName() {
