@@ -10,9 +10,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import model.Playlist;
@@ -22,6 +20,7 @@ import model.UserDAO;
 
 import javax.swing.*;
 import java.sql.SQLException;
+import java.util.Optional;
 
 import static controllers.LogInController.activeUser;
 
@@ -40,6 +39,8 @@ public class AdminController extends MainController{
     public TableColumn<User, String> col_last;
     public TableColumn<User, String> col_isAdmin;
     public Label lbl_inputError;
+    public JFXButton btn_deleteUser;
+    public JFXButton btn_grantPermissions;
     private String allUsersQuery = "SELECT * FROM g7musicappdb.users" ;
 
 
@@ -61,20 +62,13 @@ public class AdminController extends MainController{
 
 
         col_user_id.setCellValueFactory(cellData -> cellData.getValue().userIdProperty());
-        System.out.println("setting Cell factory col userid");
-
         col_username.setCellValueFactory(cellData ->cellData.getValue().usernameProperty());
-        System.out.println("setting Cell factory col username");
         col_first.setCellValueFactory(cellData ->cellData.getValue().firstNameProperty());
-        System.out.println("setting Cell factory col first");
         col_last.setCellValueFactory(cellData ->cellData.getValue().lastNameProperty());
-        System.out.println("setting Cell factory col last");
         col_email.setCellValueFactory(cellData ->cellData.getValue().emailProperty());
-        System.out.println("setting Cell factory col email");
         col_isAdmin.setCellValueFactory(cellData ->cellData.getValue().strAdminLevelProperty());
-        System.out.println("setting Cell factory col boolean");
 
-       tbl_users.setItems(userData);
+        tbl_users.setItems(userData);
 
 
 
@@ -98,7 +92,7 @@ public class AdminController extends MainController{
         if (!txt_searchEmail.getText().isEmpty()){
 
             String email = txt_searchEmail.getText();
-            searchQuery ="SELECT * FROM g7musicappdb.users WHERE users.user_email like '" + email +"'";
+            searchQuery ="SELECT * FROM g7musicappdb.users WHERE users.email like '" + email +"'";
 
         }else if (!txt_searchUserId.getText().isEmpty()){
 
@@ -156,12 +150,148 @@ public class AdminController extends MainController{
 
         });
 
+        /*
+         * binds the delete button to be disabled when selection in user table is null
+         * i.e. : enables the delete button only when an item has been selected
+         */
+        btn_deleteUser.disableProperty().bind(
+                Bindings.isNull(tbl_users.getSelectionModel().selectedItemProperty())
+        );
+
+        /*
+         * binds the permissions button to be disabled when selection in user table is null
+         * i.e. : enables the premissions button only when an item has been selected
+         */
+        btn_grantPermissions.disableProperty().bind(
+                Bindings.isNull(tbl_users.getSelectionModel().selectedItemProperty())
+
+        );
+
+        /*
+         *binds the button text according to whether the selected user is an admin or not
+         */
+        tbl_users.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+       if ( newSelection == null || !newSelection.adminLevelProperty().get() ){
+
+                 btn_grantPermissions.setText("Grant Admin Permissions");
+
+            }else  {
+                btn_grantPermissions.setText("Revoke Admin Permissions");
+
+            }
+        });
+
     }
 
-    public void deleteUserFromDB(){
+    public void deleteUserFromDB()throws SQLException{
+
+
+        User selectedUser = tbl_users.getSelectionModel().getSelectedItem();
+        System.out.println(selectedUser.getUserId());
+
+
+
+        int selectedUserId = selectedUser.getUserId();
+
+        if (selectedUserId == activeUser.getUserId()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+
+            alert.setContentText("Delete operation not possible: the selected user has an active session open.");
+
+            alert.show();
+
+
+            }else{
+
+            UserDAO.deleteUser(selectedUserId);
+
+        }
+
+    }
+
+    public void press_btn_deleteUser(javafx.event.ActionEvent event)throws Exception{
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+
+        alert.setContentText("Are you sure you want to delete this user?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) {
+
+            try {
+                deleteUserFromDB();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        } else {
+
+            alert.close();
+
+        }
+
+    update_tbl_users(allUsersQuery);
 
 
     }
 
 
+    public void press_btn_grantPermissions(javafx.event.ActionEvent event)throws Exception{
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+
+        alert.setContentText("Are you sure you want to update this user's permissions?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) {
+
+            try {
+                updatePermissions();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        } else {
+
+            alert.close();
+
+        }
+
+        update_tbl_users(allUsersQuery);
+
+    }
+
+    public void updatePermissions()throws SQLException{
+        User selectedUser = tbl_users.getSelectionModel().getSelectedItem();
+        System.out.println(selectedUser.getUserId());
+
+        String aux;
+
+        if(selectedUser.adminLevelProperty().get()){
+            aux = "0";
+        }else{
+            aux = "1";
+        }
+
+        int selectedUserId = selectedUser.getUserId();
+
+        String query = " UPDATE g7musicappdb.users SET admin_level = "+ aux + " WHERE user_id = " + selectedUserId + ";";
+
+
+
+        if (selectedUserId == activeUser.getUserId()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+
+            alert.setContentText("Update failed: the selected user has an active session open.");
+
+            alert.show();
+
+
+        }else{
+
+            UserDAO.updateUser(selectedUserId, query);
+
+        }
+
+    }
 }

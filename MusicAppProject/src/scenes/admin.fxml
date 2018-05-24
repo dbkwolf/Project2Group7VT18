@@ -29,8 +29,8 @@
                               <TableColumn fx:id="col_isAdmin" prefWidth="105.0" text="isAdmin" />
                           </columns>
                         </TableView>
-                        <JFXButton fx:id="btn_deleteUser" layoutX="14.0" layoutY="376.0" style="-fx-background-color: #cccccc;" text="Delete" />
-                        <JFXButton fx:id="btn_grantPermissions" layoutX="486.0" layoutY="376.0" style="-fx-background-color: #ffffff;" text="Grant Admin permissions" />
+                        <JFXButton fx:id="btn_deleteUser" layoutX="14.0" layoutY="376.0" onAction="#press_btn_deleteUser" style="-fx-background-color: #cccccc;" text="Delete" />
+                        <JFXButton fx:id="btn_grantPermissions" layoutX="486.0" layoutY="376.0" style="-fx-background-color: #ffffff;" text="Grant Admin Permissions" onAction="#press_btn_grantPermissions"/>
                         <JFXButton fx:id="btn_searchUsers" layoutX="584.0" layoutY="25.0" onAction="#press_btn_searchUsers" style="-fx-background-color: #c9c6c6;" text="Search" />
                         <JFXTextField fx:id="txt_searchUserId" layoutX="14.0" layoutY="22.0" promptText="User_id" />
                         <JFXTextField fx:id="txt_searchUsername" layoutX="188.0" layoutY="22.0" promptText="Username" />

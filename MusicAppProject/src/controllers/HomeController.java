@@ -273,7 +273,7 @@ public class HomeController extends MainController{
             grid.setHgap(10);
             grid.setVgap(10);
             grid.setPadding(new Insets(20, 150, 10, 10));
-            grid.setStyle("-fx-background-color: greenyellow;");
+            //grid.setStyle("-fx-background-color: greenyellow;");
 
             TextField username = new TextField();
             username.setPromptText("Username");

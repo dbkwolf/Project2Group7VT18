@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/HomeController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/HomeController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/AdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/model/Artist.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/model/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/model/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/manageDB.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/images/tbl-stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/images/tbl-stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/tbl-stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/tbl-stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/manageDB.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/admin.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,26 +105,29 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5366645">
+    <splitter split-orientation="horizontal" split-proportion="0.6484935">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/controllers/AdminController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="871">
-                  <caret line="162" selection-start-line="162" selection-end-line="162" />
+                <state relative-caret-position="548">
+                  <caret line="277" column="32" selection-start-line="277" selection-start-column="32" selection-end-line="277" selection-end-column="32" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="method#update_tbl_users#0;class#AdminController#0" />
+                    <element signature="method#deleteUserFromDB#0;class#AdminController#0" />
+                    <element signature="method#press_btn_deleteUser#0;class#AdminController#0" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/controllers/LogInController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="724">
-                  <caret line="79" column="9" lean-forward="true" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+                <state relative-caret-position="98">
+                  <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -156,8 +151,8 @@
           <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/model/User.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+                <state relative-caret-position="-510">
+                  <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -168,32 +163,25 @@
           <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/model/UserDAO.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="82" column="69" lean-forward="true" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
+                <state relative-caret-position="612">
+                  <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
                   <folding>
                     <element signature="method#insertUser#0;class#UserDAO#0" />
                     <element signature="method#findUser#0;class#UserDAO#0" />
                     <element signature="method#getUserFromResultSet#0;class#UserDAO#0" />
                     <element signature="method#findAuCode#0;class#UserDAO#0" />
+                    <element signature="method#buildUserData#0;class#UserDAO#0" />
+                    <element signature="method#deleteUser#0;class#UserDAO#0" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="console_4.sql" pinned="false" current-in-tab="false">
+          <file leaf-file-name="console_4.sql" pinned="false" current-in-tab="true">
             <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_4.sql">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
-                  <caret column="57" lean-forward="true" selection-end-column="57" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SongLink.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/model/SongLink.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+                  <caret column="64" selection-start-column="64" selection-end-column="64" />
                 </state>
               </provider>
             </entry>
@@ -237,12 +225,12 @@
           <file leaf-file-name="PlaylistDAO.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/model/PlaylistDAO.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+                <state relative-caret-position="391">
+                  <caret line="82" column="9" lean-forward="true" selection-start-line="72" selection-start-column="8" selection-end-line="82" selection-end-column="9" />
                   <folding>
                     <element signature="method#insertPlaylist#0;class#PlaylistDAO#0" />
+                    <element signature="method#buildPlaylistData#0;class#PlaylistDAO#0" />
                     <element signature="method#insertSonginPlaylist#0;class#PlaylistDAO#0" />
-                    <element signature="method#deletePlaylist#0;class#PlaylistDAO#0" />
                   </folding>
                 </state>
               </provider>
@@ -251,8 +239,8 @@
           <file leaf-file-name="admin.fxml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/scenes/admin.fxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="131">
-                  <caret line="33" column="122" selection-start-line="33" selection-start-column="122" selection-end-line="33" selection-end-column="122" />
+                <state relative-caret-position="114">
+                  <caret line="32" column="203" selection-start-line="32" selection-start-column="203" selection-end-line="32" selection-end-column="203" />
                 </state>
               </provider>
               <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -261,19 +249,19 @@
           <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="98">
-                  <caret line="275" column="64" lean-forward="true" selection-start-line="275" selection-start-column="64" selection-end-line="275" selection-end-column="64" />
+                <state relative-caret-position="89">
+                  <caret line="198" lean-forward="true" selection-start-line="186" selection-start-column="23" selection-end-line="203" selection-end-column="25" />
                   <folding>
+                    <element signature="method#initialize#0;class#HomeController#0" />
                     <element signature="method#press_btn_search#0;class#HomeController#0" />
                     <element signature="method#press_btn_play#0;class#HomeController#0" />
                     <element signature="method#press_btn_pause#0;class#HomeController#0" />
                     <element signature="method#press_btn_newPlaylist#0;class#HomeController#0" />
                     <element signature="method#namePlaylistPrompt#0;class#HomeController#0" />
                     <element signature="method#update_tbl_userPlaylists#0;class#HomeController#0" />
-                    <element signature="method#click_tbl_userPlaylists#0;class#HomeController#0" />
                     <element signature="method#update_tbl_playlistTracks#0;class#HomeController#0" />
                     <element signature="method#press_btn_addSong#0;class#HomeController#0" />
-                    <element signature="method#delete_Playlist#0;class#HomeController#0" />
+                    <element signature="method#press_btn_profile_settings#0;class#HomeController#0" />
                     <element signature="method#testHttpGet#0;class#HomeController#0" />
                     <element signature="method#press_btn_ytSearch#0;class#HomeController#0" />
                     <element signature="method#addSongsToUserPlaylistsLocal#0;class#HomeController#0" />
@@ -302,6 +290,7 @@
       <find>help</find>
       <find>PaintConverter</find>
       <find>visi</find>
+      <find>are</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -352,7 +341,6 @@
         <option value="$PROJECT_DIR$/src/scenes/Settings.fxml" />
         <option value="$PROJECT_DIR$/src/scenes/youtube-search.fxml" />
         <option value="$PROJECT_DIR$/src/controllers/YouTubeSearchController.java" />
-        <option value="$PROJECT_DIR$/src/images/tbl-stylesheet.css" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_1.sql" />
         <option value="$PROJECT_DIR$/src/model/PlaylistDAO.java" />
         <option value="$PROJECT_DIR$/src/model/Playlist.java" />
@@ -365,12 +353,13 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_3.sql" />
         <option value="$PROJECT_DIR$/src/model/Admin.java" />
         <option value="$PROJECT_DIR$/src/model/User.java" />
-        <option value="$PROJECT_DIR$/src/model/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/controllers/MainController.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_4.sql" />
+        <option value="$PROJECT_DIR$/src/controllers/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/images/tbl-stylesheet.css" />
+        <option value="$PROJECT_DIR$/src/model/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/scenes/admin.fxml" />
         <option value="$PROJECT_DIR$/src/controllers/AdminController.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_4.sql" />
       </list>
     </option>
   </component>
@@ -775,7 +764,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189115000" />
+    <option name="totallyTimeSpent" value="198881000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -805,8 +794,8 @@
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3256262" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
-      <window_info anchor="right" id="Database" order="5" weight="0.07835821" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.07835821" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32851636" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -814,12 +803,36 @@
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" x="91" y="91" width="1738" height="850" id="Documentation" order="9" type="FLOATING" />
       <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021322" side_tool="true" weight="0.5597609" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4978678" weight="0.32867134" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32867134" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="right" x="91" y="91" width="1738" height="850" id="Documentation" order="9" type="FLOATING" />
+      <window_info anchor="right" id="Database" order="5" weight="0.07835821" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32867134" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32968128" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.3256262" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32851636" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4978678" weight="0.66955686" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32851636" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info id="Designer" order="3" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="3" />
@@ -1032,13 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/tbl-stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.graphics/javafx/scene/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -1125,13 +1131,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="das://table:/876cd98f/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/g7musicappdb.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_3.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1174,6 +1173,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/tbl-stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/PlaylistDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1186,44 +1199,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="82" column="69" lean-forward="true" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
-          <folding>
-            <element signature="method#insertUser#0;class#UserDAO#0" />
-            <element signature="method#findUser#0;class#UserDAO#0" />
-            <element signature="method#getUserFromResultSet#0;class#UserDAO#0" />
-            <element signature="method#findAuCode#0;class#UserDAO#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="275" column="64" lean-forward="true" selection-start-line="275" selection-start-column="64" selection-end-line="275" selection-end-column="64" />
+        <state relative-caret-position="89">
+          <caret line="198" lean-forward="true" selection-start-line="186" selection-start-column="23" selection-end-line="203" selection-end-column="25" />
           <folding>
+            <element signature="method#initialize#0;class#HomeController#0" />
             <element signature="method#press_btn_search#0;class#HomeController#0" />
             <element signature="method#press_btn_play#0;class#HomeController#0" />
             <element signature="method#press_btn_pause#0;class#HomeController#0" />
             <element signature="method#press_btn_newPlaylist#0;class#HomeController#0" />
             <element signature="method#namePlaylistPrompt#0;class#HomeController#0" />
             <element signature="method#update_tbl_userPlaylists#0;class#HomeController#0" />
-            <element signature="method#click_tbl_userPlaylists#0;class#HomeController#0" />
             <element signature="method#update_tbl_playlistTracks#0;class#HomeController#0" />
             <element signature="method#press_btn_addSong#0;class#HomeController#0" />
-            <element signature="method#delete_Playlist#0;class#HomeController#0" />
+            <element signature="method#press_btn_profile_settings#0;class#HomeController#0" />
             <element signature="method#testHttpGet#0;class#HomeController#0" />
             <element signature="method#press_btn_ytSearch#0;class#HomeController#0" />
             <element signature="method#addSongsToUserPlaylistsLocal#0;class#HomeController#0" />
@@ -1232,27 +1222,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_4.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="57" lean-forward="true" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/admin.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="33" column="122" selection-start-line="33" selection-start-column="122" selection-end-line="33" selection-end-column="122" />
+        <state relative-caret-position="114">
+          <caret line="32" column="203" selection-start-line="32" selection-start-column="203" selection-end-line="32" selection-end-column="203" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+          <folding>
+            <element signature="method#insertUser#0;class#UserDAO#0" />
+            <element signature="method#findUser#0;class#UserDAO#0" />
+            <element signature="method#getUserFromResultSet#0;class#UserDAO#0" />
+            <element signature="method#findAuCode#0;class#UserDAO#0" />
+            <element signature="method#buildUserData#0;class#UserDAO#0" />
+            <element signature="method#deleteUser#0;class#UserDAO#0" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1265,10 +1256,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/AdminController.java">
+    <entry file="file://$PROJECT_DIR$/src/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="871">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        <state relative-caret-position="-510">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1277,11 +1268,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/LogInController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="79" column="9" lean-forward="true" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+        <state relative-caret-position="98">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="277" column="32" selection-start-line="277" selection-start-column="32" selection-end-line="277" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#update_tbl_users#0;class#AdminController#0" />
+            <element signature="method#deleteUserFromDB#0;class#AdminController#0" />
+            <element signature="method#press_btn_deleteUser#0;class#AdminController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/876cd98f/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/g7musicappdb.users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_4.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
         </state>
       </provider>
     </entry>

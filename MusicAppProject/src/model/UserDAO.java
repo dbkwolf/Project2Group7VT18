@@ -99,5 +99,34 @@ public class UserDAO {
         return userData;
     }
 
+    public static void deleteUser (int userId)throws SQLException{
+        //Declare a DELETE statement
+        String delStmt = "DELETE FROM g7musicappdb.users WHERE user_id = " + userId + ";";
+
+        //Execute DELETE operation
+        try {
+            DatabaseUtility.dbExecuteUpdate(delStmt);
+        }
+        catch (SQLException e) {
+            System.out.print("Error occurred while DELETE Operation: " + e);
+            throw e;
+        }
+
+
+    }
+
+    public static void updateUser(int userId, String query) throws SQLException{
+
+        //Execute UPDATE operation
+        try {
+            DatabaseUtility.dbExecuteUpdate(query);
+        }
+        catch (SQLException e) {
+            System.out.print("Error occurred while UPDATE Operation: " + e);
+            throw e;
+        }
+
+    }
+
 }
 
