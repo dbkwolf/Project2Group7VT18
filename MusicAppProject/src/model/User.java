@@ -4,6 +4,7 @@ package model;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.ObservableList;
 
 public class User {
     private SimpleIntegerProperty userId;
@@ -15,6 +16,7 @@ public class User {
     private SimpleStringProperty email;
     private SimpleBooleanProperty adminLevel;
     private SimpleStringProperty strAdminLevel;
+    private ObservableList<Playlist> userPlaylists;
 
 
 
@@ -146,6 +148,14 @@ public class User {
 
     public void setStrUserId(String strUserId) {
         this.strUserId.set(strUserId);
+    }
+
+    public ObservableList<Playlist> getUserPlaylists() {
+        return userPlaylists;
+    }
+
+    public void setUserPlaylists(ObservableList<Playlist> userPlaylists) {
+        this.userPlaylists = userPlaylists;
     }
 /*
     public String getFirstName() {

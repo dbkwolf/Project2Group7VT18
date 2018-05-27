@@ -20,7 +20,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bpn_root" style="-fx-background-color: #1f2835;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+<BorderPane fx:id="bpn_root" prefHeight="837.0" prefWidth="1216.0" style="-fx-background-color: #1f2835;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
    <top>
       <AnchorPane minWidth="-Infinity" prefHeight="127.0" prefWidth="1025.0" style="-fx-background-color: #00060c;" BorderPane.alignment="CENTER">
          <children>
@@ -46,13 +46,13 @@
       </AnchorPane>
    </top>
    <right>
-      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_RIGHT">
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="300.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_RIGHT">
          <children>
-            <TableView fx:id="tbl_searchResults" layoutY="48.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
+            <TableView fx:id="tbl_searchResults" layoutY="48.0" prefHeight="400.0" prefWidth="297.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
               <columns>
                 <TableColumn fx:id="col_searchTitle" prefWidth="118.0" text="   Title" />
                 <TableColumn fx:id="col_searchArtist" prefWidth="104.0" text="Artist" />
-                  <TableColumn fx:id="col_searchAlbum" prefWidth="102.0" text="Album" />
+                  <TableColumn fx:id="col_searchAlbum" prefWidth="64.0" text="Album" />
               </columns>
                <padding>
                   <Insets right="10.0" />
@@ -64,9 +64,9 @@
       </AnchorPane>
    </right>
    <center>
-      <AnchorPane fx:id="apn_middleHomeAnchorpane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="734.0" style="-fx-background-color: #091626;">
+      <AnchorPane fx:id="apn_middleHomeAnchorpane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="500.0" style="-fx-background-color: #091626;">
          <children>
-            <TableView fx:id="tbl_playlistTracks" layoutX="60.0" layoutY="49.0" style="-fx-background-color: #091626;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
+            <TableView fx:id="tbl_playlistTracks" layoutX="21.0" layoutY="56.0" onMouseClicked="#click_tbl_playlistTracks" style="-fx-background-color: #091626;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
               <columns>
                 <TableColumn minWidth="0.0" prefWidth="36.0" />
                 <TableColumn fx:id="col_title" prefWidth="236.0" text="Title" />
@@ -86,9 +86,9 @@
       </AnchorPane>
    </center>
    <left>
-      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="200.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_LEFT">
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="219.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_LEFT">
          <children>
-            <TableView fx:id="tbl_userPlaylists" layoutY="48.0" onMouseClicked="#click_tbl_userPlaylists" prefWidth="200.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
+            <TableView fx:id="tbl_userPlaylists" layoutX="10.0" layoutY="48.0" onMouseClicked="#click_tbl_userPlaylists" prefHeight="575.0" prefWidth="200.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
               <columns>
                 <TableColumn fx:id="col_userPlaylistTitle" prefWidth="200.0" text="Playlists" />
               </columns>
@@ -112,14 +112,16 @@
          <children>
             <JFXButton fx:id="btn_addSong" layoutX="911.0" layoutY="20.0" onAction="#press_btn_addSong" style="-fx-background-color: #06111e;" text="add to Playlist" textFill="#c3c0c0" />
             <JFXButton fx:id="btn_newPlaylist" layoutX="104.0" layoutY="22.0" onAction="#press_btn_newPlaylist" style="-fx-background-color: #06111e;" text="New Playlist+" textFill="#a19e9e" />
-            <JFXButton fx:id="btn_testHttpGet" layoutX="404.0" layoutY="22.0" onAction="#testHttpGet" style="-fx-background-color: #000000;" text="Test HttpGet" textFill="#a40b0b" />
-            <JFXTextField fx:id="txt_test" layoutX="536.0" layoutY="19.0" promptText="URL here" />
+            <JFXButton fx:id="btn_testHttpGet" layoutX="214.0" layoutY="22.0" onAction="#testHttpGet" style="-fx-background-color: #000000;" text="Test HttpGet" textFill="#a40b0b" />
+            <JFXTextField fx:id="txt_test" layoutX="306.0" layoutY="19.0" promptText="URL here" />
             <JFXButton fx:id="btn_ytSearch" layoutX="745.0" layoutY="22.0" onAction="#press_btn_ytSearch" style="-fx-background-color: #a11111;" text="Go to YT Search" textFill="#dadada">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btn_manageDB" layoutX="250.0" layoutY="22.0" onAction="#press_btn_manageDB" style="-fx-background-color: #ffffff;" text="Manage Database" visible="false" />
+            <JFXButton fx:id="btn_manageDB" layoutX="1050.0" layoutY="22.0" onAction="#press_btn_manageDB" style="-fx-background-color: #ffffff;" text="Manage Database" visible="false" />
+            <JFXButton fx:id="btn_playUrl" layoutX="619.0" layoutY="22.0" onAction="#press_btn_playUrl" style="-fx-background-color: #2a9a05;" text="PLay UrL" textFill="WHITE" />
+            <Label fx:id="lbl_showUrl" layoutX="455.0" layoutY="20.0" prefHeight="30.0" prefWidth="155.0" text="Label" textFill="#656565" />
          </children>
       </AnchorPane>
    </bottom>

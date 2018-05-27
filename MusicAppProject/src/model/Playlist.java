@@ -2,9 +2,11 @@ package model;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Playlist {
     private SimpleIntegerProperty playlistId;
@@ -16,6 +18,7 @@ public class Playlist {
         this.playlistId = new SimpleIntegerProperty(id);
         this.plTitle = new SimpleStringProperty(title);
         this.plOwner = new SimpleIntegerProperty(owner);
+        this.songsInPlaylist = FXCollections.observableArrayList();
     }
 
     public int getPlaylistId() {

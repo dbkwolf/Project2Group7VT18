@@ -3,9 +3,11 @@ package controllers;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import javafx.beans.InvalidationListener;
+import javafx.beans.value.ObservableBooleanValue;
+import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.input.MouseButton;
@@ -13,10 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.util.Pair;
-import model.Playlist;
-import model.PlaylistDAO;
-import model.Song;
-import model.SongDAO;
+import model.*;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 
@@ -26,9 +25,11 @@ import javafx.scene.media.MediaPlayer;
 import util.HttpGet;
 
 import java.sql.SQLException;
-import java.util.Optional;
+import java.sql.SQLOutput;
+import java.util.*;
 
 import static controllers.LogInController.activeUser;
+import static model.UserDAO.dbutil;
 
 
 public class HomeController extends MainController{
@@ -57,7 +58,10 @@ public class HomeController extends MainController{
     public Label lbl_playlistName;
     public JFXButton btn_manageDB;
     public AnchorPane apn_middleHomeAnchorpane;
+    public Label lbl_showUrl;
+    private String url;
 
+    private List<Integer> removedPlaylists = new ArrayList<>();
     private ContextMenu cm = new ContextMenu();
     private MenuItem mi_delete = new MenuItem("Delete");
 
@@ -68,6 +72,8 @@ public class HomeController extends MainController{
 
         lbl_user.setText(fullName);
         lbl_currentTrack.setText("");
+        load_all();
+
         update_tbl_userPlaylists();
         cm.getItems().add(mi_delete);
         adminVisibility(activeUser.isAdminLevel());
@@ -125,18 +131,29 @@ public class HomeController extends MainController{
 
         String plTitle = namePlaylistPrompt();
 
-        if (plTitle.equals("empty")) {
+        if (!plTitle.equals("empty")) {
 
+            System.out.println("before: " + activeUser.getUserPlaylists().size());
+            activeUser.getUserPlaylists().add(new Playlist(0, plTitle, activeUser.getUserId()));
 
-
-        }else{
-
-            String strActiveUserId = Integer.toString(activeUser.getUserId());
-            System.out.println(plTitle);
-            PlaylistDAO.insertPlaylist(plTitle, strActiveUserId);
 
             update_tbl_userPlaylists();
+
+
+            System.out.println("after. "+activeUser.getUserPlaylists().size());
+
+            try {
+                UserDAO.updateUser("INSERT INTO g7musicappdb.playlists (playlist_id, pl_title, owner_id) VALUES (0, '"+ plTitle + "', " + activeUser.getUserId()+");");
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+            activeUser.getUserPlaylists().get(activeUser.getUserPlaylists().size()-1).setPlaylistId(PlaylistDAO.getPlaylistIdFromDB(plTitle,Integer.toString(activeUser.getUserId())));
+
          }
+
+
 
     }
 
@@ -157,18 +174,14 @@ public class HomeController extends MainController{
         return playlistName;
     }
 
-    public void update_tbl_userPlaylists() throws SQLException, ClassNotFoundException{
+    public void update_tbl_userPlaylists() {
 
-        String strActiveUserId = Integer.toString(activeUser.getUserId());
-        ObservableList<Playlist> userPlaylists = PlaylistDAO.buildPlaylistData(strActiveUserId);
-        addSongsToUserPlaylistsLocal(userPlaylists);
         col_userPlaylistTitle.setCellValueFactory(cellData -> cellData.getValue().plTitleProperty());
-
-        tbl_userPlaylists.setItems(userPlaylists);
+        tbl_userPlaylists.setItems(activeUser.getUserPlaylists());
 
     }
 
-    public void click_tbl_userPlaylists(MouseEvent event) throws SQLException, ClassNotFoundException{
+    public void click_tbl_userPlaylists(MouseEvent event) {
 
 
             if (event.getButton() == MouseButton.PRIMARY  && event.getClickCount() == 2) {
@@ -208,19 +221,61 @@ public class HomeController extends MainController{
 
             }
     }
+    public void click_tbl_playlistTracks(MouseEvent event) {
 
-    public void update_tbl_playlistTracks() throws SQLException, ClassNotFoundException {
+        if (event.getButton() == MouseButton.PRIMARY  && event.getClickCount() == 2) {
+
+            update_tbl_playlistTracks();
+
+        }else if(event.getButton() == MouseButton.SECONDARY) {
+
+
+            cm.show(tbl_userPlaylists, event.getScreenX(), event.getScreenY());
+
+            mi_delete.setOnAction(event1 -> delete_songFromPlaylist());
+
+
+        }
+
+    }
+
+    private void delete_songFromPlaylist() {
+
+        int plPosition = findPlaylistListPosition(lbl_playlistName.getText());
+        selectedSong = tbl_playlistTracks.getSelectionModel().getSelectedItem();
+        activeUser.getUserPlaylists().get(plPosition).getSongsInPlaylist().remove(selectedSong);
+
+
+
+        if(selectedPlaylist.getPlaylistId()!=0){
+
+            StringBuilder qry = new StringBuilder();
+
+            qry.append("DELETE FROM g7musicappdb.song_playlist_references WHERE ref_id = ").append(selectedSong.getRefId());
+            System.out.println(qry.toString());
+            try {
+                UserDAO.updateUser(qry.toString());
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
+    public void update_tbl_playlistTracks() {
 
 
         selectedPlaylist = tbl_userPlaylists.getSelectionModel().getSelectedItem();
-        lbl_playlistName.setText(selectedPlaylist.getPlTitle());
+        if(!selectedPlaylist.getPlTitle().isEmpty()) {
+            lbl_playlistName.setText(selectedPlaylist.getPlTitle());
 
-
-        col_title.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
-        col_artist.setCellValueFactory(cellData -> cellData.getValue().artistProperty());
-        col_album.setCellValueFactory(cellData -> cellData.getValue().albumProperty());
-        tbl_playlistTracks.setItems(selectedPlaylist.getSongsInPlaylist());
-
+            col_title.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
+            col_artist.setCellValueFactory(cellData -> cellData.getValue().artistProperty());
+            col_album.setCellValueFactory(cellData -> cellData.getValue().albumProperty());
+            tbl_playlistTracks.setItems(selectedPlaylist.getSongsInPlaylist());
+        }
 
     }
 
@@ -228,27 +283,75 @@ public class HomeController extends MainController{
 
         selectedPlaylist = tbl_userPlaylists.getSelectionModel().getSelectedItem();
         selectedSong = tbl_searchResults.getSelectionModel().getSelectedItem();
+        int plPosition = findPlaylistListPosition(selectedPlaylist.getPlTitle());
 
-
-        PlaylistDAO.insertSonginPlaylist(Integer.toString(selectedSong.getSongId()),Integer.toString(selectedPlaylist.getPlaylistId()));
-
+        activeUser.getUserPlaylists().get(plPosition).getSongsInPlaylist().add(selectedSong);
         update_tbl_userPlaylists();
         update_tbl_playlistTracks();
 
 
+
+
+            StringBuilder qry = new StringBuilder();
+
+            qry.append("INSERT INTO g7musicappdb.song_playlist_references (ref_id, song_id, playlist_id) VALUES (0,").append(selectedSong.getSongId()).append(", ").append( selectedPlaylist.getPlaylistId()).append( "); ");
+
+            try {
+                UserDAO.updateUser(qry.toString());
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+
+        activeUser.getUserPlaylists().get(plPosition).setSongsInPlaylist(SongDAO.buildSongDataFromPlaylist( activeUser.getUserPlaylists().get(plPosition).getPlaylistId()));
+
+        update_tbl_userPlaylists();
+        update_tbl_playlistTracks();
     }
 
-    public void delete_Playlist() throws SQLException, ClassNotFoundException{
+    public int findPlaylistListPosition(String playlistTitle){
+
+
+        int  i= 0;
+       while(!activeUser.getUserPlaylists().get(i).getPlTitle().equals(playlistTitle)){
+           System.out.println(i);
+           i++;
+       }
+
+        return i;
+    }
+
+    public void delete_Playlist() throws SQLException, ClassNotFoundException {
 
 
         selectedPlaylist = tbl_userPlaylists.getSelectionModel().getSelectedItem();
 
-        System.out.println(selectedPlaylist.getPlaylistId() + " " + selectedPlaylist.getPlTitle()+" gets deleted");
 
-        PlaylistDAO.deletePlaylist(Integer.toString(selectedPlaylist.getPlaylistId()));
+        if (selectedPlaylist.getPlaylistId() != 0) {
+            removedPlaylists.add(selectedPlaylist.getPlaylistId());
+        }
+
+        activeUser.getUserPlaylists().remove(selectedPlaylist);
+
+
+        System.out.println(selectedPlaylist.getPlaylistId() + " " + selectedPlaylist.getPlTitle() + " gets deleted");
+
 
         update_tbl_playlistTracks();
         update_tbl_userPlaylists();
+
+
+
+        try {
+            UserDAO.updateUser("DELETE FROM g7musicappdb.playlists WHERE playlist_id =" + selectedPlaylist.getPlaylistId());
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        update_tbl_userPlaylists();
+
     }
 
     public void press_btn_profile_settings(javafx.event.ActionEvent event) throws Exception {
@@ -308,7 +411,13 @@ public class HomeController extends MainController{
 
     public void testHttpGet() throws Exception{
 
-        System.out.println(HttpGet.getDownload(txt_test.getText()));
+
+
+        //url = HttpGet.getDownload(txt_test.getText());
+        //lbl_showUrl.setText(url);
+
+        update_all_user_changes();
+
 
     }
 
@@ -316,10 +425,11 @@ public class HomeController extends MainController{
         change_Scene_to(event,"../scenes/youtube-search.fxml");
     }
 
-    public void addSongsToUserPlaylistsLocal(ObservableList<Playlist> playlistList){
+    public void loadSongsToUserPlaylistsLocal(ObservableList<Playlist> userPlaylists){
 
 
-        playlistList.forEach((p) -> {
+
+        userPlaylists.forEach((p) -> {
             try {
                 if(p!=null){
                     p.setSongsInPlaylist(SongDAO.buildSongDataFromPlaylist(p.getPlaylistId()));}
@@ -351,4 +461,139 @@ public class HomeController extends MainController{
         change_Scene_to(event,"../scenes/admin.fxml");
 
     }
+
+    public void press_btn_playUrl (javafx.event.ActionEvent event)throws Exception {
+
+        track = new Media(lbl_showUrl.getText());
+        player = new MediaPlayer(track);
+        player.play();
+
+    }
+
+    public void update_all_user_changes () {
+
+        List<Playlist> addedPlaylists = new ArrayList<>();
+
+
+        for (Playlist playlist : activeUser.getUserPlaylists()) {
+            if (playlist.getPlaylistId() == 0) {
+                addedPlaylists.add(playlist);
+            }
+        }
+
+        StringBuilder query = new StringBuilder();
+
+        if (addedPlaylists.size() != 0) {
+            query.append("INSERT INTO g7musicappdb.playlists (playlist_id, pl_title, owner_id) VALUES ");
+
+            int i = 0;
+            for (Playlist p : addedPlaylists) {
+                query.append("(0, '").append(p.getPlTitle()).append("', ").append(p.getPlOwner()).append(")");
+                if (i++ == addedPlaylists.size() - 1) {
+                    query.append(";\n");
+
+
+                } else {
+                    query.append(",");
+                }
+            }
+
+            //System.out.println(query);
+            try {
+                UserDAO.updateUser(query.toString());
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        StringBuilder delQ = new StringBuilder();
+
+        if (removedPlaylists.size() > 0) {
+            delQ.append("DELETE FROM g7musicappdb.playlists WHERE playlist_id IN ( ");
+
+            int j = 0;
+
+            for (int id : removedPlaylists) {
+                delQ.append(id);
+
+                if (j++ == removedPlaylists.size() - 1) {
+                    delQ.append(");\n");
+                } else {
+                    delQ.append(",");
+                }
+            }
+
+           // System.out.println(query);
+            try {
+                UserDAO.updateUser(delQ.toString());
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+
+      /*  StringBuilder songq = new StringBuilder();
+
+            for (Playlist playlist : addedPlaylists) {
+
+
+                    if (!playlist.getSongsInPlaylist().isEmpty()) {
+
+
+                        songq.append("INSERT INTO g7musicappdb.song_playlist_references (ref_id, song_id, playlist_id) VALUES");
+
+                        int z = 0;
+
+                        for (Song song : playlist.getSongsInPlaylist()) {
+
+                            songq.append("(0, " + song.getSongId() + ", (SELECT playlists.playlist_id FROM g7musicappdb.playlists " +
+                                                 "WHERE pl_title like '" + playlist.getPlTitle() + "' and owner_id = " + activeUser.getUserId() + " ))");
+
+                            if (z++ == playlist.getSongsInPlaylist().size() - 1) {
+                                songq.append(";");
+                            } else {
+                                songq.append(",");
+                            }
+
+                        }
+
+                        try {
+                            UserDAO.updateUser(songq.toString());
+                        }
+                        catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+                        }
+                    }*/
+
+
+
+
+
+
+
+
+    }
+
+    public void load_all(){
+        String strActiveUserId = Integer.toString(activeUser.getUserId());
+        ObservableList<Playlist> userPlaylists = null;
+
+        try {
+            userPlaylists = PlaylistDAO.buildPlaylistData(strActiveUserId);
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        activeUser.setUserPlaylists(userPlaylists);//saves all playlists of active user locally
+        loadSongsToUserPlaylistsLocal(userPlaylists);//saves all songs of every playlist locally
+    }
+
+
 }

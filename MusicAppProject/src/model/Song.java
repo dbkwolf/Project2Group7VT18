@@ -11,6 +11,7 @@ public class Song {
     private SimpleStringProperty songArtist;
     private SimpleStringProperty songAlbum;
     private SimpleStringProperty songLocation;
+    private int refId;
 
 
 
@@ -20,7 +21,7 @@ public class Song {
         this.songTitle = new SimpleStringProperty(title);
         this.songArtist = new SimpleStringProperty(artist);
         this.songAlbum = new SimpleStringProperty(album);
-        this.songLocation = new SimpleStringProperty("file:///C:/Users/Delta/Desktop/DRVNOfficial-4Head/"+location+".mp3");
+        this.songLocation = new SimpleStringProperty(location);
     }
 
     //private int artistId;
@@ -91,4 +92,11 @@ public StringProperty albumProperty(){
     }
 
 
+    public int getRefId() {
+        return refId;
+    }
+
+    public void setRefId(int refId) {
+        this.refId = refId;
+    }
 }

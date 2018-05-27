@@ -289,7 +289,7 @@ public class AdminController extends MainController{
 
         }else{
 
-            UserDAO.updateUser(selectedUserId, query);
+            UserDAO.updateUser(query);
 
         }
 

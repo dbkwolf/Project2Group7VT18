@@ -50,7 +50,7 @@ public class SongDAO {
         try {
             songData = FXCollections.observableArrayList();
 
-            String query = "SELECT songs.song_id, songs.song_title, artists.artist_name, albums.album_title, songs.file_location\n" +
+            String query = "SELECT song_playlist_references.ref_id, songs.song_id, songs.song_title, artists.artist_name, albums.album_title, songs.file_location\n" +
                     "FROM (((g7musicappdb.songs INNER JOIN g7musicappdb.artists ON songs.artist_id = artists.artist_id)\n" +
                     "INNER JOIN g7musicappdb.albums on songs.album_id = albums.album_id)\n" +
                     "INNER JOIN g7musicappdb.song_playlist_references on songs.song_id = song_playlist_references.song_id)\n" +
@@ -61,7 +61,7 @@ public class SongDAO {
             while (rs.next()) {
 
                 Song currentSong = new Song(rs.getInt("song_id"), rs.getString("song_title"), rs.getString("artist_name"), rs.getString("album_title"), rs.getString("file_location"));
-
+                        currentSong.setRefId(rs.getInt("ref_id"));
                 songData.add(currentSong);
 
 

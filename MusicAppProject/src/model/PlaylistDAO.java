@@ -1,11 +1,12 @@
 package model;
 
-import util.DatabaseUtility;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import static model.UserDAO.dbutil;
 
 public class PlaylistDAO {
 
@@ -16,10 +17,10 @@ public class PlaylistDAO {
 
         //Execute INSERT operation
         try {
-            DatabaseUtility.runQuery(insertQuery);
+            dbutil.runQuery(insertQuery);
         }
         catch (SQLException e) {
-            System.out.print("Error occurred while DELETE Operation: " + e);
+            System.out.print("Error occurred while INSERT Operation: " + e);
             throw e;
         }
     }
@@ -34,7 +35,7 @@ public class PlaylistDAO {
             String query = "SELECT g7musicappdb.playlists.playlist_id, g7musicappdb.playlists.pl_title, g7musicappdb.playlists.owner_id" +
                     " FROM (g7musicappdb.playlists INNER JOIN g7musicappdb.users ON g7musicappdb.playlists.owner_id = g7musicappdb.users.user_id)" +
                     " WHERE g7musicappdb.playlists.owner_id like '" + owner + "';";
-            ResultSet rs = DatabaseUtility.dbExecuteQuery(query);
+            ResultSet rs = dbutil.dbExecuteQuery(query);
 
 
             while (rs.next()) {
@@ -61,7 +62,7 @@ public class PlaylistDAO {
 
         //Execute INSERT operation
         try {
-            DatabaseUtility.runQuery(insertQuery);
+            dbutil.runQuery(insertQuery);
         }
         catch (SQLException e) {
             System.out.print("Error occurred while INSERT Operation: " + e);
@@ -75,12 +76,38 @@ public class PlaylistDAO {
 
         //Execute DELETE operation
         try {
-            DatabaseUtility.dbExecuteUpdate(updateStmt);
+            dbutil.dbExecuteUpdate(updateStmt);
         }
         catch (SQLException e) {
             System.out.print("Error occurred while DELETE Operation: " + e);
             throw e;
         }
+    }
+
+    public static int getPlaylistIdFromDB(String playlistTitle, String owner) throws SQLException, ClassNotFoundException {
+        int id = 0;
+        String qr = "SELECT playlist_id FROM g7musicappdb.playlists WHERE pl_title = '" + playlistTitle + "' AND owner_id = "+owner+";";
+
+
+        try {
+            ResultSet rs = dbutil.dbExecuteQuery(qr);
+
+            while (rs.next()) {
+                id = rs.getInt("playlist_id");
+            }
+
+        }
+        catch (SQLException e) {
+            System.out.print("Error occurred while SELECT Operation: " + e);
+            throw e;
+        }
+
+        return id;
+
+    }
+
+    public static void batchUpdate() throws SQLException{
+
     }
 
 

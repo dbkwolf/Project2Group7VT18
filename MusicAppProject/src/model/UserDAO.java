@@ -9,9 +9,19 @@ import java.sql.SQLException;
 
 public class UserDAO {
 
-    //*************************************
-    //INSERT a user
-    //*************************************
+    public static DatabaseUtility dbutil = new DatabaseUtility();
+
+    /**
+     * INSERT USER INTO DB (For Standard User Registration)
+     * @param username user input from sign up scene
+     * @param firstName  -"-
+     * @param lastName   -"-
+     * @param password   -"-
+     * @param email      -"-
+     * @param adminLevel gene
+     * @throws SQLException
+     * @throws ClassNotFoundException
+     */
     public static void insertUser (String username, String firstName, String lastName,String password,String email, String adminLevel) throws SQLException, ClassNotFoundException {
         //Declare a INSERT statement
 
@@ -20,19 +30,28 @@ public class UserDAO {
 
         //Execute INSERT operation
         try {
-            DatabaseUtility.runQuery(insertQuery);
+            dbutil.runQuery(insertQuery);
         } catch (SQLException e) {
             System.out.print("Error occurred while INSERT Operation: " + e);
             throw e;
         }
     }
 
+    /**
+     * SEARCH USER IN DB BY USERNAME (for log in)
+     * @param username search by username
+     * @return searched User
+     * @throws SQLException provides information on a database access error
+     * @throws ClassNotFoundException
+     */
     public static User findUser(String username) throws SQLException, ClassNotFoundException {
 
         String searchQuery = "SELECT * FROM g7musicappdb.users WHERE username like '" + username+"';";
 
         try {
-            ResultSet rsUser = DatabaseUtility.dbExecuteQuery(searchQuery);
+            ResultSet rsUser = dbutil.dbExecuteQuery(searchQuery);
+
+            System.out.println("creating user object from RS");
 
             User user = getUserFromResultSet(rsUser);
             return user;
@@ -42,6 +61,12 @@ public class UserDAO {
         }
     }
 
+    /**
+     * Creates new User object from DB query Result Set
+     * @param rs from DB Query
+     * @return searched user
+     * @throws SQLException
+     */
         public static User getUserFromResultSet(ResultSet rs) throws  SQLException{
             User user = null;
             if (rs.next()){
@@ -53,12 +78,20 @@ public class UserDAO {
             return user;
     }
 
+
+    /**
+     * SEARCH AUTHORIZATION CODE IN DB (for Admin User Registration)
+     * @param input authorization code input by the user
+     * @return the searched authorization code
+     * @throws SQLException provides information on a database access error
+     * @throws ClassNotFoundException
+     */
     public static String findAuCode(String input) throws SQLException, ClassNotFoundException {
 
         String searchQuery = "SELECT * FROM g7musicappdb.authorization_codes WHERE code_sequence like '" + input +"';";
         String auCode=null;
         try {
-            ResultSet rsCode = DatabaseUtility.dbExecuteQuery(searchQuery);
+            ResultSet rsCode = dbutil.dbExecuteQuery(searchQuery);
             if (rsCode.next()) {
 
                 auCode = rsCode.getString("code_sequence");
@@ -71,6 +104,12 @@ public class UserDAO {
         }
     }
 
+    /**
+     *RETURNS LIST OF USERS (To populate tableviews)
+     * @param query : the DB query to search for detailed User search
+     * @return List of users from DB search
+     * @throws SQLException provides information on a database access error
+     */
     public static ObservableList<User> buildUserData(String query) throws SQLException {
 
 
@@ -80,7 +119,7 @@ public class UserDAO {
             userData = FXCollections.observableArrayList();
 
 
-            ResultSet rsUser = DatabaseUtility.dbExecuteQuery(query);
+            ResultSet rsUser = dbutil.dbExecuteQuery(query);
 
             while (rsUser.next()) {
 
@@ -105,7 +144,7 @@ public class UserDAO {
 
         //Execute DELETE operation
         try {
-            DatabaseUtility.dbExecuteUpdate(delStmt);
+            dbutil.dbExecuteUpdate(delStmt);
         }
         catch (SQLException e) {
             System.out.print("Error occurred while DELETE Operation: " + e);
@@ -115,11 +154,13 @@ public class UserDAO {
 
     }
 
-    public static void updateUser(int userId, String query) throws SQLException{
+    public static void updateUser(String query) throws SQLException{
+        System.out.println("UserDAO.updateUser");
+        System.out.println("query = [" + query + "]");
 
         //Execute UPDATE operation
         try {
-            DatabaseUtility.dbExecuteUpdate(query);
+            dbutil.dbExecuteUpdate(query);
         }
         catch (SQLException e) {
             System.out.print("Error occurred while UPDATE Operation: " + e);
@@ -127,6 +168,7 @@ public class UserDAO {
         }
 
     }
+
 
 }
 
