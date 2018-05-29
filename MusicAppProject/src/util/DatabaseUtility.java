@@ -1,14 +1,5 @@
 package util;
 
-
-
-
-
-
-
-
-
-import model.User;
 import org.apache.commons.dbcp.ConnectionFactory;
 import org.apache.commons.dbcp.DriverManagerConnectionFactory;
 import org.apache.commons.dbcp.PoolableConnectionFactory;
