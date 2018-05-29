@@ -76,6 +76,45 @@ public class SongDAO {
 
     }
 
+    public static Song insertSonginPlaylist(int songId, int playlistId, Song song) throws SQLException {
+        //Declare a INSERT statement
 
 
+        String insertQuery = "INSERT INTO g7musicappdb.song_playlist_references ( song_id, playlist_id) VALUES (" + songId + ", " + playlistId + "); ";
+
+        //Execute INSERT operation
+        try {
+            DatabaseUtility.dbExecuteUpdate(insertQuery);
+
+            ResultSet rs = DatabaseUtility.dbExecuteQuery("SELECT LAST_INSERT_ID();");
+
+            while(rs.next()){
+                song.setRefId(rs.getInt("LAST_INSERT_ID()"));
+
+
+            }
+
+        }
+        catch (SQLException e) {
+            System.out.print("Error occurred while INSERT Operation: " + e);
+            throw e;
+        }
+
+        return song;
+    }
+
+    public static void deleteSongfromPlaylist(int ref_id) throws SQLException{
+
+        String qr = "DELETE FROM g7musicappdb.song_playlist_references WHERE ref_id = " + ref_id;
+
+        //Execute UPDATE operation
+        try {
+            DatabaseUtility.dbExecuteUpdate(qr);
+        }
+        catch (SQLException e) {
+            System.out.print("Error occurred while UPDATE Operation: " + e);
+            throw e;
+        }
+
+    }
 }
