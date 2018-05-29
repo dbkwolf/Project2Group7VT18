@@ -36,6 +36,7 @@
           <TableColumn fx:id="col_titles" prefWidth="419.0" text="Video Titles" />
         </columns>
       </TableView>
-      <JFXButton fx:id="btn_back" style="-fx-background-color: #c5c5c5;" onAction="#press_btn_back" text="Back" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <JFXButton fx:id="btn_back" onAction="#press_btn_back" style="-fx-background-color: #c5c5c5;" text="Back" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <JFXButton fx:id="btn_addToDB" onAction="#press_btn_addtoDB" text="Add to DB" GridPane.rowIndex="4" />
    </children>
 </GridPane>

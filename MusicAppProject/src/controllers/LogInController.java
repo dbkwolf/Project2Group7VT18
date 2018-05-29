@@ -12,6 +12,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.User;
 import model.UserDAO;
+import util.DatabaseUtility;
 
 
 import java.sql.SQLException;
@@ -27,6 +28,8 @@ public class LogInController extends MainController {
     public JFXButton btn_help;
     public Label lbl_loading;
     public Pane pn_loading;
+
+    public DatabaseUtility dbutil = new DatabaseUtility();
 
     public void press_btn_register(ActionEvent event) throws Exception {
 

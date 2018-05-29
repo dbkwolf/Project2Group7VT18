@@ -12,8 +12,11 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
+import javafx.util.Pair;
 import model.SongLink;
 import util.Auth;
 import util.Search;
@@ -46,7 +49,7 @@ public class YouTubeSearchController extends MainController{
 
         } catch (IOException e) {
             System.err.println("Error reading " + PROPERTIES_FILENAME + ": " + e.getCause()
-                    + " : " + e.getMessage());
+                                       + " : " + e.getMessage());
             System.exit(1);
         }
 
@@ -86,11 +89,11 @@ public class YouTubeSearchController extends MainController{
             SearchListResponse searchResponse = search.execute();
             List<SearchResult> searchResultList = searchResponse.getItems();
             if (searchResultList != null) {
-                populateList(searchResultList.iterator(), queryTerm);
+                populateList(searchResultList.iterator());
             }
         } catch (GoogleJsonResponseException e) {
             System.err.println("There was a service error: " + e.getDetails().getCode() + " : "
-                    + e.getDetails().getMessage());
+                                       + e.getDetails().getMessage());
         } catch (IOException e) {
             System.err.println("There was an IO error: " + e.getCause() + " : " + e.getMessage());
         } catch (Throwable t) {
@@ -115,7 +118,7 @@ public class YouTubeSearchController extends MainController{
 
     }
 
-    public void populateList(Iterator<SearchResult> iteratorSearchResults, String query) {
+    public void populateList(Iterator<SearchResult> iteratorSearchResults) {
 
         ObservableList<SongLink> ytData = FXCollections.observableArrayList();
 
@@ -161,6 +164,55 @@ public class YouTubeSearchController extends MainController{
         change_Scene_to(event, "../scenes/home.fxml");
     }
 
+
+    public void  press_btn_addtoDB(ActionEvent event) throws Exception{
+
+        Dialog<Pair<String, String>> dialog = new Dialog <>();
+        dialog.setTitle("Add song to DB");
+        dialog.setHeaderText("Please enter the following information");
+
+
+        // Set the icon (must be included in the project).
+
+        // Set the button types.
+        ButtonType updateButtonType = new ButtonType("Add", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().addAll(updateButtonType, ButtonType.CANCEL);
+
+        // Create the songTitle and password labels and fields.
+        GridPane grid = new GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 150, 10, 10));
+        //grid.setStyle("-fx-background-color: greenyellow;");
+
+        TextField songTitle = new TextField();
+        songTitle.setPromptText("Song Title");
+        TextField artist = new TextField();
+        artist.setPromptText("Artist");
+        TextField album = new TextField();
+        album.setPromptText("Album");
+
+        grid.add(new Label("Username:"), 0, 0);
+        grid.add(songTitle, 1, 0);
+        grid.add(new Label("Password:"), 0, 1);
+        grid.add(artist, 1, 1);
+        grid.add(new Label("Email:"), 0, 2);
+        grid.add(album, 1, 2);
+
+        // Enable/Disable login button depending on whether a songTitle was entered.
+        Node updateButton = dialog.getDialogPane().lookupButton(updateButtonType);
+        updateButton.setDisable(false);
+
+        // Do some validation.
+        songTitle.textProperty().addListener((observable, oldValue, newValue) -> {
+            updateButton.setDisable(newValue.trim().isEmpty());
+        });
+
+        dialog.getDialogPane().setContent(grid);
+
+        dialog.showAndWait();
+
+    }
 
 
 
