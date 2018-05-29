@@ -32,7 +32,7 @@ public class HttpGet {
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(connection.getInputStream()));
         String inputLine;
-        StringBuilder response = new StringBuilder();
+        StringBuffer response = new StringBuffer();
 
         while ((inputLine = in.readLine()) != null) {
             response.append(inputLine);

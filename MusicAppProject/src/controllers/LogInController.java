@@ -76,6 +76,12 @@ public class LogInController extends MainController {
 
     }
 
+
+    @FXML
+    public void loginPressedButton(){
+
+    }
+
     @FXML
     public void minScreen(MouseEvent event){
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();

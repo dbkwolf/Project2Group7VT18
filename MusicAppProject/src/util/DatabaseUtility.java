@@ -106,8 +106,6 @@ public class DatabaseUtility {
         }
     }
 
-
-
     public static void dbExecuteUpdate(String query) throws SQLException {
         PreparedStatement pstmt = null;
         try(Connection con = getInstance().getConnection()) {

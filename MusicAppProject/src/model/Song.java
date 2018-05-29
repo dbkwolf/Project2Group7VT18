@@ -21,9 +21,12 @@ public class Song {
         this.songTitle = new SimpleStringProperty(title);
         this.songArtist = new SimpleStringProperty(artist);
         this.songAlbum = new SimpleStringProperty(album);
-        this.songLocation = new SimpleStringProperty("http://project2.duckdns.org:1234/files/"+location+".mp3");
+        this.songLocation = new SimpleStringProperty(location);
     }
 
+    //private int artistId;
+   // private int albumId;
+    //private String location;
 
 public StringProperty titleProperty(){
         return songTitle;
