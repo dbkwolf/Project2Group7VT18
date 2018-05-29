@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class UserDAO {
 
-    public static DatabaseUtility dbutil = new DatabaseUtility();
+
 
     /**
      * INSERT USER INTO DB (For Standard User Registration)
@@ -20,9 +20,8 @@ public class UserDAO {
      * @param email      -"-
      * @param adminLevel gene
      * @throws SQLException
-     * @throws ClassNotFoundException
      */
-    public static void insertUser (String username, String firstName, String lastName,String password,String email, String adminLevel) throws SQLException, ClassNotFoundException {
+    public static void insertUser (String username, String firstName, String lastName,String password,String email, String adminLevel) throws SQLException {
         //Declare a INSERT statement
 
 
@@ -30,7 +29,7 @@ public class UserDAO {
 
         //Execute INSERT operation
         try {
-            dbutil.runQuery(insertQuery);
+            DatabaseUtility.runQuery(insertQuery);
         } catch (SQLException e) {
             System.out.print("Error occurred while INSERT Operation: " + e);
             throw e;
@@ -42,19 +41,16 @@ public class UserDAO {
      * @param username search by username
      * @return searched User
      * @throws SQLException provides information on a database access error
-     * @throws ClassNotFoundException
      */
-    public static User findUser(String username) throws SQLException, ClassNotFoundException {
+    public static User findUser(String username) throws SQLException {
 
         String searchQuery = "SELECT * FROM g7musicappdb.users WHERE username like '" + username+"';";
 
         try {
-            ResultSet rsUser = dbutil.dbExecuteQuery(searchQuery);
+            ResultSet rsUser = DatabaseUtility.dbExecuteQuery(searchQuery);
 
-            System.out.println("creating user object from RS");
+            return getUserFromResultSet(rsUser);
 
-            User user = getUserFromResultSet(rsUser);
-            return user;
         } catch (SQLException e) {
             System.out.println("error while searching user");
             throw e;
@@ -68,7 +64,9 @@ public class UserDAO {
      * @throws SQLException
      */
         public static User getUserFromResultSet(ResultSet rs) throws  SQLException{
+
             User user = null;
+
             if (rs.next()){
                 user = new User(rs.getInt("user_id"), rs.getString("username"),
                         rs.getString("first_name"), rs.getString("last_name"),
@@ -84,14 +82,13 @@ public class UserDAO {
      * @param input authorization code input by the user
      * @return the searched authorization code
      * @throws SQLException provides information on a database access error
-     * @throws ClassNotFoundException
      */
-    public static String findAuCode(String input) throws SQLException, ClassNotFoundException {
+    public static String findAuCode(String input) throws SQLException {
 
         String searchQuery = "SELECT * FROM g7musicappdb.authorization_codes WHERE code_sequence like '" + input +"';";
         String auCode=null;
         try {
-            ResultSet rsCode = dbutil.dbExecuteQuery(searchQuery);
+            ResultSet rsCode = DatabaseUtility.dbExecuteQuery(searchQuery);
             if (rsCode.next()) {
 
                 auCode = rsCode.getString("code_sequence");
@@ -119,7 +116,7 @@ public class UserDAO {
             userData = FXCollections.observableArrayList();
 
 
-            ResultSet rsUser = dbutil.dbExecuteQuery(query);
+            ResultSet rsUser = DatabaseUtility.dbExecuteQuery(query);
 
             while (rsUser.next()) {
 
@@ -144,7 +141,7 @@ public class UserDAO {
 
         //Execute DELETE operation
         try {
-            dbutil.dbExecuteUpdate(delStmt);
+            DatabaseUtility.dbExecuteUpdate(delStmt);
         }
         catch (SQLException e) {
             System.out.print("Error occurred while DELETE Operation: " + e);
@@ -160,7 +157,7 @@ public class UserDAO {
 
         //Execute UPDATE operation
         try {
-            dbutil.dbExecuteUpdate(query);
+            DatabaseUtility.dbExecuteUpdate(query);
         }
         catch (SQLException e) {
             System.out.print("Error occurred while UPDATE Operation: " + e);
