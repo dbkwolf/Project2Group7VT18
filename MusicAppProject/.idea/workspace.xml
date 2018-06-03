@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/HomeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Spectrum152-G.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Spectrum152-G.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/searchyt.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/searchyt.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -103,78 +102,11 @@
       <file leaf-file-name="SendEmail.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/SendEmail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="340">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DATABASE/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.SCHEMA:g7musicappdb" pinned="false" current-in-tab="false">
-        <entry file="uml://DATABASE/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.SCHEMA:g7musicappdb">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.SCHEMA:g7musicappdb</OriginalElement>
-              <nodes>
-                <node x="131.25000000000006" y="570.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references</node>
-                <node x="242.0" y="0.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists</node>
-                <node x="474.0" y="0.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.authorization_codes</node>
-                <node x="238.0" y="358.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs</node>
-                <node x="11.0" y="391.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists</node>
-                <node x="194.0" y="168.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums</node>
-                <node x="0.0" y="711.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.genres</node>
-                <node x="0.0" y="124.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists">
-                  <point x="-39.75000000000003" y="-48.0" />
-                  <point x="171.0" y="545.0" />
-                  <point x="87.0" y="545.0" />
-                  <point x="0.0" y="48.0" />
-                </edge>
-                <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
-                  <point x="47.0" y="-81.0" />
-                  <point x="379.0" y="333.0" />
-                  <point x="381.5" y="333.0" />
-                  <point x="381.5" y="99.0" />
-                  <point x="377.0" y="99.0" />
-                  <point x="45.0" y="37.0" />
-                </edge>
-                <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
-                  <point x="0.0" y="-48.0" />
-                  <point x="282.5" y="99.0" />
-                  <point x="287.0" y="99.0" />
-                  <point x="-45.0" y="37.0" />
-                </edge>
-                <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs">
-                  <point x="39.74999999999997" y="-48.0" />
-                  <point x="250.5" y="545.0" />
-                  <point x="332.0" y="545.0" />
-                  <point x="0.0" y="81.0" />
-                </edge>
-                <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums">
-                  <point x="-47.0" y="-81.0" />
-                  <point x="285.0" y="333.0" />
-                  <point x="282.5" y="333.0" />
-                  <point x="0.0" y="48.0" />
-                </edge>
-                <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users">
-                  <point x="0.0" y="-48.0" />
-                  <point x="0.0" y="92.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.8236024844720496" x="107.55656108597276" y="271.4027149321267" />
-              <SelectedNodes>
-                <node>c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Key columns</Category>
-                <Category>Columns</Category>
-              </Categories>
             </state>
           </provider>
         </entry>
@@ -182,136 +114,8 @@
       <file leaf-file-name="DatabaseUtility.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/DatabaseUtility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#dbExecuteUpdate#0;class#DatabaseUtility#0" />
-                <element signature="docComment;method#dbExecuteQuery#0;class#DatabaseUtility#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JAVA/controllers.AdminController" pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/controllers.AdminController">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>controllers.AdminController</OriginalElement>
-              <nodes>
-                <node x="666.5590277777776" y="100.0">controllers.MainController</node>
-                <node x="507.5590277777776" y="321.0">controllers.SignUpController</node>
-                <node x="47.375" y="1094.0">controllers.YouTubeSearchController</node>
-                <node x="1405.0555555555554" y="0.0">controllers.SettingsController</node>
-                <node x="0.0" y="77.5">util.Auth</node>
-                <node x="867.4613715277777" y="929.0">controllers.AdminController</node>
-                <node x="1080.0555555555554" y="0.0">util.DatabaseUtility</node>
-                <node x="452.4613715277777" y="687.0">controllers.HomeController</node>
-                <node x="261.5590277777776" y="453.5">util.HttpGet</node>
-                <node x="11.25" y="453.5">util.Search</node>
-                <node x="992.8055555555554" y="332.0">controllers.LogInController</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="util.Search" target="util.Auth">
-                  <point x="0.0" y="-25.5" />
-                  <point x="95.25" y="301.0" />
-                  <point x="71.25" y="301.0" />
-                  <point x="-71.25" y="48.0" />
-                </edge>
-                <edge source="controllers.HomeController" target="controllers.MainController">
-                  <point x="-49.375" y="-521.0" />
-                  <point x="600.5863715277777" y="657.0" />
-                  <point x="497.0590277777776" y="657.0" />
-                  <point x="497.0590277777776" y="281.0" />
-                  <point x="715.392361111111" y="281.0" />
-                  <point x="-97.66666666666663" y="25.5" />
-                </edge>
-                <edge source="controllers.HomeController" target="controllers.LogInController">
-                  <point x="148.125" y="-521.0" />
-                  <point x="798.0863715277777" y="667.0" />
-                  <point x="1068.5555555555554" y="667.0" />
-                  <point x="-75.75" y="147.0" />
-                </edge>
-                <edge source="controllers.YouTubeSearchController" target="controllers.MainController">
-                  <point x="36.25" y="-114.0" />
-                  <point x="228.625" y="667.0" />
-                  <point x="231.8715277777776" y="667.0" />
-                  <point x="231.8715277777776" y="271.0" />
-                  <point x="682.8368055555554" y="271.0" />
-                  <point x="-130.22222222222217" y="25.5" />
-                </edge>
-                <edge source="controllers.YouTubeSearchController" target="util.Auth">
-                  <point x="-36.25" y="-114.0" />
-                  <point x="156.125" y="667.0" />
-                  <point x="189.74999999999994" y="667.0" />
-                  <point x="189.74999999999994" y="301.0" />
-                  <point x="213.75" y="301.0" />
-                  <point x="71.25" y="48.0" />
-                </edge>
-                <edge source="controllers.LogInController" target="util.DatabaseUtility">
-                  <point x="113.625" y="-147.0" />
-                  <point x="1257.9305555555554" y="301.0" />
-                  <point x="1290.0555555555554" y="301.0" />
-                  <point x="70.0" y="125.5" />
-                </edge>
-                <edge source="controllers.SignUpController" target="controllers.MainController">
-                  <point x="-73.75" y="-158.0" />
-                  <point x="581.3090277777776" y="291.0" />
-                  <point x="747.9479166666665" y="291.0" />
-                  <point x="-65.11111111111109" y="25.5" />
-                </edge>
-                <edge source="controllers.YouTubeSearchController" target="util.Search">
-                  <point x="-108.75" y="-114.0" />
-                  <point x="83.625" y="667.0" />
-                  <point x="95.25" y="667.0" />
-                  <point x="0.0" y="25.5" />
-                </edge>
-                <edge source="controllers.HomeController" target="util.HttpGet">
-                  <point x="-148.125" y="-521.0" />
-                  <point x="501.8363715277777" y="667.0" />
-                  <point x="430.3090277777776" y="667.0" />
-                  <point x="56.25" y="25.5" />
-                </edge>
-                <edge source="controllers.YouTubeSearchController" target="util.HttpGet">
-                  <point x="108.75" y="-114.0" />
-                  <point x="301.125" y="667.0" />
-                  <point x="317.8090277777776" y="667.0" />
-                  <point x="-56.25" y="25.5" />
-                </edge>
-                <edge source="controllers.AdminController" target="controllers.MainController">
-                  <point x="0.0" y="-279.0" />
-                  <point x="1022.4613715277777" y="657.0" />
-                  <point x="982.3055555555554" y="657.0" />
-                  <point x="982.3055555555554" y="291.0" />
-                  <point x="878.1701388888887" y="291.0" />
-                  <point x="65.11111111111109" y="25.5" />
-                </edge>
-                <edge source="controllers.AdminController" target="controllers.LogInController">
-                  <point x="103.33333333333326" y="-279.0" />
-                  <point x="1125.7947048611109" y="667.0" />
-                  <point x="1220.0555555555554" y="667.0" />
-                  <point x="75.75" y="147.0" />
-                </edge>
-                <edge source="controllers.LogInController" target="controllers.MainController">
-                  <point x="-113.625" y="-147.0" />
-                  <point x="1030.6805555555554" y="281.0" />
-                  <point x="910.7256944444442" y="281.0" />
-                  <point x="97.66666666666663" y="25.5" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="206.0" y="790.0" />
-              <SelectedNodes>
-                <node>controllers.AdminController</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Constructors</Category>
-                <Category>Methods</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>packageLocal</VISIBILITY>
+            <state relative-caret-position="17">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -326,9 +130,9 @@
                 <node x="131.25000000000003" y="570.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references</node>
                 <node x="242.0" y="0.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists</node>
                 <node x="474.0" y="0.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.authorization_codes</node>
-                <node x="238.0" y="358.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs</node>
-                <node x="11.0" y="391.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists</node>
                 <node x="194.0" y="168.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums</node>
+                <node x="11.0" y="391.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists</node>
+                <node x="238.0" y="358.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs</node>
                 <node x="0.0" y="711.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.genres</node>
                 <node x="0.0" y="124.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users</node>
               </nodes>
@@ -340,6 +144,12 @@
                   <point x="87.0" y="545.0" />
                   <point x="0.0" y="48.0" />
                 </edge>
+                <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
+                  <point x="0.0" y="-48.0" />
+                  <point x="282.5" y="99.0" />
+                  <point x="287.0" y="99.0" />
+                  <point x="-45.0" y="37.0" />
+                </edge>
                 <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
                   <point x="46.999999999999986" y="-81.0" />
                   <point x="379.0" y="333.0" />
@@ -347,12 +157,6 @@
                   <point x="381.5" y="99.0" />
                   <point x="377.0" y="99.0" />
                   <point x="44.999999999999986" y="37.0" />
-                </edge>
-                <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
-                  <point x="0.0" y="-48.0" />
-                  <point x="282.5" y="99.0" />
-                  <point x="287.0" y="99.0" />
-                  <point x="-45.0" y="37.0" />
                 </edge>
                 <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs">
                   <point x="39.75" y="-48.0" />
@@ -371,7 +175,7 @@
                   <point x="0.0" y="92.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.8236024844720496" x="107.55656108597276" y="281.4027149321267" />
+              <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
               <SelectedNodes>
                 <node>c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users</node>
               </SelectedNodes>
@@ -386,54 +190,61 @@
       <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="141" column="10" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
+            <state relative-caret-position="691">
+              <caret line="420" lean-forward="true" selection-start-line="420" selection-end-line="420" />
               <folding>
-                <element signature="e#2973#3346#0" />
-                <element signature="e#3529#4913#0" />
-                <element signature="e#3565#3628#0" />
-                <element signature="e#3889#4004#0" />
-                <element signature="e#4162#4905#0" />
-                <element signature="e#4180#4282#0" />
-                <element signature="e#4919#5724#0" />
-                <element signature="e#5730#6304#0" />
-                <element signature="e#6312#7241#0" />
-                <element signature="e#6630#7220#0" />
-                <element signature="e#7247#7862#0" />
-                <element signature="e#7871#8876#0" />
-                <element signature="e#8882#9355#0" />
-                <element signature="e#9363#9847#0" />
-                <element signature="e#9857#10397#0" />
-                <element signature="e#10404#11712#0" />
-                <element signature="class#11057:11576" />
-                <element signature="method#run#0;class#11057:11576" />
-                <element signature="e#11718#12056#0" />
-                <element signature="e#12063#16326#0" />
-                <element signature="e#13888#13962#0" />
-                <element signature="e#14456#14805#0" />
-                <element signature="e#14978#15336#0" />
-                <element signature="e#15561#15897#0" />
-                <element signature="e#15950#16292#0" />
-                <element signature="e#16332#16606#0" />
-                <element signature="e#16898#17043#0" />
-                <element signature="e#17981#18183#0" />
-                <element signature="e#18190#18436#0" />
-                <element signature="e#18443#18662#0" />
-                <element signature="e#18668#18986#0" />
-                <element signature="e#18993#19613#0" />
-                <element signature="e#19619#19772#0" />
-                <element signature="e#19778#20162#0" />
-                <element signature="e#19895#20152#0" />
-                <element signature="e#20169#20283#0" />
+                <element signature="e#2338#3664#0" />
+                <element signature="e#3031#3404#0" />
+                <element signature="e#5060#5865#0" />
+                <element signature="e#5871#6445#0" />
+                <element signature="e#6453#7382#0" />
+                <element signature="e#6771#7361#0" />
+                <element signature="e#7388#8003#0" />
+                <element signature="e#8012#9017#0" />
+                <element signature="e#9023#9496#0" />
+                <element signature="e#9504#9988#0" />
+                <element signature="e#9998#10538#0" />
+                <element signature="e#11859#12197#0" />
+                <element signature="e#12204#16467#0" />
+                <element signature="e#14029#14103#0" />
+                <element signature="e#14597#14946#0" />
+                <element signature="e#15119#15477#0" />
+                <element signature="e#15702#16038#0" />
+                <element signature="e#16091#16433#0" />
+                <element signature="e#16473#16747#0" />
+                <element signature="e#16755#17032#0" />
+                <element signature="e#17039#17184#0" />
+                <element signature="e#17190#18156#0" />
+                <element signature="e#17238#17324#0" />
+                <element signature="e#17718#18144#0" />
+                <element signature="e#18162#18364#0" />
+                <element signature="e#18371#18617#0" />
+                <element signature="e#18624#18843#0" />
+                <element signature="e#18849#19167#0" />
+                <element signature="e#19174#19794#0" />
+                <element signature="e#19800#19953#0" />
+                <element signature="e#19959#20343#0" />
+                <element signature="e#20076#20333#0" />
+                <element signature="e#20350#20464#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="home.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scenes/home.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="34" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
       <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/LogInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="3740">
               <caret line="242" column="5" selection-start-line="242" selection-start-column="5" selection-end-line="242" selection-end-column="5" />
             </state>
           </provider>
@@ -442,8 +253,8 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+            <state relative-caret-position="510">
+              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -452,7 +263,7 @@
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -460,7 +271,7 @@
       <file leaf-file-name="login.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/login.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
+            <state relative-caret-position="816">
               <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
             </state>
           </provider>
@@ -489,6 +300,7 @@
       <find>for</find>
       <find>searchdb</find>
       <find>JFXButton</find>
+      <find>pn_sear</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -577,9 +389,9 @@
     <packageJsonPaths />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="width" value="1818" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1455" />
+    <option name="height" value="832" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -642,12 +454,6 @@
             <path>
               <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MusicAppProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MusicAppProject" type="462c0819:PsiDirectoryNode" />
               <item name="org.apache.commons.pool.jar" type="ab9368bb:PsiFileNode" />
             </path>
             <path>
@@ -658,8 +464,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -849,6 +655,7 @@
       <workItem from="1527934581885" duration="35900000" />
       <workItem from="1527977390091" duration="7906000" />
       <workItem from="1528018666237" duration="5519000" />
+      <workItem from="1528044663876" duration="4240000" />
     </task>
     <task id="LOCAL-00001" summary=" JFoenix added">
       <created>1525085802096</created>
@@ -994,7 +801,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343684000" />
+    <option name="totallyTimeSpent" value="349071000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1006,62 +813,40 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="845" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32947975" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3272727" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" weight="0.5597609" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32995737" />
-      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32851636" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4978678" weight="0.4755245" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32851636" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.32851636" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21797451" />
-      <window_info anchor="right" id="Database" order="5" weight="0.20187794" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.12474849" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.3988604" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" weight="0.5597609" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.12526652" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.32851636" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32995737" />
-      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32851636" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.3988604" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="right" x="91" y="91" width="1738" height="850" id="Documentation" order="9" type="FLOATING" />
-      <window_info anchor="right" id="Database" order="5" weight="0.20243737" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32851636" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="TODO" order="8" weight="0.32947975" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Database Console" order="1" weight="0.62813103" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32851636" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4978678" visible="true" weight="0.4755245" />
-      <window_info anchor="bottom" id="SQL Generator" order="0" weight="0.97013485" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32763532" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" weight="0.5597609" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32995737" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32851636" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32851636" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4978678" weight="0.4755245" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.32851636" />
+      <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11513859" />
+      <window_info anchor="right" id="Database" order="5" weight="0.20243737" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.12526652" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.3988604" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Database Console" order="1" weight="0.62813103" />
+      <window_info anchor="bottom" id="SQL Generator" order="0" weight="0.97013485" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="right" x="91" y="91" width="1738" height="850" id="Documentation" order="9" type="FLOATING" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32851636" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="3" />
@@ -1286,15 +1071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding>
-            <element signature="e#129#130#0" expanded="true" />
-            <element signature="e#160#161#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1354,11 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
-          <folding>
-            <element signature="e#2422#2423#0" expanded="true" />
-            <element signature="e#2457#2458#0" expanded="true" />
-            <element signature="e#2561#2562#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1377,17 +1148,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/MP3File.java" />
-    <entry file="file://$PROJECT_DIR$/src/scenes/home.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/login.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
+        <state relative-caret-position="816">
           <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
         </state>
       </provider>
@@ -1395,7 +1158,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/LogInController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
+        <state relative-caret-position="3740">
           <caret line="242" column="5" selection-start-line="242" selection-start-column="5" selection-end-line="242" selection-end-column="5" />
         </state>
       </provider>
@@ -1437,8 +1200,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/SendEmail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="340">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1487,7 +1250,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="294.0" y="500.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="294.0" y="501.0" />
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
@@ -1552,7 +1315,7 @@
               <point x="0.0" y="92.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.8236024844720496" x="107.55656108597276" y="271.4027149321267" />
+          <settings layout="Hierarchic Group" zoom="0.8236024844720496" x="108.0" y="271.0" />
           <SelectedNodes>
             <node>c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users</node>
           </SelectedNodes>
@@ -1560,6 +1323,7 @@
             <Category>Key columns</Category>
             <Category>Columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -1571,11 +1335,12 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="433.5" y="331.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="434.0" y="332.0" />
           <SelectedNodes />
           <Categories>
             <Category>All</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
@@ -1588,24 +1353,13 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="433.5" y="331.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="434.0" y="332.0" />
           <SelectedNodes />
           <Categories>
             <Category>All</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/DatabaseUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#dbExecuteUpdate#0;class#DatabaseUtility#0" />
-            <element signature="docComment;method#dbExecuteQuery#0;class#DatabaseUtility#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1730,6 +1484,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="uml://DATABASE/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1739,9 +1507,9 @@
             <node x="131.25000000000003" y="570.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references</node>
             <node x="242.0" y="0.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists</node>
             <node x="474.0" y="0.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.authorization_codes</node>
-            <node x="238.0" y="358.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs</node>
-            <node x="11.0" y="391.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists</node>
             <node x="194.0" y="168.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums</node>
+            <node x="11.0" y="391.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists</node>
+            <node x="238.0" y="358.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs</node>
             <node x="0.0" y="711.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.genres</node>
             <node x="0.0" y="124.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users</node>
           </nodes>
@@ -1753,6 +1521,12 @@
               <point x="87.0" y="545.0" />
               <point x="0.0" y="48.0" />
             </edge>
+            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
+              <point x="0.0" y="-48.0" />
+              <point x="282.5" y="99.0" />
+              <point x="287.0" y="99.0" />
+              <point x="-45.0" y="37.0" />
+            </edge>
             <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
               <point x="46.999999999999986" y="-81.0" />
               <point x="379.0" y="333.0" />
@@ -1760,12 +1534,6 @@
               <point x="381.5" y="99.0" />
               <point x="377.0" y="99.0" />
               <point x="44.999999999999986" y="37.0" />
-            </edge>
-            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
-              <point x="0.0" y="-48.0" />
-              <point x="282.5" y="99.0" />
-              <point x="287.0" y="99.0" />
-              <point x="-45.0" y="37.0" />
             </edge>
             <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs">
               <point x="39.75" y="-48.0" />
@@ -1784,7 +1552,7 @@
               <point x="0.0" y="92.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.8236024844720496" x="107.55656108597276" y="281.4027149321267" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
           <SelectedNodes>
             <node>c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users</node>
           </SelectedNodes>
@@ -1795,61 +1563,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/util/DatabaseUtility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="17">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/scenes/home.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        <state relative-caret-position="867">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="34" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="141" column="10" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
+        <state relative-caret-position="691">
+          <caret line="420" lean-forward="true" selection-start-line="420" selection-end-line="420" />
           <folding>
-            <element signature="e#2973#3346#0" />
-            <element signature="e#3529#4913#0" />
-            <element signature="e#3565#3628#0" />
-            <element signature="e#3889#4004#0" />
-            <element signature="e#4162#4905#0" />
-            <element signature="e#4180#4282#0" />
-            <element signature="e#4919#5724#0" />
-            <element signature="e#5730#6304#0" />
-            <element signature="e#6312#7241#0" />
-            <element signature="e#6630#7220#0" />
-            <element signature="e#7247#7862#0" />
-            <element signature="e#7871#8876#0" />
-            <element signature="e#8882#9355#0" />
-            <element signature="e#9363#9847#0" />
-            <element signature="e#9857#10397#0" />
-            <element signature="e#10404#11712#0" />
-            <element signature="class#11057:11576" />
-            <element signature="method#run#0;class#11057:11576" />
-            <element signature="e#11718#12056#0" />
-            <element signature="e#12063#16326#0" />
-            <element signature="e#13888#13962#0" />
-            <element signature="e#14456#14805#0" />
-            <element signature="e#14978#15336#0" />
-            <element signature="e#15561#15897#0" />
-            <element signature="e#15950#16292#0" />
-            <element signature="e#16332#16606#0" />
-            <element signature="e#16898#17043#0" />
-            <element signature="e#17981#18183#0" />
-            <element signature="e#18190#18436#0" />
-            <element signature="e#18443#18662#0" />
-            <element signature="e#18668#18986#0" />
-            <element signature="e#18993#19613#0" />
-            <element signature="e#19619#19772#0" />
-            <element signature="e#19778#20162#0" />
-            <element signature="e#19895#20152#0" />
-            <element signature="e#20169#20283#0" />
+            <element signature="e#2338#3664#0" />
+            <element signature="e#3031#3404#0" />
+            <element signature="e#5060#5865#0" />
+            <element signature="e#5871#6445#0" />
+            <element signature="e#6453#7382#0" />
+            <element signature="e#6771#7361#0" />
+            <element signature="e#7388#8003#0" />
+            <element signature="e#8012#9017#0" />
+            <element signature="e#9023#9496#0" />
+            <element signature="e#9504#9988#0" />
+            <element signature="e#9998#10538#0" />
+            <element signature="e#11859#12197#0" />
+            <element signature="e#12204#16467#0" />
+            <element signature="e#14029#14103#0" />
+            <element signature="e#14597#14946#0" />
+            <element signature="e#15119#15477#0" />
+            <element signature="e#15702#16038#0" />
+            <element signature="e#16091#16433#0" />
+            <element signature="e#16473#16747#0" />
+            <element signature="e#16755#17032#0" />
+            <element signature="e#17039#17184#0" />
+            <element signature="e#17190#18156#0" />
+            <element signature="e#17238#17324#0" />
+            <element signature="e#17718#18144#0" />
+            <element signature="e#18162#18364#0" />
+            <element signature="e#18371#18617#0" />
+            <element signature="e#18624#18843#0" />
+            <element signature="e#18849#19167#0" />
+            <element signature="e#19174#19794#0" />
+            <element signature="e#19800#19953#0" />
+            <element signature="e#19959#20343#0" />
+            <element signature="e#20076#20333#0" />
+            <element signature="e#20350#20464#0" />
           </folding>
         </state>
       </provider>

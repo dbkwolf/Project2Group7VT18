@@ -81,6 +81,8 @@ public class HomeController extends MainController {
     private ContextMenu playlist_cm = new ContextMenu();
     private MenuItem delete_mi = new MenuItem("Delete");
 
+    private static final double MIN_CHANGE = 0.5 ;
+
 
 
 
@@ -139,36 +141,37 @@ public class HomeController extends MainController {
 
 
 
-        //pn_searchyt.setStyle("-fx-background-color: rgba(255, 255, 255, 0);");
+        pn_searchyt.setStyle("-fx-background-color: rgba(255, 255, 255, 0);");
 
 
     }
 
     private void sliderSetUp(){
-        // Listen to the slider. When it changes, seek with the player.
-// MediaPlayer.seek does nothing when the player is stopped, so the play/pause button's handler
-// always sets the start time to the slider's current value, and then resets it to 0 after starting the player.
-        InvalidationListener sliderChangeListener = o-> {
-            Duration seekTo = Duration.seconds(slider.getValue());
-            player.seek(seekTo);
-        };
-        slider.valueProperty().addListener(sliderChangeListener);
 
-// Link the player's time to the slider
-        player.currentTimeProperty().addListener(l-> {
-            // Temporarily remove the listener on the slider, so it doesn't respond to the change in playback time
-            // I thought timeSlider.isValueChanging() would be useful for this, but it seems to get stuck at true
-            // if the user slides the slider instead of just clicking a position on it.
-            slider.valueProperty().removeListener(sliderChangeListener);
 
-            // Keep timeText's text up to date with the slider position.
-            Duration currentTime = player.getCurrentTime();
-            int value = (int) currentTime.toSeconds();
-            slider.setValue(value);
-
-            // Re-add the slider listener
-            slider.valueProperty().addListener(sliderChangeListener);
+        slider.valueChangingProperty().addListener((obs, wasChanging, isChanging) -> {
+            if (! isChanging) {
+                player.seek(Duration.seconds(slider.getValue()));
+            }
         });
+
+        slider.valueProperty().addListener((obs, oldValue, newValue) -> {
+            if (! slider.isValueChanging()) {
+                double currentTime = player.getCurrentTime().toSeconds();
+                if (Math.abs(currentTime - newValue.doubleValue()) > MIN_CHANGE) {
+                    player.seek(Duration.seconds(newValue.doubleValue()));
+                }
+            }
+        });
+
+        player.currentTimeProperty().addListener((obs, oldTime, newTime) -> {
+            if (! slider.isValueChanging()) {
+                slider.setValue(newTime.toSeconds());
+            }
+        });
+
+
+
     }
 
     public void press_btn_newPlaylist(javafx.event.ActionEvent event) throws Exception {
@@ -383,6 +386,11 @@ public class HomeController extends MainController {
 
                     System.out.println("Duration: "+track.getDuration().toSeconds());
 
+                    slider.maxProperty().bind(Bindings.createDoubleBinding(
+                            () -> player.getTotalDuration().toSeconds(),
+                            player.totalDurationProperty()));
+
+
                     // display media's metadata
                     for (Map.Entry<String, Object> entry : track.getMetadata().entrySet()){
                         System.out.println(entry.getKey() + ": " + entry.getValue());
@@ -570,18 +578,21 @@ public class HomeController extends MainController {
 
         //serve para voltar quando aperto o botão de menu
 
-        BoxBlur bb = new BoxBlur();
+
+        BoxBlur blur = new BoxBlur();
 
         btn_searchDB.setOnAction((ActionEvent event) -> {
             if (pn_searchyt.getTranslateX()!= 0){
                 openYTsearchAction.setToX(0);
                 openYTsearchAction.play();
-                pn_search.setEffect(bb);
+                pn_search.setEffect(blur);
+
                 btn_searchDB.setText("DB Search");
             }else{
                 closeYTsearchAction.setToX(+(pn_searchyt.getWidth()));
                 closeYTsearchAction.play();
-                //btn_searchDB.setText("YT Search");
+                btn_searchDB.setText("YT Search");
+                pn_search.setEffect(null);
             }
         });
 

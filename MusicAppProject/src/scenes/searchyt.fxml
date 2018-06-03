@@ -9,26 +9,30 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: null;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.YouTubeSearchController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #06111E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.YouTubeSearchController">
    <children>
-      <ImageView fitHeight="623.0" fitWidth="300.0" layoutY="1.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/Spectrum152-G.jpg" />
-         </image>
-      </ImageView>
-      <JFXTextField fx:id="txt_search" layoutX="14.0" layoutY="14.0" maxWidth="420.0" minWidth="204.0" prefHeight="31.0" prefWidth="269.0" unFocusColor="WHITE" />
-      <JFXButton fx:id="btn_search" layoutX="123.0" layoutY="51.0" onAction="#press_btn_searchyt" style="-fx-background-color: #ae1d1d;" text="Search" textFill="WHITE">
+      <JFXTextField fx:id="txt_search" layoutX="14.0" layoutY="14.0" maxWidth="420.0" minWidth="204.0" prefHeight="31.0" prefWidth="269.0" promptText="Search something on YouTube..." unFocusColor="WHITE">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btn_search" buttonType="RAISED" layoutX="117.0" layoutY="52.0" onAction="#press_btn_searchyt" style="-fx-background-color: #531515;" text="Search" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="tbl_results" layoutY="97.0" onMouseClicked="#getLinkFromList" prefHeight="349.0" prefWidth="300.0">
+      <TableView fx:id="tbl_results" layoutY="97.0" onMouseClicked="#getLinkFromList" opacity="0.83" prefHeight="349.0" prefWidth="300.0" stylesheets="@../images/tbl-stylesheet.css">
          <columns>
             <TableColumn fx:id="col_titles" prefWidth="298.0" text="Video Titles" />
          </columns>
       </TableView>
-      <StackPane fx:id="stpn_addtoDB" layoutY="325.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="325.0" />
-      <JFXButton fx:id="btn_addToDB" layoutX="113.0" layoutY="468.0" onAction="#press_btn_addtoDB" style="-fx-background-color: #59bdc2;" text="Add to DB" />
+      <StackPane fx:id="stpn_addtoDB" alignment="BOTTOM_CENTER" layoutY="325.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="325.0">
+         <children>
+            <JFXButton fx:id="btn_addToDB" buttonType="RAISED" onAction="#press_btn_addtoDB" style="-fx-background-color: #531515;" text="Add to DB" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </StackPane>
    </children>
 </AnchorPane>
