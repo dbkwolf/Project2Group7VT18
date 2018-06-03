@@ -6,7 +6,11 @@ public class Album {
     private String title;
     private int artistId;
 
-
+public Album(int id, String title, int artistId){
+    this.albumId = id;
+    this.title = title;
+    this.artistId = artistId;
+}
 
     public int getAlbumId() {
         return albumId;

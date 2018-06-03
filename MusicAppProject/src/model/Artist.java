@@ -2,8 +2,15 @@ package model;
 
 public class Artist {
 
+
+
     private int artistId;
-    private String name;
+    private String artistName;
+
+    public Artist(int id, String name){
+        this.artistId = id;
+        this.artistName = name;
+    }
 
     public int getArtistId() {
         return artistId;
@@ -13,11 +20,12 @@ public class Artist {
         this.artistId = artistId;
     }
 
-    public String getName() {
-        return name;
+
+    public String getArtistName() {
+        return artistName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setArtistName(String artistName) {
+        this.artistName = artistName;
     }
 }

@@ -11,21 +11,21 @@ public class Song {
     private SimpleStringProperty songArtist;
     private SimpleStringProperty songAlbum;
     private SimpleStringProperty songLocation;
+    private SimpleIntegerProperty songDuration;
+    private int refId;
 
 
 
-    public Song(int id, String title, String artist, String album, String location) {
+    public Song(int id, String title, String artist, String album, String location, int duration) {
 
         this.songId = new SimpleIntegerProperty(id);
         this.songTitle = new SimpleStringProperty(title);
         this.songArtist = new SimpleStringProperty(artist);
         this.songAlbum = new SimpleStringProperty(album);
-        this.songLocation = new SimpleStringProperty("file:///C:/Users/Delta/Desktop/DRVNOfficial-4Head/"+location+".mp3");
+        this.songLocation = new SimpleStringProperty("http://project2.duckdns.org:1234/files/"+location+".mp3");
+        this.songDuration = new SimpleIntegerProperty(duration);
     }
 
-    //private int artistId;
-   // private int albumId;
-    //private String location;
 
 public StringProperty titleProperty(){
         return songTitle;
@@ -91,4 +91,23 @@ public StringProperty albumProperty(){
     }
 
 
+    public int getRefId() {
+        return refId;
+    }
+
+    public void setRefId(int refId) {
+        this.refId = refId;
+    }
+
+    public int getSongDuration() {
+        return songDuration.get();
+    }
+
+    public SimpleIntegerProperty songDurationProperty() {
+        return songDuration;
+    }
+
+    public void setSongDuration(int songDuration) {
+        this.songDuration.set(songDuration);
+    }
 }
