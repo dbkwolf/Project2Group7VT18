@@ -15,12 +15,12 @@
          <font>
             <Font size="13.0" />
          </font></JFXTextField>
-      <JFXButton fx:id="btn_search" buttonType="RAISED" layoutX="117.0" layoutY="52.0" onAction="#press_btn_searchyt" style="-fx-background-color: #531515;" text="Search" textFill="WHITE">
+      <JFXButton fx:id="btn_search" buttonType="RAISED" layoutX="119.0" layoutY="56.0" onAction="#press_btn_searchyt" style="-fx-background-color: #531515;" text="Search" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <TableView fx:id="tbl_results" layoutY="97.0" onMouseClicked="#getLinkFromList" opacity="0.83" prefHeight="349.0" prefWidth="300.0" stylesheets="@../images/tbl-stylesheet.css">
+      <TableView fx:id="tbl_results" layoutY="100.0" onMouseClicked="#getLinkFromList" opacity="0.83" prefHeight="349.0" prefWidth="300.0">
          <columns>
             <TableColumn fx:id="col_titles" prefWidth="298.0" text="Video Titles" />
          </columns>

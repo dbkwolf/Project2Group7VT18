@@ -7,19 +7,30 @@ import javax.activation.*;
 public class SendEmail {
 
    private  String to ;
-    private String from = "dwolfsteller@gmail.com";
-    private String host = "localhost";
-   private  Properties properties = System.getProperties();
+    private String from = "project2hkrmusicapp@gmail.com";
+    private  String pswd = "project2hkr18";
+
+
 
     public SendEmail(String recipient) {
 
 
        this.to = recipient;
 
-        properties.setProperty("pop.gmail.com", host);
+
+       Properties properties = System.getProperties();
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.starttls.enable", "true");
+        properties.put("mail.smtp.host", "smtp.gmail.com");
+        properties.put("mail.smtp.port", "587");
 
 
-        Session session = Session.getDefaultInstance(properties);
+        Session session = Session.getInstance(properties,
+                                              new javax.mail.Authenticator() {
+                                                  protected PasswordAuthentication getPasswordAuthentication() {
+                                                      return new PasswordAuthentication(from, pswd);
+                                                  }
+                                              });
 
         try {
             // Create a default MimeMessage object.
@@ -29,7 +40,7 @@ public class SendEmail {
             message.setFrom(new InternetAddress(from));
 
             // Set To: header field of the header.
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+            message.setRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
             // Set Subject: header field
             message.setSubject("This is the Subject Line!");

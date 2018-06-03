@@ -205,7 +205,7 @@ public class LogInController extends MainController {
 
     private void sendRecoveryEmail(ActionEvent event, String recipientEmail, JFXDialog dialog) {
 
-            SendEmail sendRecoveryEmail = new SendEmail(recipientEmail);
+        new SendEmail(recipientEmail);
 
 
 

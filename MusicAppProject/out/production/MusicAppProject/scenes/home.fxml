@@ -20,121 +20,142 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
-   <children>
-      <BorderPane fx:id="bpn_root" layoutX="-187.0" layoutY="-61.0" prefHeight="674.0" prefWidth="1201.0" style="-fx-background-color: #1f2835;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <top>
-            <AnchorPane prefHeight="120.0" prefWidth="1025.0" style="-fx-background-color: #00060c;" BorderPane.alignment="CENTER">
+<BorderPane fx:id="bpn_root" prefHeight="674.0" prefWidth="1201.0" style="-fx-background-color: #1f2835;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+   <bottom>
+      <AnchorPane prefHeight="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btn_addSong" layoutX="900.0" layoutY="10.0" onAction="#press_btn_addSong" style="-fx-background-color: #06111e;" text="add to Playlist" textFill="#c3c0c0" />
+            <JFXButton fx:id="btn_newPlaylist" layoutX="170.0" layoutY="10.0" onAction="#press_btn_newPlaylist" style="-fx-background-color: #06111e;" text="New Playlist+" textFill="#a19e9e" />
+            <JFXButton fx:id="btn_testHttpGet" disable="true" layoutX="214.0" layoutY="22.0" onAction="#testHttpGet" opacity="0.0" style="-fx-background-color: #000000;" text="Test HttpGet" textFill="#a40b0b" />
+            <JFXTextField fx:id="txt_test" disable="true" layoutX="306.0" layoutY="19.0" opacity="0.0" promptText="URL here" />
+            <JFXButton fx:id="btn_manageDB" layoutX="1050.0" layoutY="22.0" onAction="#press_btn_manageDB" style="-fx-background-color: #ffffff;" text="Manage Database" visible="false" />
+            <JFXButton fx:id="btn_playUrl" disable="true" layoutX="619.0" layoutY="22.0" onAction="#press_btn_playUrl" opacity="0.0" style="-fx-background-color: #2a9a05;" text="PLay UrL" textFill="WHITE" />
+            <Label fx:id="lbl_showUrl" disable="true" layoutX="455.0" layoutY="20.0" opacity="0.0" prefHeight="30.0" prefWidth="155.0" text="Label" textFill="#656565" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane fx:id="apn_middle" minHeight="-Infinity" prefHeight="500.0" style="-fx-background-color: #091626;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tbl_playlistTracks" layoutX="21.0" layoutY="45.0" onMouseClicked="#click_tbl_playlistTracks" style="-fx-background-color: #091626;" stylesheets="@../images/tbl-stylesheet.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="col_title" minWidth="0.0" prefWidth="167.0" text="Title" />
+                  <TableColumn fx:id="col_artist" prefWidth="188.0" text="Artist" />
+                  <TableColumn fx:id="col_album" prefWidth="212.0" text="Album" />
+                  <TableColumn fx:id="col_duration" maxWidth="45.0" minWidth="-Infinity" prefWidth="45.0" resizable="false" text="🕐" />
+               </columns>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </TableView>
+            <Label fx:id="lbl_playlistName" layoutX="33.0" layoutY="14.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="stpn_settings" alignment="TOP_LEFT" layoutX="180.0" layoutY="180.0" prefHeight="200.0" prefWidth="300.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="170.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" prefHeight="500.0" prefWidth="219.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <TableView fx:id="tbl_userPlaylists" layoutX="10.0" layoutY="45.0" onMouseClicked="#click_tbl_userPlaylists" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="col_userPlaylistTitle" prefWidth="217.0" text="Playlists" />
+               </columns>
+            </TableView>
+            <Label layoutX="21.0" layoutY="29.0" text="Your Library" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="500.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <AnchorPane fx:id="pn_searchyt" minHeight="-Infinity" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #cccccc;" />
+            <AnchorPane fx:id="pn_search" minHeight="-Infinity" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #06111e;">
                <children>
-                  <Label fx:id="lbl_user" layoutX="15.0" layoutY="92.0" prefHeight="17.0" prefWidth="56.0" text="" textFill="#dadada" />
-                  <JFXButton fx:id="btn_play" layoutX="546.0" layoutY="88.0" onAction="#press_btn_play" text="PLAY" textFill="WHITE" />
-                  <JFXButton fx:id="btn_previous" layoutX="431.0" layoutY="88.0" text="PREVIOUS" textFill="WHITE" />
-                  <JFXButton fx:id="btn_next" layoutX="644.0" layoutY="88.0" text="NEXT" textFill="WHITE" />
-                  <JFXButton fx:id="btn_shuffle" layoutX="731.0" layoutY="64.0" text="SHUFFLE" textFill="WHITE" />
-                  <Label fx:id="lbl_currentTrack" alignment="CENTER" contentDisplay="CENTER" layoutX="403.0" layoutY="28.0" prefHeight="21.0" prefWidth="322.0" text="current title - current songArtist - current album" textAlignment="CENTER" textFill="#b1aecf" />
-                  <JFXButton fx:id="btn_pause" layoutX="504.0" layoutY="82.0" onAction="#press_btn_pause" text="PAUSE" textFill="WHITE" visible="false" />
-                  <ImageView fx:id="img_user" fitHeight="55.0" fitWidth="62.0" layoutX="15.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                  <JFXTextField fx:id="txt_search" layoutX="15.0" layoutY="11.0" maxWidth="268.0" minWidth="242.0" prefHeight="36.0" prefWidth="268.0" promptText="Search" unFocusColor="#bcb8b8" />
+                  <TableView fx:id="tbl_searchResults" layoutY="45.0" prefWidth="297.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="col_searchTitle" prefWidth="118.0" text="   Title" />
+                        <TableColumn fx:id="col_searchArtist" prefWidth="104.0" text="Artist" />
+                        <TableColumn fx:id="col_searchAlbum" prefWidth="64.0" text="Album" />
+                     </columns>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </right>
+   <top>
+      <AnchorPane prefHeight="120.0" prefWidth="1201.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbl_user" layoutX="23.0" layoutY="67.0" prefHeight="17.0" prefWidth="221.0" text="" textFill="#dadada" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="80.0" />
+            <JFXButton fx:id="btn_play" buttonType="RAISED" layoutX="544.0" layoutY="70.0" onAction="#press_btn_play" style="-fx-background-color: #2c3a4d; -fx-background-radius: 3em;" text="." textFill="#3d4a5b" AnchorPane.bottomAnchor="15.0" AnchorPane.topAnchor="67.0">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../Desktop/userlogo.PNG" />
+                        <Image url="@../images/playIcon.png" />
                      </image>
                   </ImageView>
-                  <JFXButton fx:id="btn_searchDB" layoutX="1066.0" layoutY="101.0" style="-fx-background-color: #ffffff;" text="DB Search" />
-                  <Slider fx:id="slider" layoutX="414.0" layoutY="54.0" prefHeight="18.0" prefWidth="296.0" />
-               </children>
-            </AnchorPane>
-         </top>
-         <right>
-            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_RIGHT">
-               <children>
-                  <AnchorPane fx:id="pn_search" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" prefWidth="297.0" style="-fx-background-color: #06111e;">
-                     <children>
-                        <JFXTextField fx:id="txt_search" layoutX="41.0" promptText="Search" />
-                        <JFXButton fx:id="btn_search" layoutX="214.0" layoutY="4.0" onAction="#press_btn_search" style="-fx-background-color: f0f0f0;" text="Search" textFill="#862828" />
-                        <TableView fx:id="tbl_searchResults" layoutY="34.0" prefWidth="297.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
-                          <columns>
-                            <TableColumn fx:id="col_searchTitle" prefWidth="118.0" text="   Title" />
-                            <TableColumn fx:id="col_searchArtist" prefWidth="104.0" text="Artist" />
-                              <TableColumn fx:id="col_searchAlbum" prefWidth="64.0" text="Album" />
-                          </columns>
-                           <padding>
-                              <Insets right="10.0" />
-                           </padding>
-                        </TableView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane fx:id="pn_searchyt" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #cccccc;" />
-               </children>
-            </AnchorPane>
-         </right>
-         <center>
-            <AnchorPane fx:id="apn_middleHomeAnchorpane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" prefWidth="643.0" style="-fx-background-color: #091626;">
-               <children>
-                  <TableView fx:id="tbl_playlistTracks" layoutX="21.0" layoutY="56.0" onMouseClicked="#click_tbl_playlistTracks" style="-fx-background-color: #091626;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
-                    <columns>
-                      <TableColumn minWidth="0.0" prefWidth="36.0" />
-                      <TableColumn fx:id="col_title" prefWidth="236.0" text="Title" />
-                        <TableColumn fx:id="col_artist" prefWidth="206.0" text="Artist" />
-                        <TableColumn fx:id="col_album" prefWidth="116.0" text="Album" />
-                    </columns>
-                     <padding>
-                        <Insets left="10.0" right="10.0" />
-                     </padding>
-                  </TableView>
-                  <Label fx:id="lbl_playlistName" layoutX="60.0" layoutY="14.0" text="Label" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </center>
-         <left>
-            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" prefWidth="219.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_LEFT">
-               <children>
-                  <TableView fx:id="tbl_userPlaylists" layoutX="10.0" layoutY="48.0" onMouseClicked="#click_tbl_userPlaylists" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
-                    <columns>
-                      <TableColumn fx:id="col_userPlaylistTitle" prefWidth="200.0" text="Playlists" />
-                    </columns>
-                     <padding>
-                        <Insets left="10.0" right="10.0" />
-                     </padding>
-                  </TableView>
-                  <Label layoutX="9.0" layoutY="23.0" text="Your Library" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="13.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </left>
-         <bottom>
-
-   </bottom>
-         <bottom>
-            <AnchorPane prefHeight="20.0" prefWidth="1025.0" BorderPane.alignment="CENTER">
-               <children>
-                  <JFXButton fx:id="btn_addSong" layoutX="922.0" layoutY="10.0" onAction="#press_btn_addSong" style="-fx-background-color: #06111e;" text="add to Playlist" textFill="#c3c0c0" />
-                  <JFXButton fx:id="btn_newPlaylist" layoutX="115.0" layoutY="11.0" onAction="#press_btn_newPlaylist" style="-fx-background-color: #06111e;" text="New Playlist+" textFill="#a19e9e" />
-                  <JFXButton fx:id="btn_testHttpGet" disable="true" layoutX="214.0" layoutY="22.0" onAction="#testHttpGet" opacity="0.0" style="-fx-background-color: #000000;" text="Test HttpGet" textFill="#a40b0b" />
-                  <JFXTextField fx:id="txt_test" disable="true" layoutX="306.0" layoutY="19.0" opacity="0.0" promptText="URL here" />
-                  <JFXButton fx:id="btn_manageDB" layoutX="1050.0" layoutY="22.0" onAction="#press_btn_manageDB" style="-fx-background-color: #ffffff;" text="Manage Database" visible="false" />
-                  <JFXButton fx:id="btn_playUrl" disable="true" layoutX="619.0" layoutY="22.0" onAction="#press_btn_playUrl" opacity="0.0" style="-fx-background-color: #2a9a05;" text="PLay UrL" textFill="WHITE" />
-                  <Label fx:id="lbl_showUrl" disable="true" layoutX="455.0" layoutY="20.0" opacity="0.0" prefHeight="30.0" prefWidth="155.0" text="Label" textFill="#656565" />
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </AnchorPane>
-         </bottom>
-      </BorderPane>
-      <StackPane fx:id="stpn_settings" alignment="TOP_LEFT" layoutX="88.0" layoutY="17.0" prefHeight="223.0" prefWidth="325.0">
-         <children>
-            <JFXButton fx:id="btn_profile_settings" alignment="TOP_LEFT" contentDisplay="CENTER" onAction="#press_btn_profile_settings" prefHeight="29.0" prefWidth="52.0" text="・・・" textFill="#f8f6f6">
+               </graphic></JFXButton>
+            <JFXButton fx:id="btn_previous" buttonType="RAISED" layoutX="446.0" layoutY="70.0" style="-fx-background-radius: 3em; -fx-background-color: #2c3a4d;" text="." textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.topAnchor="67.0">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/bwrdIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="btn_next" buttonType="RAISED" layoutX="636.0" layoutY="70.0" style="-fx-background-color: #2c3a4d; -fx-background-radius: 3em;" text="." textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.topAnchor="67.0">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/fwrdIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="btn_shuffle" layoutX="733.0" layoutY="50.0" text="SHUFFLE" textFill="WHITE" />
+            <Label fx:id="lbl_currentTrack" alignment="CENTER" contentDisplay="CENTER" layoutX="405.0" layoutY="14.0" prefHeight="21.0" prefWidth="322.0" text="current title - current songArtist - current album" textAlignment="CENTER" textFill="#b1aecf" />
+            <JFXButton fx:id="btn_pause" buttonType="RAISED" layoutX="544.0" layoutY="70.0" onAction="#press_btn_pause" style="-fx-background-color: #2c3a4d; -fx-background-radius: 3em;" text="." textFill="WHITE" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.topAnchor="67.0">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/pauseIcon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <ImageView fx:id="img_user" fitHeight="55.0" fitWidth="62.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="14.0">
+               <image>
+                  <Image url="@../../../../../../Desktop/userlogo.PNG" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btn_searchDB" alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="1091.0" layoutY="62.0" style="-fx-background-color: #1f2835; -fx-background-radius: 5em;" text="Search YouTube" textFill="#bfb7b7" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="14.0">
+               <graphic>
+                  <ImageView fx:id="img_YTIcon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ytlogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <Slider fx:id="slider" layoutX="419.0" layoutY="41.0" prefHeight="18.0" prefWidth="296.0" />
+            <JFXButton fx:id="btn_profile_settings" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="91.0" layoutY="5.0" onAction="#press_btn_profile_settings" prefHeight="29.0" prefWidth="52.0" text="・・・" textFill="#f8f6f6">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
          </children>
-      </StackPane>
-   </children>
-</AnchorPane>
+      </AnchorPane>
+   </top>
+</BorderPane>

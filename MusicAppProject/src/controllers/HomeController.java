@@ -6,10 +6,15 @@ import javafx.animation.TranslateTransition;
 import javafx.beans.InvalidationListener;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.effect.BoxBlur;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -57,14 +62,15 @@ public class HomeController extends MainController {
     public TableColumn <Song, String> col_searchAlbum;
     public Label lbl_playlistName;
     public JFXButton btn_manageDB;
-    public AnchorPane apn_middleHomeAnchorpane;
+    public AnchorPane apn_middle;
     public Label lbl_showUrl;
     public StackPane stpn_settings;
     public AnchorPane pn_search;
     public JFXButton btn_searchDB;
     public AnchorPane pn_searchyt;
-    public JFXButton btn_ytSearch;
     public Slider slider;
+    public JFXButton btn_profile_settings;
+    public ImageView img_YTIcon;
 
     private String url;
 
@@ -82,6 +88,11 @@ public class HomeController extends MainController {
     private MenuItem delete_mi = new MenuItem("Delete");
 
     private static final double MIN_CHANGE = 0.5 ;
+
+    private Image imgDBlogo = new Image("/images/dblogo.png");
+    private Image imgYTlogo = new Image("/images/ytlogo.png");
+
+
 
 
 
@@ -141,9 +152,25 @@ public class HomeController extends MainController {
 
 
 
-        pn_searchyt.setStyle("-fx-background-color: rgba(255, 255, 255, 0);");
 
 
+
+        txt_search.setOnKeyPressed(ke -> {
+            if (ke.getCode().equals(KeyCode.ENTER))
+            {
+                try {
+                    press_btn_search();
+                }
+                catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        btn_searchDB.setText("");
     }
 
     private void sliderSetUp(){
@@ -354,7 +381,7 @@ public class HomeController extends MainController {
 
 
 
-    public void press_btn_search(javafx.event.ActionEvent event) throws SQLException, ClassNotFoundException {
+    public void press_btn_search() throws SQLException, ClassNotFoundException {
 
         ObservableList <Song> songsAvailable = SongDAO.searchSong(txt_search.getText());
         col_searchTitle.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
@@ -433,7 +460,7 @@ public class HomeController extends MainController {
 
 
 
-        JFXDialog dialog = new JFXDialog(stpn_settings, content, JFXDialog.DialogTransition.TOP);
+        JFXDialog dialog = new JFXDialog(stpn_settings, content, JFXDialog.DialogTransition.CENTER);
 
 
         // Create the username and password labels and fields.
@@ -478,8 +505,8 @@ public class HomeController extends MainController {
 //        bounds.contains(200, 94);
         JFXButton btn_close = new JFXButton("close");
         JFXButton btn_updateInfo = new JFXButton("Save Changes");
-        btn_close.setOnAction(event1 -> dialog.close());
-        btn_updateInfo.setOnAction(event2-> updateUserInfo(event, passwordField.getText(),txt_changeEmail.getText()));
+        btn_close.setOnAction(event1 -> close(dialog));
+        btn_updateInfo.setOnAction(event2-> updateUserInfo(event, passwordField.getText(),txt_changeEmail.getText(), dialog));
 
 
         btn_close.setStyle("-fx-background-color: #000080; -fx-text-fill: #fffafa; -fx-background-radius: 100");
@@ -531,12 +558,20 @@ public class HomeController extends MainController {
 
         });
 
+        BoxBlur bb = new BoxBlur();
+
+
+        tbl_playlistTracks.setEffect(bb);
+        lbl_playlistName.setEffect(bb);
+        btn_profile_settings.setDisable(true);
 
         dialog.show();
 
+
+
     }
 
-    public void updateUserInfo(ActionEvent event, String password, String email) {
+    public void updateUserInfo(ActionEvent event, String password, String email, JFXDialog dialog) {
 
 
         try {
@@ -546,9 +581,16 @@ public class HomeController extends MainController {
             e.printStackTrace();
         }
 
+        close(dialog);
 
 
+    }
 
+    private void close(JFXDialog dialog){
+        tbl_playlistTracks.setEffect(null);
+        lbl_playlistName.setEffect(null);
+        btn_profile_settings.setDisable(false);
+        dialog.close();
     }
 
 
@@ -573,26 +615,28 @@ public class HomeController extends MainController {
         //AnchorPane pane =FXMLLoader.load(getClass().getResource("../scenes/searchdb.fxml"));
         //pn_search.getChildren().setAll(pane);
 
-        TranslateTransition closeYTsearchAction = new TranslateTransition(new Duration(350), pn_searchyt);
-        TranslateTransition openYTsearchAction = new TranslateTransition(new Duration(350), pn_searchyt );
+        TranslateTransition closeYTsearchAction = new TranslateTransition(new Duration(350), pn_search);
+        TranslateTransition openYTsearchAction = new TranslateTransition(new Duration(350), pn_search );
 
         //serve para voltar quando aperto o botão de menu
 
 
-        BoxBlur blur = new BoxBlur();
+
 
         btn_searchDB.setOnAction((ActionEvent event) -> {
-            if (pn_searchyt.getTranslateX()!= 0){
+            if (pn_search.getTranslateX()!= 0){
                 openYTsearchAction.setToX(0);
                 openYTsearchAction.play();
-                pn_search.setEffect(blur);
+                img_YTIcon.setImage(imgDBlogo);
 
-                btn_searchDB.setText("DB Search");
+
             }else{
-                closeYTsearchAction.setToX(+(pn_searchyt.getWidth()));
+                closeYTsearchAction.setToX(+(pn_search.getWidth()));
                 closeYTsearchAction.play();
-                btn_searchDB.setText("YT Search");
-                pn_search.setEffect(null);
+                img_YTIcon.setImage(imgYTlogo);
+
+
+
             }
         });
 

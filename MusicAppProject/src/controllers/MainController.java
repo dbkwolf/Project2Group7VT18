@@ -26,7 +26,7 @@ public class MainController {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(nextScene);
 
-       //centerStage(window, window.getWidth(), window.getHeight());
+       centerStage(window, window.getWidth(), window.getHeight());
         window.show();
     }
 
