@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apn_adminAnchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #cccccc;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
+   <children>
+      <Label layoutX="245.0" layoutY="14.0" text="Database Administration" textFill="#686868">
+         <font>
+            <Font name="Microsoft JhengHei" size="18.0" />
+         </font>
+      </Label>
+      <Accordion layoutX="12.0" layoutY="50.0" prefHeight="500.0" prefWidth="676.0">
+        <panes>
+          <TitledPane animated="false" prefHeight="479.0" prefWidth="691.0" text="Users">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tbl_users" layoutX="14.0" layoutY="62.0" prefHeight="300.0" prefWidth="622.0">
+                          <columns>
+                            <TableColumn fx:id="col_user_id" prefWidth="57.0" text="User ID" />
+                            <TableColumn fx:id="col_username" prefWidth="85.0" text="Username" />
+                              <TableColumn fx:id="col_first" prefWidth="116.0" text="First Name" />
+                              <TableColumn fx:id="col_last" prefWidth="145.0" text="Last Name" />
+                              <TableColumn fx:id="col_email" prefWidth="113.0" text="E-mail" />
+                              <TableColumn fx:id="col_isAdmin" prefWidth="105.0" text="isAdmin" />
+                          </columns>
+                        </TableView>
+                        <JFXButton fx:id="btn_deleteUser" layoutX="14.0" layoutY="376.0" onAction="#press_btn_deleteUser" style="-fx-background-color: #cccccc;" text="Delete" />
+                        <JFXButton fx:id="btn_grantPermissions" layoutX="486.0" layoutY="376.0" style="-fx-background-color: #ffffff;" text="Grant Admin Permissions" onAction="#press_btn_grantPermissions"/>
+                        <JFXButton fx:id="btn_searchUsers" layoutX="584.0" layoutY="25.0" onAction="#press_btn_searchUsers" style="-fx-background-color: #c9c6c6;" text="Search" />
+                        <JFXTextField fx:id="txt_searchUserId" layoutX="14.0" layoutY="22.0" promptText="User_id" />
+                        <JFXTextField fx:id="txt_searchUsername" layoutX="188.0" layoutY="22.0" promptText="Username" />
+                        <JFXTextField fx:id="txt_searchEmail" layoutX="363.0" layoutY="22.0" promptText="E-mail" />
+                        <Label fx:id="lbl_inputError" layoutX="21.0" layoutY="14.0" text="only numeric values" textFill="RED" visible="false"/>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" prefHeight="463.0" prefWidth="815.0" text="Admin Authorization Codes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="429.0" prefWidth="184.0">
+                          <columns>
+                            <TableColumn prefWidth="183.0" text="Authorization Codes" />
+                          </columns>
+                        </TableView>
+                        <JFXButton fx:id="btn_deleteAuCode" alignment="TOP_LEFT" layoutX="243.0" layoutY="31.0" style="-fx-background-color: #cccccc;" text="Delete" />
+                        <JFXButton fx:id="btn_addAuCode" alignment="TOP_LEFT" layoutX="247.0" layoutY="79.0" prefHeight="25.0" prefWidth="43.0" style="-fx-background-color: #ffffff;" text="Add" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" text="Songs">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="423.0" prefWidth="635.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+      <JFXButton fx:id="btn_adminBack" layoutX="662.0" layoutY="15.0" onAction="#press_btn_adminBack" prefHeight="25.0" prefWidth="21.0" style="-fx-background-color: #000000;" text="X" textFill="#e8e5e5" />
+   </children>
+</AnchorPane>
