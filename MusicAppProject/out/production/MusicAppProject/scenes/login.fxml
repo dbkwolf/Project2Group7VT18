@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
@@ -11,7 +19,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="700.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #00004c;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LogInController">
+<AnchorPane fx:id="anchorPane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="700.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #00004c;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LogInController">
    <children>
       <ImageView fitHeight="500.0" fitWidth="956.0" layoutX="215.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="-200.0" AnchorPane.topAnchor="0.0">
          <image>
@@ -21,7 +29,7 @@
       <AnchorPane layoutX="379.0" layoutY="33.0" prefHeight="434.0" prefWidth="289.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c6f5eb" height="434.0" layoutX="-2.0" opacity="0.52" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="289.0" />
-            <JFXTextField fx:id="txt_usernameLogIn" layoutX="76.0" layoutY="137.0"  prefHeight="25.0" prefWidth="159.0" promptText="Username" style="-fx-prompt-text-fill: #4d4d4d;" />
+            <JFXTextField fx:id="txt_usernameLogIn" layoutX="76.0" layoutY="137.0" prefHeight="25.0" prefWidth="159.0" promptText="Username" style="-fx-prompt-text-fill: #4d4d4d;" />
             <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="49.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="/images/userNameImageView.png" />
@@ -34,14 +42,14 @@
                </image>
             </ImageView>
             <JFXButton fx:id="btn_login" buttonType="RAISED" layoutX="65.0" layoutY="217.0" onAction="#press_btn_login" prefHeight="25.0" prefWidth="159.0" style="-fx-background-radius: 100; -fx-background-color: #000080; -fx-opacity: 1;" text="Login" textFill="#fffafa" />
-            <JFXButton fx:id="btn_forgotPswd" buttonType="RAISED" layoutX="91.0" layoutY="252.0" prefHeight="25.0" prefWidth="107.0" style="-fx-background-radius: 100;" text="Forgot password?">
+            <JFXButton fx:id="btn_forgotPswd" buttonType="RAISED" layoutX="91.0" layoutY="252.0"  onAction="#press_btn_forgotPassword"  prefHeight="25.0" prefWidth="107.0" style="-fx-background-radius: 100;" text="Forgot password?">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font>
             </JFXButton>
             <Label fx:id="lbl_newUserq" layoutX="63.0" layoutY="308.0" text="New User?" />
             <JFXButton fx:id="btn_signUp" buttonType="RAISED" layoutX="180.0" layoutY="304.0" onAction="#press_btn_register" style="-fx-background-color: #000000; -fx-background-radius: 100;" text="Sign Up!" textFill="#f2efef" />
-            <JFXButton fx:id="btn_help" buttonType="RAISED" layoutX="129.0" layoutY="356.0" onAction="#press_btn_help" text="Help?"/>
+            <JFXButton fx:id="btn_help" buttonType="RAISED" layoutX="129.0" layoutY="356.0" onAction="#press_btn_help" text="Help?" />
             <JFXButton fx:id="btn_close" layoutX="237.0" layoutY="12.0" onMouseClicked="#closedPressedButton" prefHeight="25.0" prefWidth="0.0" textFill="#00000c" />
             <JFXButton fx:id="btn_minimize" layoutX="211.0" layoutY="12.0" onAction="#minScreen" onMouseClicked="#minScreen" prefHeight="25.0" prefWidth="0.0" textFill="#00000c" />
             <ImageView fx:id="img_iconLogIn" fitHeight="87.0" fitWidth="166.0" layoutX="94.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
@@ -55,5 +63,6 @@
             <Blend />
          </effect>
       </AnchorPane>
+      <StackPane fx:id="stackPane" layoutX="14.0" layoutY="15.0" prefHeight="37.0" prefWidth="57.0" />
    </children>
 </AnchorPane>

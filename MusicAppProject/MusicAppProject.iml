@@ -12,5 +12,8 @@
     <orderEntry type="library" exported="" name="jfoenix" level="project" />
     <orderEntry type="library" exported="" name="json-20180130" level="project" />
     <orderEntry type="library" exported="" name="guava-jdk5-17.0" level="project" />
+    <orderEntry type="library" name="commons-dbcp-1.4" level="project" />
+    <orderEntry type="library" name="javax.mail" level="project" />
+    <orderEntry type="library" name="activation" level="project" />
   </component>
 </module>
