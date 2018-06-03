@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.effect.BoxBlur;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -23,6 +24,7 @@ import javafx.scene.media.MediaPlayer;
 
 import util.HttpGet;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.*;
@@ -135,6 +137,9 @@ public class HomeController extends MainController {
 
         load_animation_controls();
 
+
+
+        //pn_searchyt.setStyle("-fx-background-color: rgba(255, 255, 255, 0);");
 
 
     }
@@ -565,15 +570,18 @@ public class HomeController extends MainController {
 
         //serve para voltar quando aperto o botão de menu
 
+        BoxBlur bb = new BoxBlur();
+
         btn_searchDB.setOnAction((ActionEvent event) -> {
             if (pn_searchyt.getTranslateX()!= 0){
                 openYTsearchAction.setToX(0);
                 openYTsearchAction.play();
+                pn_search.setEffect(bb);
                 btn_searchDB.setText("DB Search");
             }else{
                 closeYTsearchAction.setToX(+(pn_searchyt.getWidth()));
                 closeYTsearchAction.play();
-                btn_searchDB.setText("YT Search");
+                //btn_searchDB.setText("YT Search");
             }
         });
 

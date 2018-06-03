@@ -22,9 +22,9 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
    <children>
-      <BorderPane fx:id="bpn_root" prefHeight="837.0" style="-fx-background-color: #1f2835;">
+      <BorderPane fx:id="bpn_root" layoutX="-187.0" layoutY="-61.0" prefHeight="674.0" prefWidth="1201.0" style="-fx-background-color: #1f2835;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <AnchorPane prefHeight="127.0" prefWidth="1025.0" style="-fx-background-color: #00060c;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="120.0" prefWidth="1025.0" style="-fx-background-color: #00060c;" BorderPane.alignment="CENTER">
                <children>
                   <Label fx:id="lbl_user" layoutX="15.0" layoutY="92.0" prefHeight="17.0" prefWidth="56.0" text="" textFill="#dadada" />
                   <JFXButton fx:id="btn_play" layoutX="546.0" layoutY="88.0" onAction="#press_btn_play" text="PLAY" textFill="WHITE" />
@@ -44,13 +44,13 @@
             </AnchorPane>
          </top>
          <right>
-            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="300.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_RIGHT">
+            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_RIGHT">
                <children>
-                  <AnchorPane fx:id="pn_search" layoutY="14.0" prefHeight="603.0" prefWidth="297.0" style="-fx-background-color: #06111e;">
+                  <AnchorPane fx:id="pn_search" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" prefWidth="297.0" style="-fx-background-color: #06111e;">
                      <children>
                         <JFXTextField fx:id="txt_search" layoutX="41.0" promptText="Search" />
                         <JFXButton fx:id="btn_search" layoutX="214.0" layoutY="4.0" onAction="#press_btn_search" style="-fx-background-color: f0f0f0;" text="Search" textFill="#862828" />
-                        <TableView fx:id="tbl_searchResults" layoutY="34.0" prefHeight="570.0" prefWidth="297.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
+                        <TableView fx:id="tbl_searchResults" layoutY="34.0" prefWidth="297.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
                           <columns>
                             <TableColumn fx:id="col_searchTitle" prefWidth="118.0" text="   Title" />
                             <TableColumn fx:id="col_searchArtist" prefWidth="104.0" text="Artist" />
@@ -62,12 +62,12 @@
                         </TableView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="pn_searchyt" prefHeight="621.0" prefWidth="299.0" style="-fx-background-color: #cccccc;" />
+                  <AnchorPane fx:id="pn_searchyt" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #cccccc;" />
                </children>
             </AnchorPane>
          </right>
          <center>
-            <AnchorPane fx:id="apn_middleHomeAnchorpane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="500.0" style="-fx-background-color: #091626;">
+            <AnchorPane fx:id="apn_middleHomeAnchorpane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" prefWidth="643.0" style="-fx-background-color: #091626;">
                <children>
                   <TableView fx:id="tbl_playlistTracks" layoutX="21.0" layoutY="56.0" onMouseClicked="#click_tbl_playlistTracks" style="-fx-background-color: #091626;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
                     <columns>
@@ -89,9 +89,9 @@
             </AnchorPane>
          </center>
          <left>
-            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="219.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_LEFT">
+            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" prefWidth="219.0" style="-fx-background-color: #06111e;" BorderPane.alignment="CENTER_LEFT">
                <children>
-                  <TableView fx:id="tbl_userPlaylists" layoutX="10.0" layoutY="48.0" onMouseClicked="#click_tbl_userPlaylists" prefHeight="575.0" prefWidth="200.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
+                  <TableView fx:id="tbl_userPlaylists" layoutX="10.0" layoutY="48.0" onMouseClicked="#click_tbl_userPlaylists" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
                     <columns>
                       <TableColumn fx:id="col_userPlaylistTitle" prefWidth="200.0" text="Playlists" />
                     </columns>
@@ -111,16 +111,19 @@
 
    </bottom>
          <bottom>
-            <AnchorPane prefHeight="87.0" prefWidth="1025.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="20.0" prefWidth="1025.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton fx:id="btn_addSong" layoutX="911.0" layoutY="20.0" onAction="#press_btn_addSong" style="-fx-background-color: #06111e;" text="add to Playlist" textFill="#c3c0c0" />
-                  <JFXButton fx:id="btn_newPlaylist" layoutX="104.0" layoutY="22.0" onAction="#press_btn_newPlaylist" style="-fx-background-color: #06111e;" text="New Playlist+" textFill="#a19e9e" />
-                  <JFXButton fx:id="btn_testHttpGet" layoutX="214.0" layoutY="22.0" onAction="#testHttpGet" style="-fx-background-color: #000000;" text="Test HttpGet" textFill="#a40b0b" />
-                  <JFXTextField fx:id="txt_test" layoutX="306.0" layoutY="19.0" promptText="URL here" />
+                  <JFXButton fx:id="btn_addSong" layoutX="922.0" layoutY="10.0" onAction="#press_btn_addSong" style="-fx-background-color: #06111e;" text="add to Playlist" textFill="#c3c0c0" />
+                  <JFXButton fx:id="btn_newPlaylist" layoutX="115.0" layoutY="11.0" onAction="#press_btn_newPlaylist" style="-fx-background-color: #06111e;" text="New Playlist+" textFill="#a19e9e" />
+                  <JFXButton fx:id="btn_testHttpGet" disable="true" layoutX="214.0" layoutY="22.0" onAction="#testHttpGet" opacity="0.0" style="-fx-background-color: #000000;" text="Test HttpGet" textFill="#a40b0b" />
+                  <JFXTextField fx:id="txt_test" disable="true" layoutX="306.0" layoutY="19.0" opacity="0.0" promptText="URL here" />
                   <JFXButton fx:id="btn_manageDB" layoutX="1050.0" layoutY="22.0" onAction="#press_btn_manageDB" style="-fx-background-color: #ffffff;" text="Manage Database" visible="false" />
-                  <JFXButton fx:id="btn_playUrl" layoutX="619.0" layoutY="22.0" onAction="#press_btn_playUrl" style="-fx-background-color: #2a9a05;" text="PLay UrL" textFill="WHITE" />
-                  <Label fx:id="lbl_showUrl" layoutX="455.0" layoutY="20.0" prefHeight="30.0" prefWidth="155.0" text="Label" textFill="#656565" />
+                  <JFXButton fx:id="btn_playUrl" disable="true" layoutX="619.0" layoutY="22.0" onAction="#press_btn_playUrl" opacity="0.0" style="-fx-background-color: #2a9a05;" text="PLay UrL" textFill="WHITE" />
+                  <Label fx:id="lbl_showUrl" disable="true" layoutX="455.0" layoutY="20.0" opacity="0.0" prefHeight="30.0" prefWidth="155.0" text="Label" textFill="#656565" />
                </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </AnchorPane>
          </bottom>
       </BorderPane>

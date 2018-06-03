@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>controllers.AdminController</OriginalElement>
+  <nodes>
+    <node x="666.5590277777777" y="100.0">controllers.MainController</node>
+    <node x="507.5590277777777" y="321.0">controllers.SignUpController</node>
+    <node x="47.375" y="1094.0">controllers.YouTubeSearchController</node>
+    <node x="1405.0555555555557" y="0.0">controllers.SettingsController</node>
+    <node x="0.0" y="77.5">util.Auth</node>
+    <node x="867.4613715277778" y="929.0">controllers.AdminController</node>
+    <node x="1080.0555555555557" y="0.0">util.DatabaseUtility</node>
+    <node x="452.46137152777777" y="687.0">controllers.HomeController</node>
+    <node x="261.5590277777777" y="453.5">util.HttpGet</node>
+    <node x="11.25" y="453.5">util.Search</node>
+    <node x="992.8055555555555" y="332.0">controllers.LogInController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="util.Search" target="util.Auth">
+      <point x="0.0" y="-25.5" />
+      <point x="95.25" y="301.0" />
+      <point x="71.25" y="301.0" />
+      <point x="-71.25" y="48.0" />
+    </edge>
+    <edge source="controllers.HomeController" target="controllers.MainController">
+      <point x="49.375" y="-521.0" />
+      <point x="699.3363715277778" y="657.0" />
+      <point x="813.0590277777777" y="657.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="controllers.HomeController" target="controllers.LogInController">
+      <point x="148.125" y="-521.0" />
+      <point x="798.0863715277778" y="667.0" />
+      <point x="1068.5555555555557" y="667.0" />
+      <point x="-75.75" y="147.0" />
+    </edge>
+    <edge source="controllers.YouTubeSearchController" target="controllers.MainController">
+      <point x="36.25" y="-114.0" />
+      <point x="228.625" y="667.0" />
+      <point x="231.87152777777771" y="667.0" />
+      <point x="231.87152777777771" y="271.0" />
+      <point x="682.8368055555555" y="271.0" />
+      <point x="-130.22222222222217" y="25.5" />
+    </edge>
+    <edge source="controllers.YouTubeSearchController" target="util.Auth">
+      <point x="-36.25" y="-114.0" />
+      <point x="156.125" y="667.0" />
+      <point x="189.75" y="667.0" />
+      <point x="189.75" y="301.0" />
+      <point x="213.75" y="301.0" />
+      <point x="71.25" y="48.0" />
+    </edge>
+    <edge source="controllers.LogInController" target="util.DatabaseUtility">
+      <point x="37.875" y="-147.0" />
+      <point x="1182.1805555555557" y="301.0" />
+      <point x="1150.0555555555557" y="301.0" />
+      <point x="-70.0" y="125.5" />
+    </edge>
+    <edge source="controllers.SignUpController" target="controllers.MainController">
+      <point x="-73.75" y="-158.0" />
+      <point x="581.3090277777777" y="291.0" />
+      <point x="747.9479166666666" y="291.0" />
+      <point x="-65.11111111111109" y="25.5" />
+    </edge>
+    <edge source="controllers.YouTubeSearchController" target="util.Search">
+      <point x="-108.75" y="-114.0" />
+      <point x="83.625" y="667.0" />
+      <point x="95.25" y="667.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="controllers.HomeController" target="util.HttpGet">
+      <point x="-148.125" y="-521.0" />
+      <point x="501.83637152777777" y="667.0" />
+      <point x="430.3090277777777" y="667.0" />
+      <point x="56.25" y="25.5" />
+    </edge>
+    <edge source="controllers.YouTubeSearchController" target="util.HttpGet">
+      <point x="108.75" y="-114.0" />
+      <point x="301.125" y="667.0" />
+      <point x="317.8090277777777" y="667.0" />
+      <point x="-56.25" y="25.5" />
+    </edge>
+    <edge source="controllers.AdminController" target="controllers.MainController">
+      <point x="0.0" y="-279.0" />
+      <point x="1022.4613715277778" y="657.0" />
+      <point x="982.3055555555555" y="657.0" />
+      <point x="982.3055555555555" y="291.0" />
+      <point x="878.1701388888888" y="291.0" />
+      <point x="65.11111111111109" y="25.5" />
+    </edge>
+    <edge source="controllers.AdminController" target="controllers.LogInController">
+      <point x="103.33333333333326" y="-279.0" />
+      <point x="1125.794704861111" y="667.0" />
+      <point x="1220.0555555555557" y="667.0" />
+      <point x="75.75" y="147.0" />
+    </edge>
+    <edge source="controllers.LogInController" target="controllers.MainController">
+      <point x="-113.625" y="-147.0" />
+      <point x="1030.6805555555557" y="281.0" />
+      <point x="910.7256944444443" y="281.0" />
+      <point x="97.66666666666663" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="702.4999999999999" y="358.4999999999999" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+
