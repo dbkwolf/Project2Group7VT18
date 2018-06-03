@@ -1,17 +1,18 @@
 package controllers;
 
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.*;
+import javafx.animation.TranslateTransition;
+import javafx.beans.InvalidationListener;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
+import javafx.geometry.Pos;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.util.Pair;
+import javafx.scene.layout.*;
+import javafx.util.Duration;
 import model.*;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -19,8 +20,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+
 import util.HttpGet;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -54,6 +57,12 @@ public class HomeController extends MainController {
     public JFXButton btn_manageDB;
     public AnchorPane apn_middleHomeAnchorpane;
     public Label lbl_showUrl;
+    public StackPane stpn_settings;
+    public AnchorPane pn_search;
+    public JFXButton btn_searchDB;
+    public AnchorPane pn_searchyt;
+    public JFXButton btn_ytSearch;
+    public JFXSlider slider;
     private String url;
 
 
@@ -116,9 +125,45 @@ public class HomeController extends MainController {
             }
         });
 
+       try {
+            load_searchYTpane();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        load_animation_controls();
+
+
 
     }
 
+    private void sliderSetUp(){
+        // Listen to the slider. When it changes, seek with the player.
+// MediaPlayer.seek does nothing when the player is stopped, so the play/pause button's handler
+// always sets the start time to the slider's current value, and then resets it to 0 after starting the player.
+        InvalidationListener sliderChangeListener = o-> {
+            Duration seekTo = Duration.seconds(slider.getValue());
+            player.seek(seekTo);
+        };
+        slider.valueProperty().addListener(sliderChangeListener);
+
+// Link the player's time to the slider
+        player.currentTimeProperty().addListener(l-> {
+            // Temporarily remove the listener on the slider, so it doesn't respond to the change in playback time
+            // I thought timeSlider.isValueChanging() would be useful for this, but it seems to get stuck at true
+            // if the user slides the slider instead of just clicking a position on it.
+            slider.valueProperty().removeListener(sliderChangeListener);
+
+            // Keep timeText's text up to date with the slider position.
+            Duration currentTime = player.getCurrentTime();
+            int value = (int) currentTime.toSeconds();
+            slider.setValue(value);
+
+            // Re-add the slider listener
+            slider.valueProperty().addListener(sliderChangeListener);
+        });
+    }
 
     public void press_btn_newPlaylist(javafx.event.ActionEvent event) throws Exception {
 
@@ -272,7 +317,11 @@ public class HomeController extends MainController {
 
         }
 
+
+
     }
+
+
 
     private void delete_songFromPlaylist() {
 
@@ -317,12 +366,18 @@ public class HomeController extends MainController {
             lbl_currentTrack.setText(selectedSongInfo);
             System.out.println(selectedSong.getSongLocation());
             track = new Media(selectedSong.getSongLocation());
+
+
             player = new MediaPlayer(track);
             player.play();
+
+
         }
         catch (Exception e) {
             System.out.println("no media found");
         }
+
+        sliderSetUp();
 
     }
 
@@ -342,79 +397,170 @@ public class HomeController extends MainController {
 
     public void press_btn_profile_settings(javafx.event.ActionEvent event) throws Exception {
 
-
-        // Create the custom dialog.
-        Dialog <Pair <String, String>> dialog = new Dialog <>();
-        dialog.setTitle("Settings");
-        dialog.setHeaderText("User Profile Settings");
+        JFXDialogLayout content = new JFXDialogLayout();
+        //content.setHeading(new Text("User Profile Settings"));
 
 
-        // Set the icon (must be included in the project).
 
-        // Set the button types.
-        ButtonType updateButtonType = new ButtonType("Update", ButtonBar.ButtonData.OK_DONE);
-        dialog.getDialogPane().getButtonTypes().addAll(updateButtonType, ButtonType.CANCEL);
+        JFXDialog dialog = new JFXDialog(stpn_settings, content, JFXDialog.DialogTransition.TOP);
+
 
         // Create the username and password labels and fields.
         GridPane grid = new GridPane();
         grid.setHgap(10);
         grid.setVgap(10);
-        grid.setPadding(new Insets(20, 150, 10, 10));
+        grid.setPadding(new Insets(10, 10, 10, 10));
+
+        grid.getColumnConstraints().addAll(  new ColumnConstraints( 150 ), new ColumnConstraints( 150 ));
         //grid.setStyle("-fx-background-color: greenyellow;");
 
-        TextField username = new TextField();
-        username.setPromptText("Username");
-        PasswordField password = new PasswordField();
-        password.setPromptText("Password");
-        TextField email = new TextField();
-        email.setPromptText("Email");
 
-        grid.add(new Label("Username:"), 0, 0);
-        grid.add(username, 1, 0);
-        grid.add(new Label("Password:"), 0, 1);
-        grid.add(password, 1, 1);
-        grid.add(new Label("Email:"), 0, 2);
-        grid.add(email, 1, 2);
+        PasswordField passwordField = new PasswordField();
+        passwordField.setPromptText("New Password");
+        PasswordField repeatPasswordField = new PasswordField();
+        repeatPasswordField.setPromptText("Repeat new Password");
 
-        // Enable/Disable login button depending on whether a username was entered.
-        Node updateButton = dialog.getDialogPane().lookupButton(updateButtonType);
-        updateButton.setDisable(false);
+        TextField txt_changeEmail = new TextField();
+        txt_changeEmail.setPromptText(activeUser.getEmail());
 
-        // Do some validation.
-        username.textProperty().addListener((observable, oldValue, newValue) -> {
-            updateButton.setDisable(newValue.trim().isEmpty());
+        Label lbl_newPsw = new Label("New Password");
+        Label lbl_repNewPsw = new Label("Repeat new Password");
+        Label lbl_changeEmail = new Label("E-mail");
+        Label lbl_pswdError = new Label("!");
+        lbl_pswdError.setVisible(false);
+        lbl_newPsw.setStyle("-fx-text-fill: #fffafa ");
+        lbl_repNewPsw.setStyle("-fx-text-fill: #fffafa");
+        lbl_pswdError.setStyle("-fx-text-fill: red");
+        lbl_changeEmail.setStyle("-fx-text-fill: #fffafa");
+
+
+        grid.add(lbl_newPsw, 0, 0);
+        grid.add(passwordField, 1, 0);
+
+        grid.add(lbl_repNewPsw, 0, 1);
+        grid.add(repeatPasswordField, 1, 1);
+        grid.add(lbl_pswdError, 2,1);
+
+        grid.add(lbl_changeEmail, 0, 2);
+        grid.add(txt_changeEmail, 1, 2);
+//        Bounds bounds = dialog.localToScreen(dialog.getBoundsInLocal());
+//        bounds.contains(200, 94);
+        JFXButton btn_close = new JFXButton("close");
+        JFXButton btn_updateInfo = new JFXButton("Save Changes");
+        btn_close.setOnAction(event1 -> dialog.close());
+        btn_updateInfo.setOnAction(event2-> updateUserInfo(event, passwordField.getText(),txt_changeEmail.getText()));
+
+
+        btn_close.setStyle("-fx-background-color: #000080; -fx-text-fill: #fffafa; -fx-background-radius: 100");
+        btn_close.hoverProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue){
+                btn_close.setStyle("-fx-background-color: #3733cb; -fx-text-fill: #fffafa; -fx-background-radius: 100");
+            }else{
+                btn_close.setStyle("-fx-background-color: #000080; -fx-text-fill: #fffafa; -fx-background-radius: 100");
+            }
+
         });
 
-        dialog.getDialogPane().setContent(grid);
+        btn_updateInfo.setStyle("-fx-background-color: #027232; -fx-text-fill: #fffafa; -fx-background-radius: 100");
+        btn_updateInfo.hoverProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue){
+                btn_updateInfo.setStyle("-fx-background-color: #02a149;-fx-text-fill: #fffafa; -fx-background-radius: 100");
+            }else{
+                btn_updateInfo.setStyle("-fx-background-color: #027232; -fx-text-fill: #fffafa; -fx-background-radius: 100");
+            }
 
-        dialog.showAndWait();
+        });
+
+        grid.add(btn_updateInfo, 1,4);
+        grid.add(btn_close, 0, 4);
+
+        grid.setStyle("-fx-background-color: #1d1d1d");
+
+        dialog.setContent(grid);
+
+        repeatPasswordField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if(!newValue.equals(passwordField.getText())){
+                lbl_pswdError.setVisible(true);
+                btn_updateInfo.setDisable(true);
+            }else{
+                lbl_pswdError.setVisible(false);
+                btn_updateInfo.setDisable(false);
+            }
+
+        });
+
+        passwordField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if(!newValue.equals(repeatPasswordField.getText())){
+                lbl_pswdError.setVisible(true);
+                btn_updateInfo.setDisable(true);
+            }else{
+                lbl_pswdError.setVisible(false);
+                btn_updateInfo.setDisable(false);
+            }
+
+        });
+
+
+        dialog.show();
+
+    }
+
+    public void updateUserInfo(ActionEvent event, String password, String email) {
+
+
+        try {
+            UserDAO.updateUserProfileInfo(activeUser.getUserId(), password, email);
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
 
 
     }
 
-    public void testHttpGet() throws Exception {
 
 
-        url = HttpGet.getDownload(txt_test.getText());
-        lbl_showUrl.setText(url);
+    private void load_searchYTpane()throws Exception{
 
-
-
+        pn_searchyt.getChildren().clear();
+        pn_searchyt.getChildren().add(FXMLLoader.load(getClass().getResource("../scenes/searchyt.fxml")));
+        pn_searchyt.setLayoutX(0);
+        pn_searchyt.setLayoutY(0);
 
     }
-
-
-
-
-    public void press_btn_ytSearch(ActionEvent event) throws Exception {
-        change_Scene_to(event, "../scenes/youtube-search.fxml");
-    }
-
 
 
     public void press_btn_manageDB(javafx.event.ActionEvent event) throws Exception {
 
         change_Scene_to(event, "../scenes/admin.fxml");
+
+    }
+
+    public void load_animation_controls() {
+        //AnchorPane pane =FXMLLoader.load(getClass().getResource("../scenes/searchdb.fxml"));
+        //pn_search.getChildren().setAll(pane);
+
+        TranslateTransition closeYTsearchAction = new TranslateTransition(new Duration(350), pn_searchyt);
+        TranslateTransition openYTsearchAction = new TranslateTransition(new Duration(350), pn_searchyt );
+
+        //serve para voltar quando aperto o botão de menu
+
+        btn_searchDB.setOnAction((ActionEvent event) -> {
+            if (pn_searchyt.getTranslateX()!= 0){
+                openYTsearchAction.setToX(0);
+                openYTsearchAction.play();
+                btn_searchDB.setText("DB Search");
+            }else{
+                closeYTsearchAction.setToX(+(pn_searchyt.getWidth()));
+                closeYTsearchAction.play();
+                btn_searchDB.setText("YT Search");
+            }
+        });
+
+
+
 
     }
 
@@ -499,6 +645,10 @@ public class HomeController extends MainController {
     }
 
 
+    public void testHttpGet(ActionEvent even)throws Exception{
+
+        HttpGet.getDownload(txt_test.getText());
+    }
 
 
 }

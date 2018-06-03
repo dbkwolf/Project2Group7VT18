@@ -63,6 +63,6 @@
             <Blend />
          </effect>
       </AnchorPane>
-      <Label text="Label" />
+      <StackPane fx:id="stackPane" layoutX="14.0" layoutY="15.0" prefHeight="37.0" prefWidth="57.0" />
    </children>
 </AnchorPane>

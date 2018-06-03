@@ -7,6 +7,8 @@ import util.DatabaseUtility;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import static controllers.LogInController.activeUser;
+
 public class UserDAO {
 
 
@@ -166,6 +168,31 @@ public class UserDAO {
 
     }
 
+
+    public static void updateUserProfileInfo(int userid, String password, String email) throws SQLException{
+
+        if (!password.trim().isEmpty() ^ !email.trim().isEmpty()){
+
+            if (!password.trim().isEmpty()){
+
+                UserDAO.updateUser("UPDATE g7musicappdb.users SET password = '" + password + "' WHERE user_id = " + userid + ";");
+
+            }
+
+            if (!email.trim().isEmpty()){
+
+                UserDAO.updateUser("UPDATE g7musicappdb.users SET email = '" + email + "' WHERE user_id = " + userid + ";");
+
+            }
+
+
+        } else if (!password.trim().isEmpty() && !email.trim().isEmpty()){
+
+            UserDAO.updateUser("UPDATE g7musicappdb.users SET email = '" + email + "', password = '" + password + "' WHERE user_id = " + userid + ";");
+
+        }
+
+    }
 
 }
 
