@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-import model.MP3File;
 import org.json.*;
 
 
@@ -19,7 +17,7 @@ public class HttpGet {
      * @return url location from server (this is the link to be stored in the database)
      * @throws Exception throws an exception if an error occurs
      */
-    public static MP3File getDownload(String URL) throws Exception {
+    public static String getDownload(String URL) throws Exception {
 
         String url = "http://project2.duckdns.org:1234/index.php?link=" + URL;
 
@@ -34,7 +32,7 @@ public class HttpGet {
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(connection.getInputStream()));
         String inputLine;
-        StringBuilder response = new StringBuilder();
+        StringBuffer response = new StringBuffer();
 
         while ((inputLine = in.readLine()) != null) {
             response.append(inputLine);
@@ -43,18 +41,7 @@ public class HttpGet {
 
         //print result
         System.out.println(response.toString());
-
-        String chunk = response.toString();
-
-        String fileDurationString =  chunk.substring(chunk.indexOf("duration") + 10 , chunk.length());
-
-        fileDurationString = fileDurationString.split(",")[0];
-
-        MP3File mp3 = new MP3File(parseJSON(response.toString()), Integer.parseInt(fileDurationString) );
-
-        System.out.println(fileDurationString);
-
-        return mp3;
+        return parseJSON(response.toString());
     }
 
     private  static String parseJSON(String jsonString){
