@@ -24,7 +24,7 @@ public class SongDAO {
 
             String query = "SELECT g7musicappdb.songs.song_id, g7musicappdb.songs.song_title, g7musicappdb.artists.artist_name, g7musicappdb.albums.album_title, g7musicappdb.songs.file_location, g7musicappdb.songs.duration" +
                     " FROM ((g7musicappdb.songs INNER JOIN g7musicappdb.artists ON g7musicappdb.songs.artist_id = g7musicappdb.artists.artist_id)" +
-                    " INNER JOIN g7musicappdb.albums on g7musicappdb.songs.album_id = g7musicappdb.albums.album_id)WHERE Match(song_title) Against('" + title + "');";
+                    " INNER JOIN g7musicappdb.albums on g7musicappdb.songs.album_id = g7musicappdb.albums.album_id)WHERE song_title LIKE '" + title +"%';";
             ResultSet rs = DatabaseUtility.dbExecuteQuery(query);
 
             while (rs.next()) {
