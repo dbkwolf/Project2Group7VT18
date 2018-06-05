@@ -10,7 +10,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
    <children>
       <JFXTextField fx:id="txt_search" layoutX="51.0" layoutY="24.0" promptText="Search" />
-      <JFXButton fx:id="btn_search" layoutX="224.0" layoutY="28.0" onAction="#press_btn_search" style="-fx-background-color: f0f0f0;" text="Search" textFill="#862828" />
+      <JFXButton fx:id="btn_search" layoutX="224.0" layoutY="28.0" onAction="#enter_search" style="-fx-background-color: f0f0f0;" text="Search" textFill="#862828" />
       <TableView fx:id="tbl_searchResults" layoutX="3.0" layoutY="61.0" prefHeight="561.0" prefWidth="294.0" style="-fx-background-color: #06111e;" stylesheets="@../images/tbl-stylesheet.css" BorderPane.alignment="CENTER">
          <columns>
             <TableColumn fx:id="col_searchTitle" prefWidth="118.0" text="   Title" />

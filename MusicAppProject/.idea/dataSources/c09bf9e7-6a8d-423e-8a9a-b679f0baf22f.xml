@@ -908,178 +908,179 @@
     <table id="228" parent="2" name="authorization_codes"/>
     <table id="229" parent="2" name="genres"/>
     <table id="230" parent="2" name="playlists"/>
-    <table id="231" parent="2" name="song_playlist_references"/>
-    <table id="232" parent="2" name="songs"/>
-    <table id="233" parent="2" name="users"/>
-    <column id="234" parent="226" name="album_id">
+    <table id="231" parent="2" name="recovery_codes"/>
+    <table id="232" parent="2" name="song_playlist_references"/>
+    <table id="233" parent="2" name="songs"/>
+    <table id="234" parent="2" name="users"/>
+    <column id="235" parent="226" name="album_id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="226" name="album_title">
+    <column id="236" parent="226" name="album_title">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="226" name="artist_id">
+    <column id="237" parent="226" name="artist_id">
       <Position>3</Position>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="237" parent="226" name="albums_album_id_uindex">
+    <index id="238" parent="226" name="albums_album_id_uindex">
       <ColNames>album_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="238" parent="226" name="albums_artists_artist_id_fk">
+    <index id="239" parent="226" name="albums_artists_artist_id_fk">
       <ColNames>artist_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="239" parent="226" name="PRIMARY">
+    <key id="240" parent="226" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>album_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="240" parent="226" name="albums_album_id_uindex">
+    <key id="241" parent="226" name="albums_album_id_uindex">
       <ColNames>album_id</ColNames>
       <UnderlyingIndexName>albums_album_id_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="241" parent="226" name="albums_artists_artist_id_fk">
+    <foreign-key id="242" parent="226" name="albums_artists_artist_id_fk">
       <ColNames>artist_id</ColNames>
       <RefSchemaName>g7musicappdb</RefSchemaName>
       <RefTableName>artists</RefTableName>
       <RefColNames>artist_id</RefColNames>
     </foreign-key>
-    <column id="242" parent="227" name="artist_id">
+    <column id="243" parent="227" name="artist_id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="227" name="artist_name">
+    <column id="244" parent="227" name="artist_name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="244" parent="227" name="artists_artist_id_uindex">
+    <index id="245" parent="227" name="artists_artist_id_uindex">
       <ColNames>artist_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="245" parent="227" name="PRIMARY">
+    <key id="246" parent="227" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>artist_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="246" parent="227" name="artists_artist_id_uindex">
+    <key id="247" parent="227" name="artists_artist_id_uindex">
       <ColNames>artist_id</ColNames>
       <UnderlyingIndexName>artists_artist_id_uindex</UnderlyingIndexName>
     </key>
-    <column id="247" parent="228" name="authorization_code_id">
+    <column id="248" parent="228" name="authorization_code_id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="228" name="code_sequence">
+    <column id="249" parent="228" name="code_sequence">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="249" parent="228" name="authorization_codes_authorization_code_id_uindex">
+    <index id="250" parent="228" name="authorization_codes_authorization_code_id_uindex">
       <ColNames>authorization_code_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="250" parent="228" name="authorization_codes_code_sequence_uindex">
+    <index id="251" parent="228" name="authorization_codes_code_sequence_uindex">
       <ColNames>code_sequence</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="251" parent="228" name="PRIMARY">
+    <key id="252" parent="228" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>authorization_code_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="252" parent="228" name="authorization_codes_authorization_code_id_uindex">
+    <key id="253" parent="228" name="authorization_codes_authorization_code_id_uindex">
       <ColNames>authorization_code_id</ColNames>
       <UnderlyingIndexName>authorization_codes_authorization_code_id_uindex</UnderlyingIndexName>
     </key>
-    <key id="253" parent="228" name="authorization_codes_code_sequence_uindex">
+    <key id="254" parent="228" name="authorization_codes_code_sequence_uindex">
       <ColNames>code_sequence</ColNames>
       <UnderlyingIndexName>authorization_codes_code_sequence_uindex</UnderlyingIndexName>
     </key>
-    <column id="254" parent="229" name="genre_id">
+    <column id="255" parent="229" name="genre_id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="229" name="gnr_name">
+    <column id="256" parent="229" name="gnr_name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="256" parent="229" name="genres_genre_id_uindex">
+    <index id="257" parent="229" name="genres_genre_id_uindex">
       <ColNames>genre_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="257" parent="229" name="PRIMARY">
+    <key id="258" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>genre_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="258" parent="229" name="genres_genre_id_uindex">
+    <key id="259" parent="229" name="genres_genre_id_uindex">
       <ColNames>genre_id</ColNames>
       <UnderlyingIndexName>genres_genre_id_uindex</UnderlyingIndexName>
     </key>
-    <column id="259" parent="230" name="playlist_id">
+    <column id="260" parent="230" name="playlist_id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="230" name="pl_title">
+    <column id="261" parent="230" name="pl_title">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="230" name="owner_id">
+    <column id="262" parent="230" name="owner_id">
       <Position>3</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="262" parent="230" name="playlists_playlist_id_uindex">
+    <index id="263" parent="230" name="playlists_playlist_id_uindex">
       <ColNames>playlist_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="263" parent="230" name="playlists_users_user_id_fk">
+    <index id="264" parent="230" name="playlists_users_user_id_fk">
       <ColNames>owner_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="264" parent="230" name="PRIMARY">
+    <key id="265" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>playlist_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="265" parent="230" name="playlists_playlist_id_uindex">
+    <key id="266" parent="230" name="playlists_playlist_id_uindex">
       <ColNames>playlist_id</ColNames>
       <UnderlyingIndexName>playlists_playlist_id_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="266" parent="230" name="playlists_users_user_id_fk">
+    <foreign-key id="267" parent="230" name="playlists_users_user_id_fk">
       <ColNames>owner_id</ColNames>
       <RefSchemaName>g7musicappdb</RefSchemaName>
       <RefTableName>users</RefTableName>
@@ -1087,205 +1088,248 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="267" parent="231" name="ref_id">
+    <column id="268" parent="231" name="rec_id">
+      <Position>1</Position>
+      <DataType>int(5)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="269" parent="231" name="rec_code">
+      <Position>2</Position>
+      <DataType>int(6)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="270" parent="231" name="owner">
+      <Position>3</Position>
+      <DataType>int(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="271" parent="231" name="table_name_rec_id_uindex">
+      <ColNames>rec_id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="272" parent="231" name="recovery_codes_users_user_id_fk">
+      <ColNames>owner</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="273" parent="231" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rec_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="274" parent="231" name="table_name_rec_id_uindex">
+      <ColNames>rec_id</ColNames>
+      <UnderlyingIndexName>table_name_rec_id_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="275" parent="231" name="recovery_codes_users_user_id_fk">
+      <ColNames>owner</ColNames>
+      <RefSchemaName>g7musicappdb</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <column id="276" parent="232" name="ref_id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="231" name="song_id">
+    <column id="277" parent="232" name="song_id">
       <Position>2</Position>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="231" name="playlist_id">
+    <column id="278" parent="232" name="playlist_id">
       <Position>3</Position>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="270" parent="231" name="song_playlist_ref_ref_id_uindex">
+    <index id="279" parent="232" name="song_playlist_ref_ref_id_uindex">
       <ColNames>ref_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="271" parent="231" name="song_playlist_ref_songs_song_id_fk">
+    <index id="280" parent="232" name="song_playlist_ref_songs_song_id_fk">
       <ColNames>song_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="272" parent="231" name="song_playlist_ref_playlists_playlist_id_fk">
+    <index id="281" parent="232" name="song_playlist_ref_playlists_playlist_id_fk">
       <ColNames>playlist_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="273" parent="231" name="PRIMARY">
+    <key id="282" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ref_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="274" parent="231" name="song_playlist_ref_ref_id_uindex">
+    <key id="283" parent="232" name="song_playlist_ref_ref_id_uindex">
       <ColNames>ref_id</ColNames>
       <UnderlyingIndexName>song_playlist_ref_ref_id_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="275" parent="231" name="song_playlist_ref_songs_song_id_fk">
+    <foreign-key id="284" parent="232" name="song_playlist_ref_songs_song_id_fk">
       <ColNames>song_id</ColNames>
       <RefSchemaName>g7musicappdb</RefSchemaName>
       <RefTableName>songs</RefTableName>
       <RefColNames>song_id</RefColNames>
     </foreign-key>
-    <foreign-key id="276" parent="231" name="song_playlist_ref_playlists_playlist_id_fk">
+    <foreign-key id="285" parent="232" name="song_playlist_ref_playlists_playlist_id_fk">
       <ColNames>playlist_id</ColNames>
       <RefSchemaName>g7musicappdb</RefSchemaName>
       <RefTableName>playlists</RefTableName>
       <RefColNames>playlist_id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="277" parent="232" name="song_id">
+    <column id="286" parent="233" name="song_id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="232" name="song_title">
+    <column id="287" parent="233" name="song_title">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="232" name="artist_id">
+    <column id="288" parent="233" name="artist_id">
       <Position>3</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="232" name="album_id">
+    <column id="289" parent="233" name="album_id">
       <Position>4</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="232" name="file_location">
+    <column id="290" parent="233" name="file_location">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="232" name="duration">
+    <column id="291" parent="233" name="duration">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="283" parent="232" name="songs_song_id_uindex">
+    <index id="292" parent="233" name="songs_song_id_uindex">
       <ColNames>song_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="284" parent="232" name="song_title">
+    <index id="293" parent="233" name="song_title">
       <ColNames>song_title</ColNames>
       <Type>fulltext</Type>
     </index>
-    <index id="285" parent="232" name="songs_artists_artist_id_fk">
+    <index id="294" parent="233" name="songs_artists_artist_id_fk">
       <ColNames>artist_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="286" parent="232" name="songs_albums_album_id_fk">
+    <index id="295" parent="233" name="songs_albums_album_id_fk">
       <ColNames>album_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="287" parent="232" name="PRIMARY">
+    <key id="296" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>song_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="288" parent="232" name="songs_song_id_uindex">
+    <key id="297" parent="233" name="songs_song_id_uindex">
       <ColNames>song_id</ColNames>
       <UnderlyingIndexName>songs_song_id_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="289" parent="232" name="songs_artists_artist_id_fk">
+    <foreign-key id="298" parent="233" name="songs_artists_artist_id_fk">
       <ColNames>artist_id</ColNames>
       <RefSchemaName>g7musicappdb</RefSchemaName>
       <RefTableName>artists</RefTableName>
       <RefColNames>artist_id</RefColNames>
     </foreign-key>
-    <foreign-key id="290" parent="232" name="songs_albums_album_id_fk">
+    <foreign-key id="299" parent="233" name="songs_albums_album_id_fk">
       <ColNames>album_id</ColNames>
       <RefSchemaName>g7musicappdb</RefSchemaName>
       <RefTableName>albums</RefTableName>
       <RefColNames>album_id</RefColNames>
     </foreign-key>
-    <column id="291" parent="233" name="user_id">
+    <column id="300" parent="234" name="user_id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="233" name="username">
+    <column id="301" parent="234" name="username">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="233" name="first_name">
+    <column id="302" parent="234" name="first_name">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="233" name="last_name">
+    <column id="303" parent="234" name="last_name">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="233" name="password">
+    <column id="304" parent="234" name="password">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="233" name="email">
+    <column id="305" parent="234" name="email">
       <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="233" name="admin_level">
+    <column id="306" parent="234" name="admin_level">
       <Position>7</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="298" parent="233" name="User_user_id_uindex">
+    <index id="307" parent="234" name="User_user_id_uindex">
       <ColNames>user_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="299" parent="233" name="User_username_uindex">
+    <index id="308" parent="234" name="User_username_uindex">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="300" parent="233" name="User_email_uindex">
+    <index id="309" parent="234" name="User_email_uindex">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="301" parent="233" name="PRIMARY">
+    <key id="310" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="302" parent="233" name="User_user_id_uindex">
+    <key id="311" parent="234" name="User_user_id_uindex">
       <ColNames>user_id</ColNames>
       <UnderlyingIndexName>User_user_id_uindex</UnderlyingIndexName>
     </key>
-    <key id="303" parent="233" name="User_username_uindex">
+    <key id="312" parent="234" name="User_username_uindex">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>User_username_uindex</UnderlyingIndexName>
     </key>
-    <key id="304" parent="233" name="User_email_uindex">
+    <key id="313" parent="234" name="User_email_uindex">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>User_email_uindex</UnderlyingIndexName>
     </key>

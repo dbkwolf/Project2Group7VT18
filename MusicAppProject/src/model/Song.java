@@ -6,14 +6,14 @@ import javafx.beans.property.StringProperty;
 
 public class Song {
 
-   private SimpleIntegerProperty songId;
+    private SimpleIntegerProperty songId;
     private SimpleStringProperty songTitle;
     private SimpleStringProperty songArtist;
     private SimpleStringProperty songAlbum;
     private SimpleStringProperty songLocation;
     private SimpleIntegerProperty songDuration;
+    private SimpleStringProperty StrSongDuration;
     private int refId;
-
 
 
     public Song(int id, String title, String artist, String album, String location, int duration) {
@@ -22,22 +22,23 @@ public class Song {
         this.songTitle = new SimpleStringProperty(title);
         this.songArtist = new SimpleStringProperty(artist);
         this.songAlbum = new SimpleStringProperty(album);
-        this.songLocation = new SimpleStringProperty("http://project2.duckdns.org:1234/files/"+location+".mp3");
+        this.songLocation = new SimpleStringProperty("http://project2.duckdns.org:1234/files/" + location + ".mp3");
         this.songDuration = new SimpleIntegerProperty(duration);
+        this.StrSongDuration = new SimpleStringProperty(secondsToString(duration));
     }
 
 
-public StringProperty titleProperty(){
+    public StringProperty titleProperty() {
         return songTitle;
-}
+    }
 
-public StringProperty artistProperty(){
-    return songArtist;
-}
+    public StringProperty artistProperty() {
+        return songArtist;
+    }
 
-public StringProperty albumProperty(){
-    return songAlbum;
-}
+    public StringProperty albumProperty() {
+        return songAlbum;
+    }
 
 
     public String getSongTitle() {
@@ -47,7 +48,6 @@ public StringProperty albumProperty(){
     public void setSongTitle(String songTitle) {
         this.songTitle.set(songTitle);
     }
-
 
 
     public String getAlbum() {
@@ -75,13 +75,12 @@ public StringProperty albumProperty(){
     }
 
     public int songIdProperty() {
-      return songId.get();
+        return songId.get();
     }
 
     public void setSongId(int songId) {
         this.songId.set(songId);
     }
-
 
 
     public int getRefId() {
@@ -97,6 +96,7 @@ public StringProperty albumProperty(){
     }
 
     public SimpleIntegerProperty songDurationProperty() {
+
         return songDuration;
     }
 
@@ -114,5 +114,22 @@ public StringProperty albumProperty(){
 
     public void setSongLocation(String songLocation) {
         this.songLocation.set(songLocation);
+    }
+
+    private String secondsToString(int duration) {
+        return String.format("%02d:%02d", duration / 60, duration % 60);
+    }
+
+
+    public String getStrSongDuration() {
+        return StrSongDuration.get();
+    }
+
+    public SimpleStringProperty strSongDurationProperty() {
+        return StrSongDuration;
+    }
+
+    public void setStrSongDuration(String strSongDuration) {
+        this.StrSongDuration.set(strSongDuration);
     }
 }

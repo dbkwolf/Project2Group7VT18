@@ -50,7 +50,6 @@
             <Label fx:id="lbl_newUserq" layoutX="63.0" layoutY="308.0" text="New User?" />
             <JFXButton fx:id="btn_signUp" buttonType="RAISED" layoutX="180.0" layoutY="304.0" onAction="#press_btn_register" style="-fx-background-color: #000000; -fx-background-radius: 100;" text="Sign Up!" textFill="#f2efef" />
             <JFXButton fx:id="btn_help" buttonType="RAISED" layoutX="129.0" layoutY="356.0" onAction="#press_btn_help" text="Help?" />
-            <JFXButton fx:id="btn_close" layoutX="237.0" layoutY="12.0" onMouseClicked="#closedPressedButton" prefHeight="25.0" prefWidth="0.0" textFill="#00000c" />
             <JFXButton fx:id="btn_minimize" layoutX="211.0" layoutY="12.0" onAction="#minScreen" onMouseClicked="#minScreen" prefHeight="25.0" prefWidth="0.0" textFill="#00000c" />
             <ImageView fx:id="img_iconLogIn" fitHeight="87.0" fitWidth="166.0" layoutX="94.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>

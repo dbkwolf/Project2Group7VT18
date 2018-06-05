@@ -1,5 +1,6 @@
 package model;
 import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 import javax.mail.*;
 import javax.mail.internet.*;
 import javax.activation.*;
@@ -14,9 +15,10 @@ public class SendEmail {
     /**
      * Constructor
      * Makes an instance of the SendEmail
+     * co-author:Sirisha
      * @param recipient= String : Recipients E-mail
      */
-    public SendEmail(String recipient) {
+    public SendEmail(String recipient, int code) {
 
 
        this.to = recipient;
@@ -49,10 +51,12 @@ public class SendEmail {
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
             // Set Subject: header field
-            message.setSubject("MusicApp - Your Temporary Password");
+            message.setSubject("MusicApp - Your Password recovery");
+
+
 
             // Now set the actual message
-            message.setText("Don't worry - here is your temporary password.");
+            message.setText("Don't worry - here is your password recovery code: " +code);
 
             // Send message
             Transport.send(message);

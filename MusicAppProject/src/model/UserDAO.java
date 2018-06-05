@@ -194,25 +194,61 @@ public class UserDAO {
 
     }
 
-    public static boolean emailExistsInDB(String email) throws SQLException {
+    public static int emailExistsInDB(String email) throws SQLException {
 
-        boolean existsInDB;
+        int userId = 0;
 
         String searchQuery = "SELECT * FROM g7musicappdb.users WHERE email like '" + email+"';";
 
         try {
             ResultSet rs = DatabaseUtility.dbExecuteQuery(searchQuery);
 
-            if(rs!=null){
-                existsInDB =false;
-            }else{
-                existsInDB= true;
+            while (rs.next()){
+                userId =rs.getInt("user_id");
             }
+            System.out.println(userId);
+            return userId;
 
-            return existsInDB;
 
         } catch (SQLException e) {
-            System.out.println("error while searching user");
+            System.out.println("error while searching user mail");
+            throw e;
+        }
+    }
+
+    public static void storeRecoveryCode(int code, int user_id) throws SQLException{
+
+
+        String query = "INSERT INTO g7musicappdb.recovery_codes(rec_code,owner) VALUES ("+code+", "+user_id+");";
+
+        try {
+            DatabaseUtility.dbExecuteUpdate(query);
+
+
+        } catch (SQLException e) {
+            System.out.println("error while storing recovery code");
+            throw e;
+        }
+    }
+
+
+    public static boolean findRecoveryCode(int code, int id)throws SQLException{
+        boolean wasFound= false;
+
+        String searchQuery = "SELECT * FROM g7musicappdb.recovery_codes WHERE rec_code =" + code+" AND owner = "+id+";";
+
+        try {
+            ResultSet rs = DatabaseUtility.dbExecuteQuery(searchQuery);
+
+            while (rs.next()){
+                wasFound =true;
+            }
+
+            return wasFound;
+
+
+        } catch (SQLException e) {
+            System.out.println("error while searching recovery code");
             throw e;
         }
     }

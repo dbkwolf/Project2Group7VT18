@@ -2,22 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Delta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/HomeController$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/HomeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/LogInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/LogInController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/YouTubeSearchController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/YouTubeSearchController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/YouTubeSearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/controllers/YouTubeSearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/model/MP3File.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/model/MP3File.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/model/SendEmail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/model/SendEmail$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/model/SendEmail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/model/SendEmail.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/model/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/model/Song.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/model/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/model/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/searchdb.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicAppProject/scenes/searchdb.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/LogInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/SettingsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/YouTubeSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/YouTubeSearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MP3File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MP3File.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SendEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SendEmail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/SongDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SongDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/searchdb.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/searchdb.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,51 +121,39 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="SendEmail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/SendEmail.java">
+    <leaf>
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/UserDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="590">
+              <caret line="237" column="108" selection-start-line="237" selection-start-column="108" selection-end-line="237" selection-end-column="108" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="songs" pinned="false" current-in-tab="true">
-        <entry file="das://c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/schema/g7musicappdb/table/songs">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseUtility.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DatabaseUtility.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/util/DatabaseUtility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="-465">
               <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
+      <file leaf-file-name="Auth.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/Auth.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2125">
-              <caret line="158" selection-start-line="158" selection-end-line="158" />
+            <state relative-caret-position="75">
+              <caret line="22" column="102" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="102" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users" pinned="false" current-in-tab="false">
-        <entry file="das://c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/schema/g7musicappdb/table/users">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="Search.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/Search.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -161,55 +161,62 @@
       <file leaf-file-name="Song.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Song.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+            <state relative-caret-position="240">
+              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SongLink.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/SongLink.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
-                <element signature="e#1877#1878#0" expanded="true" />
-                <element signature="e#1910#1911#0" expanded="true" />
-                <element signature="e#1951#1952#0" expanded="true" />
-                <element signature="e#1990#1991#0" expanded="true" />
-                <element signature="e#2677#2678#0" expanded="true" />
+                <element signature="e#3913#3914#0" expanded="true" />
+                <element signature="e#3949#3950#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/home.fxml">
+      <file leaf-file-name="console_12.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_12.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1904">
-              <caret line="112" column="38" selection-start-line="112" selection-start-column="38" selection-end-line="112" selection-end-column="38" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/LogInController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3553">
-              <caret line="231" column="64" selection-start-line="231" selection-start-column="64" selection-end-line="231" selection-end-column="64" />
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/UserDAO.java">
+      <file leaf-file-name="SendEmail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/SendEmail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3213">
-              <caret line="219" column="1" selection-start-line="219" selection-start-column="1" selection-end-line="219" selection-end-column="1" />
+            <state relative-caret-position="340">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/login.fxml">
+      <file leaf-file-name="Playlist.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Playlist.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+            <state relative-caret-position="570">
+              <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
@@ -225,10 +232,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>controller</find>
-      <find>help</find>
-      <find>PaintConverter</find>
-      <find>visi</find>
       <find>are</find>
       <find>System.out.println(System.currentTimeMillis());</find>
       <find>for</find>
@@ -239,6 +242,26 @@
       <find>btn_searchdb</find>
       <find>btn</find>
       <find>no media found</find>
+      <find>img_</find>
+      <find>current</find>
+      <find>lbl_user</find>
+      <find>activeUser.getUserId()</find>
+      <find>laylistN</find>
+      <find>playlisttra</find>
+      <find>lbl_</find>
+      <find>dur</find>
+      <find>opulate</find>
+      <find>pop</find>
+      <find>delete</find>
+      <find>findplaylis</find>
+      <find>tbl_userplaylists_</find>
+      <find>play()</find>
+      <find>addLi</find>
+      <find>ondialo</find>
+      <find>enter</find>
+      <find>setting</find>
+      <find>group</find>
+      <find>search ma</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -257,7 +280,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/controllers/Artist.java" />
         <option value="$PROJECT_DIR$/src/controllers/Album.java" />
         <option value="$PROJECT_DIR$/src/controllers/User.java" />
         <option value="$PROJECT_DIR$/src/controllers/Song.java" />
@@ -295,17 +317,18 @@
         <option value="$PROJECT_DIR$/src/model/Artist.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_10.sql" />
         <option value="$PROJECT_DIR$/src/model/Album.java" />
-        <option value="$PROJECT_DIR$/src/model/MP3File.java" />
         <option value="$PROJECT_DIR$/src/util/HttpGet.java" />
         <option value="$PROJECT_DIR$/src/model/SongDAO.java" />
-        <option value="$PROJECT_DIR$/src/controllers/YouTubeSearchController.java" />
-        <option value="$PROJECT_DIR$/src/scenes/login.fxml" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/controllers/MainController.java" />
-        <option value="$PROJECT_DIR$/src/model/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/controllers/LogInController.java" />
         <option value="$PROJECT_DIR$/src/model/Song.java" />
+        <option value="$PROJECT_DIR$/src/model/MP3File.java" />
+        <option value="$PROJECT_DIR$/src/controllers/YouTubeSearchController.java" />
         <option value="$PROJECT_DIR$/src/scenes/home.fxml" />
+        <option value="$PROJECT_DIR$/src/scenes/login.fxml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_12.sql" />
+        <option value="$PROJECT_DIR$/src/controllers/LogInController.java" />
+        <option value="$PROJECT_DIR$/src/model/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/model/SendEmail.java" />
       </list>
@@ -328,10 +351,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1060" />
+    <option name="x" value="1163" />
+    <option name="y" value="1507" />
+    <option name="width" value="307" />
+    <option name="height" value="173" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -339,35 +362,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MusicAppProject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MusicAppProject" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MusicAppProject" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="dataSources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MusicAppProject" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MusicAppProject" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
@@ -384,12 +387,6 @@
               <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MusicAppProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MusicAppProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -400,14 +397,18 @@
             </path>
             <path>
               <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicAppProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MusicAppProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -424,19 +425,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="TSQL&#10;MySQL" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="MySQL&#10;TSQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Project 2 Joakim Rönning/Project 2" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -599,6 +600,7 @@
       <workItem from="1528044663876" duration="22947000" />
       <workItem from="1528183365646" duration="462000" />
       <workItem from="1528190547724" duration="1987000" />
+      <workItem from="1528195328164" duration="33358000" />
     </task>
     <task id="LOCAL-00001" summary=" JFoenix added">
       <created>1525085802096</created>
@@ -744,9 +746,9 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370454000" />
+    <option name="totallyTimeSpent" value="405205000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -756,95 +758,73 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="845" extended-state="6" />
+    <frame x="-6" y="1194" width="1549" height="845" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="8" weight="0.32947975" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32763532" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.6027027" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3272727" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" weight="0.5597609" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32851636" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4978678" visible="true" weight="0.6881119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.3236994" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32851636" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.32851636" />
       <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Database Console" order="1" weight="0.62813103" />
+      <window_info anchor="bottom" id="Database Console" order="1" weight="0.627972" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18645205" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.1602951" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14956406" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.0945674" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.3272472" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.12526652" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.3988604" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" weight="0.5597609" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18645205" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.12526652" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.32851636" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32995737" />
-      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32851636" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.3988604" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="right" x="91" y="91" width="1738" height="850" id="Documentation" order="9" type="FLOATING" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.1602951" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32851636" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="TODO" order="8" weight="0.32947975" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Database Console" order="1" weight="0.62813103" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32851636" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4978678" visible="true" weight="0.6881119" />
-      <window_info anchor="bottom" id="SQL Generator" order="0" weight="0.97013485" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32763532" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
+      <window_info id="Favorites" order="5" side_tool="true" weight="0.3296417" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info id="Designer" order="3" />
+      <window_info anchor="bottom" id="SQL Generator" order="0" weight="0.97013485" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="right" x="91" y="91" width="1738" height="850" id="Documentation" order="9" type="FLOATING" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="3" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Database Console" order="1" weight="0.62813103" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4978678" weight="0.68951046" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="1" weight="0.627972" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4978678" visible="true" weight="0.3236994" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.12526652" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Favorites" order="5" side_tool="true" weight="0.3296417" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.32851636" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" weight="0.5597609" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32763532" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3272727" />
       <window_info anchor="right" x="91" y="91" width="1738" height="850" id="Documentation" order="9" type="FLOATING" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32851636" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32851636" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.32995737" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32851636" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14419852" />
-      <window_info anchor="right" id="Database" order="5" weight="0.20243737" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="TODO" order="8" weight="0.32947975" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11886994" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.09488273" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.6027027" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.3988604" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32837838" />
       <window_info anchor="bottom" id="SQL Generator" order="0" weight="0.97013485" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -915,12 +895,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controllers/LogInController.java</url>
-          <line>77</line>
+          <line>105</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="19" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -928,52 +908,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_7.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_6.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="87" selection-start-column="87" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_8.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="57" selection-start-column="57" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/admin.fxml" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_9.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="24" selection-start-line="1" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Playlist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/876cd98f/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/g7musicappdb.song_playlist_references">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1005,27 +939,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/searchdb.fxml" />
     <entry file="file://$PROJECT_DIR$/src/scenes/youtube-search.fxml" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_11.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/searchyt.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/model/Artist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Album.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1043,13 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/SongLink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/StringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -1064,21 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/HttpGet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/PlaylistDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="30" selection-start-line="22" selection-start-column="11" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/MP3File.java" />
     <entry file="file://$PROJECT_DIR$/src/model/SongDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3672">
@@ -1086,24 +982,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/schema/g7musicappdb/table/songs">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/schema/g7musicappdb/table/artists">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/YouTubeSearchController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="390" selection-start-line="390" selection-end-line="390" />
         </state>
       </provider>
     </entry>
@@ -1262,247 +1144,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/controllers.AdminController">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>controllers.AdminController</OriginalElement>
-          <nodes>
-            <node x="666.5590277777776" y="100.0">controllers.MainController</node>
-            <node x="507.5590277777776" y="321.0">controllers.SignUpController</node>
-            <node x="47.375" y="1094.0">controllers.YouTubeSearchController</node>
-            <node x="1405.0555555555554" y="0.0">controllers.SettingsController</node>
-            <node x="0.0" y="77.5">util.Auth</node>
-            <node x="867.4613715277777" y="929.0">controllers.AdminController</node>
-            <node x="1080.0555555555554" y="0.0">util.DatabaseUtility</node>
-            <node x="452.4613715277777" y="687.0">controllers.HomeController</node>
-            <node x="261.5590277777776" y="453.5">util.HttpGet</node>
-            <node x="11.25" y="453.5">util.Search</node>
-            <node x="992.8055555555554" y="332.0">controllers.LogInController</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="util.Search" target="util.Auth">
-              <point x="0.0" y="-25.5" />
-              <point x="95.25" y="301.0" />
-              <point x="71.25" y="301.0" />
-              <point x="-71.25" y="48.0" />
-            </edge>
-            <edge source="controllers.HomeController" target="controllers.MainController">
-              <point x="-49.375" y="-521.0" />
-              <point x="600.5863715277777" y="657.0" />
-              <point x="497.0590277777776" y="657.0" />
-              <point x="497.0590277777776" y="281.0" />
-              <point x="715.392361111111" y="281.0" />
-              <point x="-97.66666666666663" y="25.5" />
-            </edge>
-            <edge source="controllers.HomeController" target="controllers.LogInController">
-              <point x="148.125" y="-521.0" />
-              <point x="798.0863715277777" y="667.0" />
-              <point x="1068.5555555555554" y="667.0" />
-              <point x="-75.75" y="147.0" />
-            </edge>
-            <edge source="controllers.YouTubeSearchController" target="controllers.MainController">
-              <point x="36.25" y="-114.0" />
-              <point x="228.625" y="667.0" />
-              <point x="231.8715277777776" y="667.0" />
-              <point x="231.8715277777776" y="271.0" />
-              <point x="682.8368055555554" y="271.0" />
-              <point x="-130.22222222222217" y="25.5" />
-            </edge>
-            <edge source="controllers.YouTubeSearchController" target="util.Auth">
-              <point x="-36.25" y="-114.0" />
-              <point x="156.125" y="667.0" />
-              <point x="189.74999999999994" y="667.0" />
-              <point x="189.74999999999994" y="301.0" />
-              <point x="213.75" y="301.0" />
-              <point x="71.25" y="48.0" />
-            </edge>
-            <edge source="controllers.LogInController" target="util.DatabaseUtility">
-              <point x="113.625" y="-147.0" />
-              <point x="1257.9305555555554" y="301.0" />
-              <point x="1290.0555555555554" y="301.0" />
-              <point x="70.0" y="125.5" />
-            </edge>
-            <edge source="controllers.SignUpController" target="controllers.MainController">
-              <point x="-73.75" y="-158.0" />
-              <point x="581.3090277777776" y="291.0" />
-              <point x="747.9479166666665" y="291.0" />
-              <point x="-65.11111111111109" y="25.5" />
-            </edge>
-            <edge source="controllers.YouTubeSearchController" target="util.Search">
-              <point x="-108.75" y="-114.0" />
-              <point x="83.625" y="667.0" />
-              <point x="95.25" y="667.0" />
-              <point x="0.0" y="25.5" />
-            </edge>
-            <edge source="controllers.HomeController" target="util.HttpGet">
-              <point x="-148.125" y="-521.0" />
-              <point x="501.8363715277777" y="667.0" />
-              <point x="430.3090277777776" y="667.0" />
-              <point x="56.25" y="25.5" />
-            </edge>
-            <edge source="controllers.YouTubeSearchController" target="util.HttpGet">
-              <point x="108.75" y="-114.0" />
-              <point x="301.125" y="667.0" />
-              <point x="317.8090277777776" y="667.0" />
-              <point x="-56.25" y="25.5" />
-            </edge>
-            <edge source="controllers.AdminController" target="controllers.MainController">
-              <point x="0.0" y="-279.0" />
-              <point x="1022.4613715277777" y="657.0" />
-              <point x="982.3055555555554" y="657.0" />
-              <point x="982.3055555555554" y="291.0" />
-              <point x="878.1701388888887" y="291.0" />
-              <point x="65.11111111111109" y="25.5" />
-            </edge>
-            <edge source="controllers.AdminController" target="controllers.LogInController">
-              <point x="103.33333333333326" y="-279.0" />
-              <point x="1125.7947048611109" y="667.0" />
-              <point x="1220.0555555555554" y="667.0" />
-              <point x="75.75" y="147.0" />
-            </edge>
-            <edge source="controllers.LogInController" target="controllers.MainController">
-              <point x="-113.625" y="-147.0" />
-              <point x="1030.6805555555554" y="281.0" />
-              <point x="910.7256944444442" y="281.0" />
-              <point x="97.66666666666663" y="25.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="206.0" y="790.0" />
-          <SelectedNodes>
-            <node>controllers.AdminController</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>packageLocal</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>c09bf9e7-6a8d-423e-8a9a-b679f0baf22f</OriginalElement>
-          <nodes>
-            <node x="131.25000000000003" y="570.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references</node>
-            <node x="242.0" y="0.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists</node>
-            <node x="474.0" y="0.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.authorization_codes</node>
-            <node x="194.0" y="168.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums</node>
-            <node x="11.0" y="391.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists</node>
-            <node x="238.0" y="358.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs</node>
-            <node x="0.0" y="711.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.genres</node>
-            <node x="0.0" y="124.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists">
-              <point x="-39.75" y="-48.0" />
-              <point x="171.00000000000003" y="545.0" />
-              <point x="87.0" y="545.0" />
-              <point x="0.0" y="48.0" />
-            </edge>
-            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
-              <point x="0.0" y="-48.0" />
-              <point x="282.5" y="99.0" />
-              <point x="287.0" y="99.0" />
-              <point x="-45.0" y="37.0" />
-            </edge>
-            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
-              <point x="46.999999999999986" y="-81.0" />
-              <point x="379.0" y="333.0" />
-              <point x="381.5" y="333.0" />
-              <point x="381.5" y="99.0" />
-              <point x="377.0" y="99.0" />
-              <point x="44.999999999999986" y="37.0" />
-            </edge>
-            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs">
-              <point x="39.75" y="-48.0" />
-              <point x="250.50000000000003" y="545.0" />
-              <point x="332.0" y="545.0" />
-              <point x="0.0" y="81.0" />
-            </edge>
-            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums">
-              <point x="-47.0" y="-81.0" />
-              <point x="285.0" y="333.0" />
-              <point x="282.5" y="333.0" />
-              <point x="0.0" y="48.0" />
-            </edge>
-            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users">
-              <point x="0.0" y="-48.0" />
-              <point x="0.0" y="92.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
-          <SelectedNodes>
-            <node>c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1483">
           <caret line="121" column="64" lean-forward="true" selection-start-line="121" selection-start-column="64" selection-end-line="121" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/DatabaseUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/login.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3213">
-          <caret line="219" column="1" selection-start-line="219" selection-start-column="1" selection-end-line="219" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/LogInController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3553">
-          <caret line="231" column="64" selection-start-line="231" selection-start-column="64" selection-end-line="231" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -1513,34 +1158,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Song.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-          <folding>
-            <element signature="e#1877#1878#0" expanded="true" />
-            <element signature="e#1910#1911#0" expanded="true" />
-            <element signature="e#1951#1952#0" expanded="true" />
-            <element signature="e#1990#1991#0" expanded="true" />
-            <element signature="e#2677#2678#0" expanded="true" />
-          </folding>
+    <entry file="das://c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/schema/g7musicappdb/table/songs">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/home.fxml">
+    <entry file="file://$PROJECT_DIR$/src/model/MP3File.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="112" column="38" selection-start-line="112" selection-start-column="38" selection-end-line="112" selection-end-column="38" />
+        <state relative-caret-position="252">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Album.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/PlaylistDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/searchyt.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
+    <entry file="jar://$PROJECT_DIR$/google-api-services-youtube-v3-rev182-1.22.0.jar!/com/google/api/services/youtube/model/SearchResult.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
+        <state relative-caret-position="84">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/YouTubeSearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1546">
+          <caret line="409" column="20" lean-forward="true" selection-start-line="409" selection-start-column="20" selection-end-line="409" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/HttpGet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="34" column="68" lean-forward="true" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/login.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="das://table:/876cd98f/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/g7musicappdb.users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1549,13 +1251,518 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/searchdb.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="das://c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/schema/g7musicappdb/table/users.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/home.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1463">
+          <caret line="127" column="31" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/LogInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-676">
+          <caret line="353" column="108" selection-start-line="353" selection-start-column="108" selection-end-line="353" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/schema/g7musicappdb/table/recovery_codes">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/controllers.AdminController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>controllers.AdminController</OriginalElement>
+          <nodes>
+            <node x="368.2530144518778" y="1609.0">controllers.YouTubeSearchController</node>
+            <node x="305.5" y="744.0">util.Auth</node>
+            <node x="1677.3395952216974" y="777.0">model.UserDAO</node>
+            <node x="1708.0446811185443" y="1521.0">controllers.AdminController</node>
+            <node x="1990.5895952216974" y="755.0">model.Admin</node>
+            <node x="1811.9534939492326" y="434.0">model.User</node>
+            <node x="0.0" y="1037.0">model.SongLink</node>
+            <node x="980.3582558539945" y="1059.0">util.HttpGet</node>
+            <node x="965.8582558539945" y="0.0">model.Song</node>
+            <node x="572.5" y="755.0">model.Artist</node>
+            <node x="1793.3395952216974" y="744.0">model.SendEmail</node>
+            <node x="960.8582558539945" y="755.0">model.MP3File</node>
+            <node x="1618.2749225206612" y="982.0">controllers.LogInController</node>
+            <node x="222.0" y="1026.0">util.Search</node>
+            <node x="1304.0776904597926" y="777.0">controllers.MainController</node>
+            <node x="1309.2749225206612" y="960.0">controllers.SignUpController</node>
+            <node x="1143.5776904597926" y="266.0">model.Playlist</node>
+            <node x="1495.6585798460796" y="467.0">util.DatabaseUtility</node>
+            <node x="1145.2749225206612" y="777.0">model.PlaylistDAO</node>
+            <node x="725.7731631794129" y="1037.0">model.SongDAO</node>
+            <node x="751.5" y="744.0">model.Album</node>
+            <node x="1024.8780144518776" y="1268.0">controllers.HomeController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="util.Search" target="util.Auth">
+              <point x="0.0" y="-48.0" />
+              <point x="356.5" y="940.0" />
+              <point x="367.25" y="940.0" />
+              <point x="-61.75" y="48.0" />
+            </edge>
+            <edge source="controllers.AdminController" target="model.UserDAO">
+              <point x="24.25" y="-191.0" />
+              <point x="1877.7946811185443" y="1248.0" />
+              <point x="1888.7749225206612" y="1248.0" />
+              <point x="1888.7749225206612" y="860.0" />
+              <point x="1761.3395952216974" y="860.0" />
+              <point x="36.00000000000006" y="15.0" />
+            </edge>
+            <edge source="model.SongDAO" target="model.Artist">
+              <point x="-93.1875" y="-37.0" />
+              <point x="739.0856631794129" y="930.0" />
+              <point x="652.0" y="930.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="model.UserDAO" target="util.DatabaseUtility">
+              <point x="-32.0" y="-15.0" />
+              <point x="1693.3395952216974" y="724.0" />
+              <point x="1675.6585798460796" y="724.0" />
+              <point x="80.0" y="92.0" />
+            </edge>
+            <edge source="controllers.YouTubeSearchController" target="controllers.MainController">
+              <point x="130.5" y="-103.0" />
+              <point x="643.7530144518778" y="1248.0" />
+              <point x="1165.9943571264591" y="1248.0" />
+              <point x="1165.9943571264591" y="900.0" />
+              <point x="1311.1888015709037" y="900.0" />
+              <point x="-56.888888888888914" y="15.0" />
+            </edge>
+            <edge source="controllers.HomeController" target="model.UserDAO">
+              <point x="121.81818181818176" y="-444.0" />
+              <point x="1314.1961962700593" y="1238.0" />
+              <point x="1596.7749225206612" y="1238.0" />
+              <point x="1596.7749225206612" y="940.0" />
+              <point x="1713.3395952216974" y="940.0" />
+              <point x="-12.0" y="15.0" />
+            </edge>
+            <edge source="controllers.YouTubeSearchController" target="util.Search">
+              <point x="-43.5" y="-103.0" />
+              <point x="469.7530144518778" y="1218.0" />
+              <point x="356.5" y="1218.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="model.User" target="model.Playlist">
+              <point x="-66.0" y="-125.0" />
+              <point x="1877.9534939492326" y="414.0" />
+              <point x="1344.5776904597926" y="414.0" />
+              <point x="67.0" y="59.0" />
+            </edge>
+            <edge source="controllers.HomeController" target="util.HttpGet">
+              <point x="-121.81818181818176" y="-444.0" />
+              <point x="1070.5598326336958" y="1238.0" />
+              <point x="1047.8582558539945" y="1238.0" />
+              <point x="22.5" y="15.0" />
+            </edge>
+            <edge source="controllers.YouTubeSearchController" target="model.SongDAO">
+              <point x="72.5" y="-103.0" />
+              <point x="585.7530144518778" y="1228.0" />
+              <point x="779.0231631794129" y="1228.0" />
+              <point x="-53.25" y="37.0" />
+            </edge>
+            <edge source="model.Admin" target="model.User">
+              <point x="0.0" y="-37.0" />
+              <point x="2097.0895952216974" y="724.0" />
+              <point x="2009.9534939492326" y="724.0" />
+              <point x="66.0" y="125.0" />
+            </edge>
+            <edge source="model.SongDAO" target="model.Album">
+              <point x="-13.3125" y="-37.0" />
+              <point x="818.9606631794129" y="910.0" />
+              <point x="858.1666666666667" y="910.0" />
+              <point x="42.66666666666674" y="48.0" />
+            </edge>
+            <edge source="controllers.LogInController" target="controllers.MainController">
+              <point x="-74.28571428571428" y="-92.0" />
+              <point x="1673.9892082349468" y="900.0" />
+              <point x="1424.9665793486815" y="900.0" />
+              <point x="56.888888888888914" y="15.0" />
+            </edge>
+            <edge source="model.Playlist" target="model.Song">
+              <point x="67.0" y="-59.0" />
+              <point x="1344.5776904597926" y="246.0" />
+              <point x="1215.6439701397087" y="246.0" />
+              <point x="115.28571428571422" y="103.0" />
+            </edge>
+            <edge source="controllers.AdminController" target="model.User">
+              <point x="72.75" y="-191.0" />
+              <point x="1926.2946811185443" y="1238.0" />
+              <point x="1980.0895952216974" y="1238.0" />
+              <point x="1980.0895952216974" y="724.0" />
+              <point x="1965.9534939492326" y="724.0" />
+              <point x="22.0" y="125.0" />
+            </edge>
+            <edge source="util.HttpGet" target="model.MP3File">
+              <point x="-22.5" y="-15.0" />
+              <point x="1002.8582558539945" y="940.0" />
+              <point x="993.1082558539945" y="940.0" />
+              <point x="-32.25" y="37.0" />
+            </edge>
+            <edge source="controllers.YouTubeSearchController" target="model.Artist">
+              <point x="14.5" y="-103.0" />
+              <point x="527.7530144518778" y="1208.0" />
+              <point x="573.6610237931259" y="1208.0" />
+              <point x="573.6610237931259" y="940.0" />
+              <point x="599.0" y="940.0" />
+              <point x="-53.0" y="37.0" />
+            </edge>
+            <edge source="model.UserDAO" target="model.User">
+              <point x="32.0" y="-15.0" />
+              <point x="1757.3395952216974" y="724.0" />
+              <point x="1877.9534939492326" y="724.0" />
+              <point x="-66.0" y="125.0" />
+            </edge>
+            <edge source="model.SongDAO" target="util.DatabaseUtility">
+              <point x="93.1875" y="-37.0" />
+              <point x="925.4606631794129" y="940.0" />
+              <point x="929.5729166666665" y="940.0" />
+              <point x="929.5729166666665" y="714.0" />
+              <point x="1515.6585798460796" y="714.0" />
+              <point x="-80.0" y="92.0" />
+            </edge>
+            <edge source="controllers.LogInController" target="model.SendEmail">
+              <point x="74.28571428571428" y="-92.0" />
+              <point x="1822.5606368063754" y="930.0" />
+              <point x="1857.8395952216974" y="930.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="controllers.HomeController" target="model.Song">
+              <point x="-60.909090909090764" y="-444.0" />
+              <point x="1131.4689235427868" y="1238.0" />
+              <point x="1111.3582558539945" y="1238.0" />
+              <point x="1111.3582558539945" y="246.0" />
+              <point x="1138.7868272825658" y="246.0" />
+              <point x="38.42857142857133" y="103.0" />
+            </edge>
+            <edge source="controllers.HomeController" target="controllers.MainController">
+              <point x="91.36363636363626" y="-444.0" />
+              <point x="1283.7416508155138" y="1248.0" />
+              <point x="1287.7749225206612" y="1248.0" />
+              <point x="1287.7749225206612" y="920.0" />
+              <point x="1339.633246015348" y="920.0" />
+              <point x="-28.444444444444457" y="15.0" />
+            </edge>
+            <edge source="controllers.SignUpController" target="model.UserDAO">
+              <point x="92.33333333333337" y="-114.0" />
+              <point x="1540.1082558539945" y="930.0" />
+              <point x="1689.3395952216974" y="930.0" />
+              <point x="-36.0" y="15.0" />
+            </edge>
+            <edge source="controllers.HomeController" target="controllers.LogInController">
+              <point x="152.27272727272725" y="-444.0" />
+              <point x="1344.6507417246048" y="1248.0" />
+              <point x="1683.2749225206612" y="1248.0" />
+              <point x="-65.0" y="92.0" />
+            </edge>
+            <edge source="controllers.LogInController" target="util.DatabaseUtility">
+              <point x="-37.14285714285711" y="-92.0" />
+              <point x="1711.1320653778039" y="890.0" />
+              <point x="1610.1585798460796" y="890.0" />
+              <point x="1610.1585798460796" y="724.0" />
+              <point x="1595.6585798460796" y="724.0" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="controllers.YouTubeSearchController" target="util.Auth">
+              <point x="-14.5" y="-103.0" />
+              <point x="498.7530144518778" y="1248.0" />
+              <point x="501.5" y="1248.0" />
+              <point x="501.5" y="940.0" />
+              <point x="490.75" y="940.0" />
+              <point x="61.75" y="48.0" />
+            </edge>
+            <edge source="model.SongDAO" target="model.Song">
+              <point x="39.9375" y="-37.0" />
+              <point x="872.2106631794129" y="930.0" />
+              <point x="907.5729166666665" y="930.0" />
+              <point x="907.5729166666665" y="236.0" />
+              <point x="1023.5011129968516" y="236.0" />
+              <point x="-76.85714285714289" y="103.0" />
+            </edge>
+            <edge source="controllers.HomeController" target="model.PlaylistDAO">
+              <point x="0.0" y="-444.0" />
+              <point x="1192.3780144518776" y="1248.0" />
+              <point x="1200.2749225206612" y="1248.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="controllers.SignUpController" target="controllers.MainController">
+              <point x="-92.33333333333326" y="-114.0" />
+              <point x="1355.4415891873277" y="940.0" />
+              <point x="1368.0776904597926" y="940.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="model.PlaylistDAO" target="util.DatabaseUtility">
+              <point x="36.666666666666856" y="-15.0" />
+              <point x="1236.941589187328" y="724.0" />
+              <point x="1555.6585798460796" y="724.0" />
+              <point x="-40.0" y="92.0" />
+            </edge>
+            <edge source="controllers.YouTubeSearchController" target="model.Album">
+              <point x="43.5" y="-103.0" />
+              <point x="556.7530144518778" y="1218.0" />
+              <point x="715.2731631794129" y="1218.0" />
+              <point x="715.2731631794129" y="940.0" />
+              <point x="772.8333333333333" y="940.0" />
+              <point x="-42.66666666666674" y="48.0" />
+            </edge>
+            <edge source="model.PlaylistDAO" target="model.Playlist">
+              <point x="1.1368683772161603E-13" y="-15.0" />
+              <point x="1200.2749225206612" y="704.0" />
+              <point x="1220.375" y="704.0" />
+              <point x="1220.375" y="414.0" />
+              <point x="1255.2443571264591" y="414.0" />
+              <point x="-22.33333333333337" y="59.0" />
+            </edge>
+            <edge source="controllers.YouTubeSearchController" target="util.HttpGet">
+              <point x="101.5" y="-103.0" />
+              <point x="614.7530144518778" y="1238.0" />
+              <point x="1002.8582558539945" y="1238.0" />
+              <point x="-22.5" y="15.0" />
+            </edge>
+            <edge source="controllers.LogInController" target="model.UserDAO">
+              <point x="37.14285714285717" y="-92.0" />
+              <point x="1785.4177796635183" y="870.0" />
+              <point x="1737.3395952216974" y="870.0" />
+              <point x="12.0" y="15.0" />
+            </edge>
+            <edge source="controllers.HomeController" target="model.Playlist">
+              <point x="30.454545454545496" y="-444.0" />
+              <point x="1222.832559906423" y="1238.0" />
+              <point x="1265.7749225206612" y="1238.0" />
+              <point x="1265.7749225206612" y="414.0" />
+              <point x="1299.9110237931259" y="414.0" />
+              <point x="22.333333333333258" y="59.0" />
+            </edge>
+            <edge source="controllers.AdminController" target="controllers.MainController">
+              <point x="-121.25" y="-191.0" />
+              <point x="1732.2946811185443" y="1228.0" />
+              <point x="1298.7749225206612" y="1228.0" />
+              <point x="1298.7749225206612" y="930.0" />
+              <point x="1353.8554682375704" y="930.0" />
+              <point x="-14.222222222222172" y="15.0" />
+            </edge>
+            <edge source="controllers.AdminController" target="controllers.LogInController">
+              <point x="-24.25" y="-191.0" />
+              <point x="1829.2946811185443" y="1248.0" />
+              <point x="1813.2749225206612" y="1248.0" />
+              <point x="65.0" y="92.0" />
+            </edge>
+            <edge source="controllers.YouTubeSearchController" target="model.SongLink">
+              <point x="-130.5" y="-103.0" />
+              <point x="382.7530144518778" y="1248.0" />
+              <point x="33.66666666666674" y="1248.0" />
+              <point x="-67.33333333333326" y="37.0" />
+            </edge>
+            <edge source="controllers.LogInController" target="model.User">
+              <point x="111.42857142857144" y="-92.0" />
+              <point x="1859.7034939492326" y="940.0" />
+              <point x="1932.8395952216974" y="940.0" />
+              <point x="1932.8395952216974" y="724.0" />
+              <point x="1921.9534939492326" y="724.0" />
+              <point x="-22.0" y="125.0" />
+            </edge>
+            <edge source="controllers.HomeController" target="model.SongDAO">
+              <point x="-152.27272727272725" y="-444.0" />
+              <point x="1040.1052871791503" y="1228.0" />
+              <point x="885.5231631794129" y="1228.0" />
+              <point x="53.25" y="37.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5" x="84.0" y="639.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>c09bf9e7-6a8d-423e-8a9a-b679f0baf22f</OriginalElement>
+          <nodes>
+            <node x="177.75" y="573.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references</node>
+            <node x="338.5" y="0.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists</node>
+            <node x="569.0" y="0.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.authorization_codes</node>
+            <node x="291.0" y="169.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums</node>
+            <node x="0.0" y="393.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists</node>
+            <node x="171.0" y="393.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.recovery_codes</node>
+            <node x="334.5" y="360.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs</node>
+            <node x="0.0" y="715.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.genres</node>
+            <node x="70.25" y="125.0">c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists">
+              <point x="-39.75" y="-48.5" />
+              <point x="217.5" y="548.0" />
+              <point x="75.5" y="548.0" />
+              <point x="0.0" y="48.5" />
+            </edge>
+            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
+              <point x="46.5" y="-81.5" />
+              <point x="474.0" y="335.0" />
+              <point x="476.5" y="335.0" />
+              <point x="476.5" y="100.0" />
+              <point x="472.0" y="100.0" />
+              <point x="44.5" y="37.5" />
+            </edge>
+            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.artists">
+              <point x="0.0" y="-48.5" />
+              <point x="378.5" y="100.0" />
+              <point x="383.0" y="100.0" />
+              <point x="-44.5" y="37.5" />
+            </edge>
+            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.song_playlist_references" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs">
+              <point x="39.75" y="-48.5" />
+              <point x="297.0" y="548.0" />
+              <point x="427.5" y="548.0" />
+              <point x="0.0" y="81.5" />
+            </edge>
+            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.songs" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.albums">
+              <point x="-46.5" y="-81.5" />
+              <point x="381.0" y="335.0" />
+              <point x="378.5" y="335.0" />
+              <point x="0.0" y="48.5" />
+            </edge>
+            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.playlists" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users">
+              <point x="0.0" y="-48.5" />
+              <point x="75.5" y="335.0" />
+              <point x="113.25" y="335.0" />
+              <point x="-43.0" y="92.5" />
+            </edge>
+            <edge source="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.recovery_codes" target="c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users">
+              <point x="0.0" y="-48.5" />
+              <point x="237.0" y="335.0" />
+              <point x="199.25" y="335.0" />
+              <point x="43.0" y="92.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8098765432098766" x="-10.443597560975661" y="276.3414634146341" />
+          <SelectedNodes>
+            <node>c09bf9e7-6a8d-423e-8a9a-b679f0baf22f.TABLE:g7musicappdb.users</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Artist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding>
+            <element signature="e#351#352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Playlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/SendEmail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        <state relative-caret-position="340">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Song.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bf9e7-6a8d-423e-8a9a-b679f0baf22f/console_12.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/SongLink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#3913#3914#0" expanded="true" />
+            <element signature="e#3949#3950#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="237" column="108" selection-start-line="237" selection-start-column="108" selection-end-line="237" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Auth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="22" column="102" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/DatabaseUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-465">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
