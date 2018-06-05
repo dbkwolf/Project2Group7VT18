@@ -71,6 +71,8 @@ public class HomeController extends MainController {
     public Slider slider;
     public JFXButton btn_profile_settings;
     public ImageView img_YTIcon;
+    public JFXButton btn_next;
+    public JFXButton btn_previous;
 
     private String url;
 
@@ -150,6 +152,10 @@ public class HomeController extends MainController {
 
         load_animation_controls();
 
+        btn_play.setText("");
+        btn_pause.setText("");
+        btn_next.setText("");
+        btn_previous.setText("");
 
 
 
@@ -337,12 +343,44 @@ public class HomeController extends MainController {
 
     }
 
+    public void press_next(){
+
+        if(player!=null){
+            int id = selectedSong.getSongId();
+
+            int i = 0;
+            while (selectedPlaylist.getSongsInPlaylist().get(i).getSongId() != id) {
+                System.out.println(i);
+                i++;
+            }
+
+            if(i<selectedPlaylist.getSongsInPlaylist().size()-1){
+
+                selectedSong = selectedPlaylist.getSongsInPlaylist().get(i++);
+
+                play();
+            }else{
+                player.stop();
+            }
+
+        }
+
+    }
+
     public void click_tbl_playlistTracks(MouseEvent event) {
 
-        //if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2)
+        if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2){
+
+            if(player!=null){
+                if (player.getStatus().equals(MediaPlayer.Status.PLAYING)){
+                    player.stop();
+                }
+            }
+            selectedSong = tbl_playlistTracks.getSelectionModel().getSelectedItem();
+            play();
 
 
-     if (event.getButton() == MouseButton.SECONDARY) {
+        } else if (event.getButton() == MouseButton.SECONDARY) {
 
          if(selectedPlaylist!=null && !selectedPlaylist.getSongsInPlaylist().isEmpty())
 
@@ -393,25 +431,23 @@ public class HomeController extends MainController {
     }
 
 
-    public void press_btn_play(javafx.event.ActionEvent event) throws Exception {
+    public void play()  {
+
         btn_play.setVisible(false);
         btn_pause.setVisible(true);
         try {
-            selectedSong = tbl_searchResults.getSelectionModel().getSelectedItem();
-            String selectedSongInfo = selectedSong.getSongTitle() + " - " + selectedSong.getSongArtist() + " - " + selectedSong.getAlbum();
-            lbl_currentTrack.setText(selectedSongInfo);
-            System.out.println(selectedSong.getSongLocation());
-            track = new Media(selectedSong.getSongLocation());
+            if(selectedSong!=null){
+                String selectedSongInfo = selectedSong.getSongTitle() + " - " + selectedSong.getSongArtist() + " - " + selectedSong.getAlbum();
+                lbl_currentTrack.setText(selectedSongInfo);
+                System.out.println(selectedSong.getSongLocation());
+                track = new Media(selectedSong.getSongLocation());
 
 
-            player = new MediaPlayer(track);
+                player = new MediaPlayer(track);
 
-            player.setOnReady(new Runnable() {
+                player.setOnReady(() -> {
 
-                @Override
-                public void run() {
-
-                    System.out.println("Duration: "+track.getDuration().toSeconds());
+                    System.out.println("Duration: " + track.getDuration().toSeconds());
 
                     slider.maxProperty().bind(Bindings.createDoubleBinding(
                             () -> player.getTotalDuration().toSeconds(),
@@ -419,16 +455,15 @@ public class HomeController extends MainController {
 
 
                     // display media's metadata
-                    for (Map.Entry<String, Object> entry : track.getMetadata().entrySet()){
+                    for (Map.Entry <String, Object> entry : track.getMetadata().entrySet()) {
                         System.out.println(entry.getKey() + ": " + entry.getValue());
                     }
 
                     // play if you want
                     player.play();
-                }
-            });
+                });
 
-
+            }
 
         }
         catch (Exception e) {
@@ -439,10 +474,16 @@ public class HomeController extends MainController {
 
     }
 
-    public void press_btn_pause(javafx.event.ActionEvent event) throws Exception {
+    public void click_tbl_search(){
+
+    }
+
+    public void pause(){
 
         btn_pause.setVisible(false);
         btn_play.setVisible(true);
+
+
         try {
             player.pause();
         }

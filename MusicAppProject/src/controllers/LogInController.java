@@ -144,18 +144,21 @@ public class LogInController extends MainController {
         Label lbl_Email = new Label("Please Enter your E-mail");
 
         lbl_Email.setStyle("-fx-text-fill: #fffafa");
+        Label lbl_errorEmail = new Label("Couldn't find user in Database");
+        lbl_errorEmail.setVisible(false);
 
 
 
         grid.add(lbl_Email, 0, 0);
-        grid.add(txt_Email, 0, 1);
+        grid.add(lbl_errorEmail, 0,1);
+        grid.add(txt_Email, 0, 2);
 
 
 
         JFXButton btn_cancel = new JFXButton("cancel");
         JFXButton btn_sendRecoveryEmail = new JFXButton("Send Recovery E-mail");
         btn_cancel.setOnAction(event1 -> dialog.close());
-        btn_sendRecoveryEmail.setOnAction(event2-> sendRecoveryEmail(event, txt_Email.getText(), dialog));
+        btn_sendRecoveryEmail.setOnAction(event2-> sendRecoveryEmail(event, txt_Email.getText(), dialog, lbl_errorEmail));
 
 
         btn_cancel.setStyle("-fx-background-color: #000080; -fx-text-fill: #fffafa; -fx-background-radius: 100");
@@ -203,42 +206,52 @@ public class LogInController extends MainController {
 
     }
 
-    private void sendRecoveryEmail(ActionEvent event, String recipientEmail, JFXDialog dialog) {
-
-        new SendEmail(recipientEmail);
+    private void sendRecoveryEmail(ActionEvent event, String recipientEmail, JFXDialog dialog, Label lbl) {
 
 
+        try {
+            if(UserDAO.emailExistsInDB(recipientEmail)){
 
-        GridPane grid = new GridPane();
-        grid.setHgap(10);
-        grid.setVgap(10);
-        grid.setPadding(new Insets(10, 10, 10, 10));
+                new SendEmail(recipientEmail);
 
-        grid.getColumnConstraints().addAll(new ColumnConstraints(150 ), new ColumnConstraints(200));
 
-        Label lbl_confirmation = new Label("A recovery E-mail has been sent to " + recipientEmail);
-        lbl_confirmation.setStyle("-fx-text-fill: white");
+                GridPane grid = new GridPane();
+                grid.setHgap(10);
+                grid.setVgap(10);
+                grid.setPadding(new Insets(10, 10, 10, 10));
 
-        grid.add(lbl_confirmation, 0, 0, 2,1);
+                grid.getColumnConstraints().addAll(new ColumnConstraints(150), new ColumnConstraints(200));
 
-        JFXButton btn_close = new JFXButton("close");
+                Label lbl_confirmation = new Label("A recovery E-mail has been sent to " + recipientEmail);
+                lbl_confirmation.setStyle("-fx-text-fill: white");
 
-        btn_close.setOnAction(event1 -> dialog.close());
+                grid.add(lbl_confirmation, 0, 0, 2, 1);
 
-        btn_close.setStyle("-fx-background-color: #000080; -fx-text-fill: #fffafa; -fx-background-radius: 100");
-        btn_close.hoverProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue){
-                btn_close.setStyle("-fx-background-color: #3733cb; -fx-text-fill: #fffafa; -fx-background-radius: 100");
-            }else{
+                JFXButton btn_close = new JFXButton("close");
+
+                btn_close.setOnAction(event1 -> dialog.close());
+
                 btn_close.setStyle("-fx-background-color: #000080; -fx-text-fill: #fffafa; -fx-background-radius: 100");
+                btn_close.hoverProperty().addListener((observable, oldValue, newValue) -> {
+                    if (newValue){
+                        btn_close.setStyle("-fx-background-color: #3733cb; -fx-text-fill: #fffafa; -fx-background-radius: 100");
+                    } else {
+                        btn_close.setStyle("-fx-background-color: #000080; -fx-text-fill: #fffafa; -fx-background-radius: 100");
+                    }
+
+                });
+
+                grid.add(btn_close, 0, 1);
+                grid.setStyle("-fx-background-color: #1d1d1d");
+                dialog.setContent(grid);
+
+            }else{
+                lbl.setStyle("-fx-text-fill: red");
+                lbl.setVisible(true);
             }
-
-        });
-
-        grid.add(btn_close, 0, 1);
-        grid.setStyle("-fx-background-color: #1d1d1d");
-        dialog.setContent(grid);
-
-
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

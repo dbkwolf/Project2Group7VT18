@@ -82,13 +82,6 @@ public StringProperty albumProperty(){
         this.songId.set(songId);
     }
 
-    public String getSongLocation() {
-        return songLocation.get();
-    }
-
-    public String songLocationProperty() {
-        return songLocation.get();
-    }
 
 
     public int getRefId() {
@@ -109,5 +102,17 @@ public StringProperty albumProperty(){
 
     public void setSongDuration(int songDuration) {
         this.songDuration.set(songDuration);
+    }
+
+    public String getSongLocation() {
+        return songLocation.get();
+    }
+
+    public SimpleStringProperty songLocationProperty() {
+        return songLocation;
+    }
+
+    public void setSongLocation(String songLocation) {
+        this.songLocation.set(songLocation);
     }
 }

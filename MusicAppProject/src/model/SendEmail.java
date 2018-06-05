@@ -11,13 +11,19 @@ public class SendEmail {
     private  String pswd = "project2hkr18";
 
 
-
+    /**
+     * Constructor
+     * Makes an instance of the SendEmail
+     * @param recipient= String : Recipients E-mail
+     */
     public SendEmail(String recipient) {
 
 
        this.to = recipient;
 
 
+       //set up  the application's email
+        // 
        Properties properties = System.getProperties();
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
@@ -43,10 +49,10 @@ public class SendEmail {
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
             // Set Subject: header field
-            message.setSubject("This is the Subject Line!");
+            message.setSubject("MusicApp - Your Temporary Password");
 
             // Now set the actual message
-            message.setText("This is actual message");
+            message.setText("Don't worry - here is your temporary password.");
 
             // Send message
             Transport.send(message);

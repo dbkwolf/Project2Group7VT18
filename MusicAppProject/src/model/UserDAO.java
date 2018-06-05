@@ -194,5 +194,28 @@ public class UserDAO {
 
     }
 
+    public static boolean emailExistsInDB(String email) throws SQLException {
+
+        boolean existsInDB;
+
+        String searchQuery = "SELECT * FROM g7musicappdb.users WHERE email like '" + email+"';";
+
+        try {
+            ResultSet rs = DatabaseUtility.dbExecuteQuery(searchQuery);
+
+            if(rs!=null){
+                existsInDB =false;
+            }else{
+                existsInDB= true;
+            }
+
+            return existsInDB;
+
+        } catch (SQLException e) {
+            System.out.println("error while searching user");
+            throw e;
+        }
+    }
+
 }
 
